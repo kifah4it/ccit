@@ -39,6 +39,13 @@ return [
     'conect_us'=>'Conect with us',
     'Special_Education'=>'Special Education',
     'Special_Education_Para'=>'Interactive and modern teaching methods to achieve the highest possible benefit from the lessons',
+    'Foundation'=>'Foundation',
+    'Beginner'=>'Beginner',
+    'Pre-intermediate'=>'Pre-intermediate',
+    'intermediate'=>'intermediate',
+    'Upper-intermediate'=>'Upper-intermediate',
+    'Advanced'=>'Advanced',
+
 
     'what_we_offer'=>'What we offer',
     'what_we_offer_para'=>'  We offer language courses with international curricula, a computer driving course in various programs at several levels up to advanced, and a secretary’s accounting course, in addition to the curricula for the middle and secondary education certificates, and distance education services.',

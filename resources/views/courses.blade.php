@@ -18,7 +18,7 @@ Courses
 
      <section class="container-fluid Languages">
     
-    <div class=" row English_top ">
+    <div class=" row English_top " style="direction:ltr;">
 		
 	<br>
 	<img class="First_icon" src="images/E_icon.PNG" > 
@@ -175,7 +175,59 @@ Courses
 <img class="row First_icon" src="images/D_icon.png" > 
 	<span><b>outch Courses</b></span>
 		 <br><br>    
-</div> 
+</div>
+
+
+
+ <div class="row Doutch">
+   
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#ab1c0e><b>A1-1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#ab1c0e><b>A1-2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#005896><b>A2-1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A2.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#005896><b>A2-2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A2.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#00924a><b>B1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/B1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#00924a><b>B2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/B1.JPG" >
+</div>
+</div>
 
 </section>
 

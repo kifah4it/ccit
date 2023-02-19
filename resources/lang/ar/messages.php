@@ -72,7 +72,11 @@ return [
     'signup'=>'إنشاء حساب جديد',
     'dont_have_account'=>'ليس لديك حساب؟',
     'date_birth'=>'تاريخ الميلاد',
-    'full_name'=>'الإسم الكامل باللغة العربية'
-
-
+    'full_name'=>'الإسم الكامل باللغة العربية',
+    'Foundation'=>'تأسيس',
+    'Beginner'=>'مبتدئ',
+    'Pre-intermediate'=>'متوسط أول',
+    'intermediate'=>'متوسط',
+    'Upper-intermediate'=>'متوسط متقدم',
+    'Advanced'=>'متقدم',
 ];
