@@ -32,17 +32,20 @@ Courses
 <div class="container-fluid">
 
     <div class="row English" >
-   
+	 	@foreach ($courseslst as $course)
+					@if(!isset($course->Name))
+						@continue
+					@else
 <div class="col-md-4">
 	<div class="Course">
-<span style=color:#fecd29><b>Ventures</b></span>
- <h5>Foundation</h5>
-<img class="Course_Im" src="images/Ve_Im.JPEG" >
+<span style=color:#fecd29><b>{{$course->Name}}</b></span>
+ <h5>{{$course->catName}}</h5>
+<img class="Course_Im" src="{{$course->imgSrc}}" >
 
 </div>
 </div>
 
-<div class="col-md-4">
+<!-- <div class="col-md-4">
 <div class="Course">
 <span style=color:#e9d129><b>Intro A</b></span>
 <h5>Foundation</h5>
@@ -161,7 +164,9 @@ Courses
 <h5>Advanced</h5>
 <img class="Course_Im" src="images/L5.JPG" >
 </div>
-</div>
+</div>!-->
+@endif 
+@endforeach
 </div>
 </div> 
 

@@ -11,5 +11,6 @@ class CoursesView
     public string $Name;
     public string $sDesc;
     public string $imgSrc;
+    public string $catName;
 
 }
