@@ -26,7 +26,7 @@ class HomeController extends Controller
             Cookie::queue(Cookie::make('lang', 'EN'));
             app()->setLocale('en');
             return redirect()->back(); 
-            // return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
+            // return redirect()->back()->withCookie(cookie()->forever('lang','EN'));fjaskfj hithub
         }
     }
 }
