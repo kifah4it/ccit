@@ -26,6 +26,9 @@ Route::post('users',function(Request $request){
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','index');
+    Route::get('/switchlang/{id}','switchlang');
 });
 
 Route::resource('courses', CourseController::class);
+
+//Route::get('/switchlang/{id}', [HomeController::class, 'switchlang']);
