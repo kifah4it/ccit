@@ -1,0 +1,122 @@
+{
+    "courses": [
+        {
+            "id": 1,
+            "fullname": "CCIT - Learning Management System",
+            "displayname": "CCIT - Learning Management System",
+            "shortname": "LMS",
+            "courseimage": "https:\/\/localhost\/pluginfile.php\/2\/course\/generated\/course.svg",
+            "categoryid": 0,
+            "categoryname": "",
+            "sortorder": 1,
+            "summary": "<p>Welcome to CCiT Learning Management System<\/p>",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [],
+            "showactivitydates": false,
+            "showcompletionconditions": null,
+            "contacts": [],
+            "enrollmentmethods": [],
+            "format": "site",
+            "showgrades": 1,
+            "newsitems": 3,
+            "startdate": 0,
+            "enddate": 0,
+            "maxbytes": 0,
+            "showreports": 0,
+            "visible": 1,
+            "groupmode": 0,
+            "groupmodeforce": 0,
+            "defaultgroupingid": 0,
+            "enablecompletion": 0,
+            "completionnotify": 0,
+            "lang": "",
+            "theme": "",
+            "marker": 0,
+            "filters": [
+                {
+                    "filter": "displayh5p",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "activitynames",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mathjaxloader",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "emoticon",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "urltolink",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                },
+                {
+                    "filter": "mediaplugin",
+                    "localstate": 0,
+                    "inheritedstate": 1
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "fullname": "Test Course",
+            "displayname": "Test Course",
+            "shortname": "tst",
+            "courseimage": "https:\/\/localhost\/pluginfile.php\/14\/course\/generated\/course.svg",
+            "categoryid": 1,
+            "categoryname": "Category 1",
+            "sortorder": 10002,
+            "summary": "<p>Test Course<\/p>",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [
+                {
+                    "id": 2,
+                    "fullname": "Admin User"
+                }
+            ],
+            "enrollmentmethods": [
+                "manual"
+            ]
+        },
+        {
+            "id": 3,
+            "fullname": "Test2",
+            "displayname": "Test2",
+            "shortname": "tst2",
+            "courseimage": "https:\/\/localhost\/pluginfile.php\/18\/course\/generated\/course.svg",
+            "categoryid": 1,
+            "categoryname": "Category 1",
+            "sortorder": 10001,
+            "summary": "<p>test2\u00a0<\/p>",
+            "summaryformat": 1,
+            "summaryfiles": [],
+            "overviewfiles": [],
+            "showactivitydates": true,
+            "showcompletionconditions": true,
+            "contacts": [
+                {
+                    "id": 2,
+                    "fullname": "Admin User"
+                }
+            ],
+            "enrollmentmethods": [
+                "manual",
+                "self"
+            ]
+        }
+    ],
+    "warnings": []
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-@if(session('lang') === 'EN')
+@if(Cookie::get('lang') == 'EN')
 <html lang="en">
 @else
 <html lang="ar" dir="rtl">
@@ -8,7 +8,7 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    @if(session('lang') === 'EN')
+    @if(Cookie::get('lang') == 'EN')
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     @else
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
     
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    @if(session('lang') === 'EN')
+    @if(Cookie::get('lang') === 'EN')
     <link rel="stylesheet" href="css/style.css">
     @else
     <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap.css">
@@ -39,7 +39,7 @@
     	<div class="container-fluid">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
-    				<a class="navbar-brand" href="index.html">Fox. <span>University</span></a>
+    				<a class="navbar-brand" href="/index">Fox. <span>University</span></a>
     			</div>
 	    		<div class="col-lg-8 d-block">
 		    		<div class="row d-flex">
@@ -82,9 +82,9 @@
         </form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="index.html" class="nav-link pl-0">{{__('messages.Home')}}</a></li>
-	        	<li class="nav-item"><a href="about.html" class="nav-link">{{__('messages.About')}}</a></li>
-	        	<li class="nav-item"><a href="courses.html" class="nav-link">{{__('messages.Courses')}}</a></li>
+	        	<li class="nav-item active"><a href="./" class="nav-link pl-0">{{__('messages.Home')}}</a></li>
+	        	<li class="nav-item"><a href="./about" class="nav-link">{{__('messages.About')}}</a></li>
+	        	<li class="nav-item"><a href="./courses" class="nav-link">{{__('messages.Courses')}}</a></li>
 	        	<li class="nav-item"><a href="teacher.html" class="nav-link">{{__('messages.Staff')}}</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">{{__('messages.Blog')}}</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">{{__('messages.Contact')}}</a></li>
@@ -92,7 +92,7 @@
 	      </div>
         <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   {{session('lang') === 'AR' ? 'AR' : 'EN'}}
+   {{Cookie::get('lang') === 'AR' ? 'AR' : 'EN'}}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="./switchlang/AR">AR</a>
@@ -207,7 +207,7 @@
   <script src="js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
-  @if(session('lang') === 'EN')
+  @if(Cookie::get('lang') === 'EN')
   <script src="js/main.js"></script>
   @else
   <script src="js/main-rtl.js"></script>
