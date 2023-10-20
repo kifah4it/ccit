@@ -96,7 +96,7 @@ Courses
 							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
 							<p><a href="#" class="btn btn-primary">Apply now</a></p>
 						</div>
-					</div>
+					</div>sssss
 					<div class="col-md-3 course ftco-animate">
 						<div class="img" style="background-image: url(images/course-7.jpg);"></div>
 						<div class="text pt-4">
