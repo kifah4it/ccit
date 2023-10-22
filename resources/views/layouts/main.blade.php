@@ -92,7 +92,7 @@
 	      </div>
         <div class="dropdown">
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   {{Cookie::get('lang') === 'AR' ? 'AR' : 'EN'}}
+   {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="./switchlang/AR">AR</a>

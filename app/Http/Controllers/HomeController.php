@@ -21,16 +21,19 @@ class HomeController extends Controller
             
         ])->get($url);
         $courses = json_decode($response,true);
-        //var_dump($courses->courses[0]->fullname);
+       // var_dump($courses['courses']);
         $courseslst[] = array();
         
         foreach($courses['courses'] as $course){
            $CourseV = new CoursesView();
             $CourseV->Name = $course['fullname'];
+            //$CourseV->Name = $course['customfields'][0]['value'] ?? '';
             $CourseV->imgSrc = $course['courseimage'];
             $CourseV->sDesc = strip_tags($course['summary']);
+            
+            $courseslst[] = $CourseV;
         }
-      //  var_dump($courseslst[1]->Name);
+       // var_dump($courseslst);
       return view('courses')->with('courseslst',$courseslst);
       
 }
@@ -39,15 +42,15 @@ class HomeController extends Controller
     {
         if($lang ==='AR'){
         //session(['lang' => 'AR']);
-        Cookie::queue(Cookie::make('lang', 'AR'));
+        //Cookie::queue(Cookie::make('lang', 'AR'));
         app()->setLocale('ar');
-        return redirect()->back();
+        return redirect()->back()->withCookie(cookie()->forever('lang','AR'));
         }
         else{
             //session(['lang' => 'EN']);
-            Cookie::queue(Cookie::make('lang', 'EN'));
+            //Cookie::queue(Cookie::make('lang', 'EN'));
             app()->setLocale('en');
-            return redirect()->back(); 
+            return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
     }
 }

@@ -17,6 +17,15 @@
             "showcompletionconditions": null,
             "contacts": [],
             "enrollmentmethods": [],
+            "customfields": [
+                {
+                    "name": "Arabic Name",
+                    "shortname": "arname",
+                    "type": "text",
+                    "valueraw": "",
+                    "value": null
+                }
+            ],
             "format": "site",
             "showgrades": 1,
             "newsitems": 3,
@@ -74,7 +83,7 @@
             "courseimage": "https:\/\/localhost\/pluginfile.php\/14\/course\/generated\/course.svg",
             "categoryid": 1,
             "categoryname": "Category 1",
-            "sortorder": 10002,
+            "sortorder": 10001,
             "summary": "<p>Test Course<\/p>",
             "summaryformat": 1,
             "summaryfiles": [],
@@ -89,21 +98,39 @@
             ],
             "enrollmentmethods": [
                 "manual"
+            ],
+            "customfields": [
+                {
+                    "name": "Arabic Name",
+                    "shortname": "arname",
+                    "type": "text",
+                    "valueraw": "",
+                    "value": null
+                }
             ]
         },
         {
             "id": 3,
-            "fullname": "Test2",
-            "displayname": "Test2",
-            "shortname": "tst2",
-            "courseimage": "https:\/\/localhost\/pluginfile.php\/18\/course\/generated\/course.svg",
-            "categoryid": 1,
-            "categoryname": "Category 1",
-            "sortorder": 10001,
-            "summary": "<p>test2\u00a0<\/p>",
+            "fullname": "Interchange Intro",
+            "displayname": "Interchange Intro",
+            "shortname": "Intro",
+            "courseimage": "https:\/\/localhost\/pluginfile.php\/18\/course\/overviewfiles\/Interchange%20Intro%20Image.jpg",
+            "categoryid": 2,
+            "categoryname": "English",
+            "sortorder": 20001,
+            "summary": "<p><span>Teach with confidence, using the world's favorite English course. Interchange is a four-level, American English course that has been used by over 50 million students worldwide.<\/span><\/p>",
             "summaryformat": 1,
             "summaryfiles": [],
-            "overviewfiles": [],
+            "overviewfiles": [
+                {
+                    "filename": "Interchange Intro Image.jpg",
+                    "filepath": "\/",
+                    "filesize": 91016,
+                    "fileurl": "https:\/\/localhost\/webservice\/pluginfile.php\/18\/course\/overviewfiles\/Interchange%20Intro%20Image.jpg",
+                    "timemodified": 1697991105,
+                    "mimetype": "image\/jpeg"
+                }
+            ],
             "showactivitydates": true,
             "showcompletionconditions": true,
             "contacts": [
@@ -115,6 +142,15 @@
             "enrollmentmethods": [
                 "manual",
                 "self"
+            ],
+            "customfields": [
+                {
+                    "name": "Arabic Name",
+                    "shortname": "arname",
+                    "type": "text",
+                    "valueraw": "\u0645\u062f\u062e\u0644 \u0625\u0644\u0649 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0627\u0646\u0643\u0644\u064a\u0632\u064a\u0629",
+                    "value": "\u0645\u062f\u062e\u0644 \u0625\u0644\u0649 \u0627\u0644\u0644\u063a\u0629 \u0627\u0644\u0627\u0646\u0643\u0644\u064a\u0632\u064a\u0629"
+                }
             ]
         }
     ],

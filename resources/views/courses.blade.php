@@ -23,7 +23,7 @@ Courses
 						@continue
 					@else
 					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url({{$course->imgSrc}});"></div>
+						<div class="img" style="background-image: url({{$course->imgSrc}}); background-size: contain;"></div>
 						<div class="text pt-4">
 							<p class="meta d-flex">
 								<span><i class="icon-user mr-2"></i>Mr. Khan</span>

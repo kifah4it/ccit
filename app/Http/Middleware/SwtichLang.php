@@ -22,27 +22,22 @@ class SwtichLang {
         if(!$request->hasCookie('lang')){
 
            // session(['lang' => 'AR']);
-           if($request->cookie('lang') == "AR"){
-            Cookie::queue(Cookie::make('lang', 'AR'));
+          
+          //  Cookie::queue(Cookie::make('lang', 'AR',));
 
             //return $next($request)->withCookie(cookie()->forever('lang','AR'));
             app()->setLocale('ar');
-           }
-           else{
-            Cookie::queue(Cookie::make('lang', 'EN'));
-
-            //return $next($request)->withCookie(cookie()->forever('lang','AR'));
-            app()->setLocale('en');
-           }
-            return $next($request);
-
+        
+          
+            return $next($request)->withCookie(cookie()->forever('lang','AR'));
+           //return $next($request);
         }
         else{
 
          // session(['lang' => $request->cookie('lang')]);
           app()->setLocale($request->cookie('lang'));
-          //Log::info("Locale is: ". $request->cookie('lang'));
-          //return $next($request)->withCookie(cookie()->forever('lang',$request->cookie('lang')));
+        //  Log::info("Locale is: ". $request->cookie('lang'));
+        //  return $next($request)->withCookie(cookie()->forever('lang',$request->cookie('lang')));
           return $next($request);
 
         }
