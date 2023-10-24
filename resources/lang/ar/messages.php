@@ -9,5 +9,8 @@ return [
     'Staff' => 'الكادر',
     'Blog' => 'المدونة',
     'Contact' => 'تواصل معنا',
-    'Search' => 'البحث'
+    'Search' => 'البحث',
+    'silder_title' => 'خيارك التعليمي الأفضل',
+    'slider_paragraph' => 'تصفح دوراتنا و سجل مباشرةً!',
+    'browse_courses' => 'إبدأ التصفح'
 ];

@@ -9,5 +9,8 @@ return [
     'Staff' => 'Staff',
     'Blog' => 'Blog',
     'Contact' => 'Contact',
-    'Search' => 'Search'
+    'Search' => 'Search',
+    'silder_title' => 'Your Best Learning Choice',
+    'slider_paragraph' => 'Browse our Courses & Register directly!',
+    'browse_courses' => 'Start Browsing'
 ];

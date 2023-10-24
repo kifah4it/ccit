@@ -82,9 +82,18 @@
         </form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="./" class="nav-link pl-0">{{__('messages.Home')}}</a></li>
+	        	<li class="nav-item active"><a href="./" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="./about" class="nav-link">{{__('messages.About')}}</a></li>
-	        	<li class="nav-item"><a href="./courses" class="nav-link">{{__('messages.Courses')}}</a></li>
+	        	<li class="nav-item dropdown">
+              <a href="./courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <li class="nav-item dropdown"><a class="dropdown-item" href="#">English</a></li>
+               <li><a class="dropdown-item" href="#">Dutch</a></li>
+               <li><a class="dropdown-item" href="#">Computer</a></li>
+               <div class="dropdown-divider"></div>
+               <li></li>
+            </ul>
+            </li>
 	        	<li class="nav-item"><a href="teacher.html" class="nav-link">{{__('messages.Staff')}}</a></li>
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">{{__('messages.Blog')}}</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">{{__('messages.Contact')}}</a></li>
