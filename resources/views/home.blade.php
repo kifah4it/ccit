@@ -14,7 +14,7 @@ Home
         </div>
   </div>
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+      <div class="slider-item" style="background-image:url(images/FB_IMG_1697467201471.jpg);">
       	<div class="overlay"></div>
         <!-- <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
@@ -42,8 +42,8 @@ s
             		<span class="flaticon-teacher"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Certified Teachers</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.Certified_Teachers')}}</h3>
+                <p>{{__('messages.Certified_Teachers_Para')}}</p>
               </div>
             </div>      
           </div>
@@ -524,7 +524,7 @@ s
             <div class="carousel-testimony owl-carousel">
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-1.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151608813.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -538,7 +538,7 @@ s
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-2.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151908758.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -552,7 +552,7 @@ s
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-3.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151588802.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -566,7 +566,7 @@ s
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-4.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151670252.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">

@@ -12,5 +12,7 @@ return [
     'Search' => 'البحث',
     'silder_title' => 'خيارك التعليمي الأفضل',
     'slider_paragraph' => 'تصفح دوراتنا و سجل مباشرةً!',
-    'browse_courses' => 'إبدأ التصفح'
+    'browse_courses' => 'إبدأ التصفح',
+    'Certified_Teachers' => 'مدرسين أكاديميين',
+    'Certified_Teachers_Para' => 'مدرسون أكاديميون كفؤ ولديهم خبرة عالية في التدريس'
 ];

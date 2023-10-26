@@ -10781,3 +10781,6 @@ textarea.form-control {
       .slider-fixed-content-container > .container > .row p{
         color: rgba(255, 255, 255, 0.9);
       }
+      .user-img{
+        background-position-y: -19px;
+      }
