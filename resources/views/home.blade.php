@@ -9,9 +9,9 @@ Home
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Education Needs Complete Solution</h1>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+            <h1 class="mb-4">{{__('messages.slide1_t')}}</h1>
+            <p>{{__('messages.slide1_c')}}</p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.con_us')}}</a></p>
           </div>
         </div>
         </div>
@@ -22,9 +22,9 @@ Home
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">University, College School Education</h1>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Contact Us</a></p>
+            <h1 class="mb-4">{{__('messages.slide2_t')}}</h1>
+            <p>{{__('messages.slide2_c')}}</p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.con_us')}}</a></p>
           </div>
         </div>
         </div>
@@ -40,8 +40,8 @@ Home
             		<span class="flaticon-teacher"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Certified Teachers</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.acad_t')}}</h3>
+                <p>{{__('messages.acad_c')}}</p>
               </div>
             </div>      
           </div>
@@ -51,8 +51,8 @@ Home
             		<span class="flaticon-reading"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Special Education</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.special_t')}}</h3>
+                <p>{{__('messages.special_c')}}</p>
               </div>
             </div>    
           </div>
@@ -62,8 +62,8 @@ Home
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Book &amp; Library</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.book_t')}}</h3>
+                <p>{{__('messages.book_c')}}</p>
               </div>
             </div>      
           </div>
@@ -73,8 +73,8 @@ Home
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Sport Clubs</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.int_t')}}</h3>
+                <p>{{__('messages.int_c')}}</p>
               </div>
             </div>      
           </div>
@@ -89,15 +89,15 @@ Home
 						<div class="img" style="background-image: url(images/about.jpg); border"></div>
 					</div>
 					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-          	<h2 class="mb-4">What We Offer</h2>
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+          	<h2 class="mb-4">{{__('messages.offer_t')}}</h2>
+						<p>{{__('messages.offer_c')}}</p>
 						<div class="row mt-5">
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
 									<div class="text pl-3">
-										<h3>Safety First</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.safety_t')}}</h3>
+										<p>{{__('messages.safety_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -105,8 +105,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
 									<div class="text pl-3">
-										<h3>Regular Classes</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.curricula_t')}}</h3>
+										<p>{{__('messages.curricula_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -114,8 +114,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 									<div class="text pl-3">
-										<h3>Certified Teachers</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.certificates_t')}}</h3>
+										<p>{{__('messages.certificates_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -123,8 +123,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 									<div class="text pl-3">
-										<h3>Sufficient Classrooms</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.calssrooms_t')}}</h3>
+										<p>{{__('messages.classrooms_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -132,8 +132,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
 									<div class="text pl-3">
-										<h3>Creative Lessons</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.creative_t')}}</h3>
+										<p>{{__('messages.creative_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -141,8 +141,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
 									<div class="text pl-3">
-										<h3>Sports Facilities</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.kids_t')}}</h3>
+										<p>{{__('messages.kids_c')}}</p>
 									</div>
 								</div>
 							</div>
@@ -166,9 +166,9 @@ Home
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-            <h2 class="mb-4">Fox University</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <h2 class="mb-4">{{__('messages.ccit_count_t')}}</h2>
+            <p>{{__('messages.ccit_count_c1')}}</p>
+            <p>{{__('messages.ccit_count_c2')}}</p>
           </div>
         </div>	
     		<div class="row d-md-flex align-items-center justify-content-center">
