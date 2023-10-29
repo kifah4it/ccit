@@ -48,7 +48,7 @@ class HomeController extends Controller
         }
         else{
             //session(['lang' => 'EN']);
-            //Cookie::queue(Cookie::make('lang', 'EN'));ssssssssssssssssss
+            //Cookie::queue(Cookie::make('lang', 'EN'));ssssssssssssssssssssssssssss
             app()->setLocale('en');
             return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
