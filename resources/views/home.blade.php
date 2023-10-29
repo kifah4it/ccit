@@ -3,10 +3,20 @@
 Home
 @endsection
 @section("content")
+  <div class="slider-fixed-content-container">
+  <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+          <div class="col-md-6 ftco-animate">
+            <h1 class="mb-4">{{__('messages.silder_title')}}</h1>
+            <p>{{__('messages.slider_paragraph')}}</p>
+            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
+          </div>
+        </div>
+  </div>
     <section class="home-slider owl-carousel">
-      <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+      <div class="slider-item" style="background-image:url(images/FB_IMG_1697467201471.jpg);">
       	<div class="overlay"></div>
-        <div class="container">
+        <!-- <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">{{__('messages.slide1_t')}}</h1>
@@ -14,7 +24,7 @@ Home
             <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.con_us')}}</a></p>
           </div>
         </div>
-        </div>
+        </div> -->
       </div>
 
       <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
@@ -30,7 +40,7 @@ Home
         </div>
       </div>
     </section>
-
+	</div>
     <section class="ftco-services ftco-no-pb">
 			<div class="container-wrap">
 				<div class="row no-gutters">
@@ -522,7 +532,7 @@ Home
             <div class="carousel-testimony owl-carousel">
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-1.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151608813.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -536,7 +546,7 @@ Home
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-2.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151908758.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -550,7 +560,7 @@ Home
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-3.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151588802.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
@@ -564,7 +574,7 @@ Home
               </div>
               <div class="item">
                 <div class="testimony-wrap d-flex">
-                  <div class="user-img mr-4" style="background-image: url(images/teacher-4.jpg)">
+                  <div class="user-img mr-4" style="background-image: url(images/FB_IMG_1698151670252.jpg)">
                   </div>
                   <div class="text ml-2">
                   	<span class="quote d-flex align-items-center justify-content-center">
