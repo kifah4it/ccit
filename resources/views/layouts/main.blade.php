@@ -35,7 +35,7 @@
     @endif
   </head>
   <body>
-	  <div class="bg-top navbar-light">
+	  <!-- <div class="bg-top navbar-light">
     	<div class="container-fluid">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
     			<div class="col-md-4 d-flex align-items-center py-4">
@@ -68,9 +68,9 @@
 			    </div>
 		    </div>
 		  </div>
-    </div>
-	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container-fluid d-flex align-items-center px-4" style="background-color:#0d1128">
+    </div> -->
+	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
+	    <div class="container-fluid d-flex align-items-center px-4">
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -81,7 +81,8 @@
           </div>
         </form>
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav mr-auto">
+          <img src="./images/logo.png" class="logo" />
+	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="./" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="./about" class="nav-link">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
