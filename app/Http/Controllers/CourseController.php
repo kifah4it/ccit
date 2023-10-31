@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
-    /**
+    /** test by kifah
      * Display a listing of the resource.
      *testttssss
      * @return \Illuminate\Http\Response
