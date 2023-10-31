@@ -9,12 +9,22 @@ use Illuminate\Support\Facades\Cache;
 
 class SyncCoursesController extends Controller
 {
-public function index(){
-    return Cache::store('apc')->get('courses_cache');
-}
-public function store(Request $req){
-Cache::store('apc')->put('courses_cache',$req,2);
-return response()->json('done');
-}
+    public function index(){
+        if(Cache::has('courses_cache')){
+        $courses = json_encode(Cache::get('courses_cache'));
+        return($courses);
+        }else
+        return "false";
+    }
+    public function store(Request $req){
+      // $courses = json_decode($req['data']['courses'],true);
+        
+        Cache::flush();
+ //Cache::add('courses_cache',$courses,10000);
+ //Cache::remember('courses_cache',10000,$courses);
+     Cache::put('courses_cache',$req['data']['courses'],15);
+     return $req['data']['courses'];
+  //  return response()->json($courses);
+    }
 
 }

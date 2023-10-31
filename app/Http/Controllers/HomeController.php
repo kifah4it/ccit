@@ -15,8 +15,8 @@ class HomeController extends Controller
         return view('home');
     }
     public function courses(){
-        //$url = 'https://localhost/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
-        $url = 'http://localhost:8080/ccit/resources/CoursesDS.json';
+        $url = 'https://localhost/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
+       // $url = 'http://localhost:8080/ccit/resources/CoursesDS.json';
         $response = HTTP::withOptions([
             
         ])->get($url);
