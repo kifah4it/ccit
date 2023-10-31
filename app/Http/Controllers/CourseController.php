@@ -8,7 +8,7 @@ class CourseController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     *testttssss
      * @return \Illuminate\Http\Response
      */
     public function index()
