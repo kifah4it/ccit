@@ -9,6 +9,7 @@ class CourseController extends Controller
     /** test by kifah
      * Display a listing of the resource.
      *testttssss
+     * test by george
      * @return \Illuminate\Http\Response
      */
     public function index()
