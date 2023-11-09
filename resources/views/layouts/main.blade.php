@@ -222,6 +222,6 @@
   @else
   <script src="js/main-rtl.js"></script>
   @endif
-    
+    @yield('scripts')
   </body>
 </html>

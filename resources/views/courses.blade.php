@@ -41,3 +41,9 @@ Courses
 			</div>
 		</section>
 @endsection
+@section('scripts')
+<script>
+	$('#ftco-nav > ul > li.nav-item').removeClass('active');
+		$('#ftco-nav > ul > li.nav-item:eq(2)').addClass('active');
+</script>
+@endsection
