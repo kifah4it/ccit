@@ -71,17 +71,13 @@
     </div> -->
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
+      <img src="./images/logo-small.png" class="logo" />
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span>
 	      </button>
-	      <form action="#" class="searchform order-lg-last">
-          <div class="form-group d-flex">
-            <input type="text" class="form-control pl-3" placeholder="{{__('messages.Search')}}">
-            <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
-          </div>
-        </form>
+	     
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-          <img src="./images/logo.png" class="logo" />
+          
 	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="./" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="./about" class="nav-link">{{__('messages.About')}}</a></li>
@@ -99,16 +95,26 @@
 	        	<li class="nav-item"><a href="blog.html" class="nav-link">{{__('messages.Blog')}}</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">{{__('messages.Contact')}}</a></li>
 	        </ul>
+          <div class="d-flex">
+        <form action="#" class="searchform order-lg-last">
+        
+        <div class="form-group d-flex">
+          <input type="text" class="form-control pl-3" placeholder="{{__('messages.Search')}}">
+          <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
+        </div>
+      </form>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="./switchlang/AR">AR</a>
+          <a class="dropdown-item" href="./switchlang/EN">EN</a>
+        </div>
+      </div>
+          </div>
 	      </div>
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-   {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="./switchlang/AR">AR</a>
-    <a class="dropdown-item" href="./switchlang/EN">EN</a>
-  </div>
-</div>
+        
 	    </div>
 	  </nav>
         @yield('content');

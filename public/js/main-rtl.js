@@ -112,7 +112,15 @@
 	$('#dropdown04').on('show.bs.dropdown', function () {
 	  console.log('show');
 	});
-
+	// menu toggle
+	$('button.navbar-toggler').click(function(s,e){
+		if($(window).scrollTop() <=150){
+		if($(this).attr('aria-expanded') === 'false'){ // 'false' means the menu was closed and going to be opened
+			$('#ftco-navbar').removeClass('fixed-trans-menu').addClass('fixed-trans-menu-open');
+		}else
+		$('#ftco-navbar').removeClass('fixed-trans-menu-open').addClass('fixed-trans-menu');
+	  }
+	  });
 	// scroll
 	var scrollWindow = function() {
 		$(window).scroll(function(){
@@ -267,6 +275,7 @@
 	});
 
 	$('.appointment_time').timepicker();
+	
 
 
 
