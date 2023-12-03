@@ -10846,13 +10846,13 @@ textarea.form-control {
   font-size: 22px;
 }
 
-.course .cat-box{
+.course .cat-widget .cat-box{
   width: 100px;
     height: 100px;
     margin: 0 auto;
     line-height: 100px;
 }
-.course .cat-box .cat-container{
+.course .cat-widget .cat-box .cat-container{
   text-align: center;
   background: #ffffff;
   border-radius: 50px;
@@ -10862,7 +10862,7 @@ textarea.form-control {
   border-color: #fda638;
 }
 
-.course .cat-box .cat-container .ico{
+.course .cat-widget .cat-box .cat-container .ico{
   font-size: 50px;
   color: #535257;
   position: relative;
@@ -10872,7 +10872,7 @@ textarea.form-control {
   transition: color 0.1s ease-in-out;
   animation-delay: 0.2s;
 }
-.course .cat-box .cat-container .ico.fill{
+.course .cat-widget a.fill .cat-box .cat-container .ico{
   color: #fff;
 }
 .course .text{
@@ -10897,7 +10897,7 @@ textarea.form-control {
     display: none !important;
   }
 }
-.cat-box .cat-container .intern-circle{
+.cat-widget .cat-box .cat-container .intern-circle{
   position: absolute;
   border-radius: 45%;
   background: #fda638;
@@ -10908,21 +10908,24 @@ textarea.form-control {
   transform: scale(0);
   transition: transform 0.3s ease-in-out;
 }
-.cat-box .cat-container .intern-circle.fill{
+.course .cat-widget a.fill .cat-box .cat-container .intern-circle{
   transform: scale(1) !important;
 }
-.course .text.pt-4 p{
+.course .cat-widget .text.pt-4 p{
   font-size: 14px !important;
 }
-.course .btns_group{
+.btns_group{
   width: 100%;
   text-align: center;
   }
-.course .btns_group button.btn{
+.btns_group button.btn{
 background:transparent !important;
 color:#fd5f00;
 }
-.course .btns_group button.btn:hover{
+.btns_group button.btn:hover{
   background:#fd5f00 !important;
   color:#fff;
   }
+.course .cat-widget a p{
+  color: #666666;
+}

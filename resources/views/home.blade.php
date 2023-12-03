@@ -216,67 +216,77 @@ Home
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">المجالات</h2>
-            <p>حدد مسارك التعليمي واختر الدورات التي تناسب تطلعاتك المستقبلية</p>
+            <h2 class="mb-4">{{__('messages.Cats')}}</h2>
+            <p>{{__('messages.Cats_parg')}}</p>
           </div>
         </div>	
 				<div class="row">
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
-						<a href="./"><div class="cat-box">
+						<div class="cat-widget">
+						<a href="./">
+							<div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-language"></span>
 						<div class="intern-circle"></div>
 						</div>
-						</div></a>
+						</div>
 						<div class="text pt-4">
-							<h3><a href="#">اللغات</a></h3>
-							<p>نوفر لك أفضل السلاسل العالمية لتتعلم مختلف اللغات الانكليزية، الألمانية والفرنسية</p>
+							<h3>{{__('messages.langs')}}</h3>
+							<p>{{__('messages.langs_parg')}}</p>
 							
 						</div>
-					
+						</a>
+						</div>
 					</div>
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<div class="cat-widget">
 						<a href="./"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-qrcode"></span>
 						<div class="intern-circle"></div>
 						</div>
-						</div></a>
+						</div>
 						<div class="text pt-4">
-							<h3><a href="#">المعلوماتية</a></h3>
-							<p>تعلم استخدام الحاسوب وتوظيفه في مجال عملك واحصل على شهادة قيادة الحاسوب الدولية ICDL</p>
+							<h3>{{__('messages.IT')}}</h3>
+							<p>{{__('messages.IT_parg')}}</p>
+						</div>
+						</a>
 						</div>
 					</div>
 					
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<div class="cat-widget">
 						<a href="./"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-calculator"></span>
 						<div class="intern-circle"></div>
 						</div>
-						</div></a>
-						<div class="text pt-4">
-							<h3><a href="#">المحاسبة</a></h3>
-							<p>تعلم مهارات المحاسبة واحترف التعامل مع أفضل برامج المحاسبة لإدارة حسابات عملك</p>
 						</div>
-					
+						<div class="text pt-4">
+							<h3>{{__('messages.Accounting')}}</h3>
+							<p>{{__('messages.Acc_parg')}}</p>
+						</div>
+						</a>
+						</div>
 					</div>
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<div class="cat-widget">
 						<a href="./"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-library_books"></span>
 						<div class="intern-circle"></div>
 						</div>
-						</div></a>
-						<div class="text pt-4">
-							<h3><a href="#">المناهج الحكومية</a></h3>
-							<p>نوفر  لطلاب التعليم الأساسي والثانوي أفضل الطرق التدريسية وأكثر المدرسين خبرة</p>
 						</div>
-					
+						<div class="text pt-4">
+							<h3>{{__('messages.GoveCirc')}}</h3>
+							<p>{{__('messages.GoveCirc_parg')}}</p>
+						</div>
+						</a>
+						</div>
 					</div>
 					<!-- <div class="col-md-3 course ftco-animate">
 						<div class="img" style="background-image: url(images/course-4.jpg);"></div>
@@ -292,9 +302,9 @@ Home
 						</div>
 					</div> -->
 				</div>
-				<div class="row course">
+				<div class="row">
 				<div class="btns_group">
-				<button type="button" class="btn btn-primary">تصفح جميع الدورات</button>
+				<button type="button" class="btn btn-primary">{{__('messages.Browse_All')}}</button>
 				</div>
 				</div>
 			</div>
@@ -651,7 +661,7 @@ Home
 @endsection
 @section("scripts")
 <script>
-	$('.cat-box .cat-container').hover(function(){
+	$('.course .cat-widget').hover(function(){
 		$(this).children().addClass('fill')
 	},function(){
 		$(this).children().removeClass('fill')})
