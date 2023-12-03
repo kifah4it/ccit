@@ -216,51 +216,69 @@ Home
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Our</span> Courses</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+            <h2 class="mb-4">المجالات</h2>
+            <p>حدد مسارك التعليمي واختر الدورات التي تناسب تطلعاتك المستقبلية</p>
           </div>
         </div>	
 				<div class="row">
 					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(images/course-1.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<a href="./"><div class="cat-box">
+						<div class="cat-container">
+						<span class="ico icon-language"></span>
+						<div class="intern-circle"></div>
 						</div>
+						</div></a>
+						<div class="text pt-4">
+							<h3><a href="#">اللغات</a></h3>
+							<p>نوفر لك أفضل السلاسل العالمية لتتعلم مختلف اللغات الانكليزية، الألمانية والفرنسية</p>
+							
+						</div>
+					
 					</div>
 					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(images/course-2.jpg);"></div>
+						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<a href="./"><div class="cat-box">
+						<div class="cat-container">
+						<span class="ico icon-qrcode"></span>
+						<div class="intern-circle"></div>
+						</div>
+						</div></a>
 						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
+							<h3><a href="#">المعلوماتية</a></h3>
+							<p>تعلم استخدام الحاسوب وتوظيفه في مجال عملك واحصل على شهادة قيادة الحاسوب الدولية ICDL</p>
 						</div>
 					</div>
+					
 					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(images/course-3.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<a href="./"><div class="cat-box">
+						<div class="cat-container">
+						<span class="ico icon-calculator"></span>
+						<div class="intern-circle"></div>
 						</div>
+						</div></a>
+						<div class="text pt-4">
+							<h3><a href="#">المحاسبة</a></h3>
+							<p>تعلم مهارات المحاسبة واحترف التعامل مع أفضل برامج المحاسبة لإدارة حسابات عملك</p>
+						</div>
+					
 					</div>
 					<div class="col-md-3 course ftco-animate">
+						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+						<a href="./"><div class="cat-box">
+						<div class="cat-container">
+						<span class="ico icon-library_books"></span>
+						<div class="intern-circle"></div>
+						</div>
+						</div></a>
+						<div class="text pt-4">
+							<h3><a href="#">المناهج الحكومية</a></h3>
+							<p>نوفر  لطلاب التعليم الأساسي والثانوي أفضل الطرق التدريسية وأكثر المدرسين خبرة</p>
+						</div>
+					
+					</div>
+					<!-- <div class="col-md-3 course ftco-animate">
 						<div class="img" style="background-image: url(images/course-4.jpg);"></div>
 						<div class="text pt-4">
 							<p class="meta d-flex">
@@ -272,12 +290,17 @@ Home
 							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
 							<p><a href="#" class="btn btn-primary">Apply now</a></p>
 						</div>
-					</div>
+					</div> -->
+				</div>
+				<div class="row course">
+				<div class="btns_group">
+				<button type="button" class="btn btn-primary">تصفح جميع الدورات</button>
+				</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="ftco-section bg-light">
+		<!-- <section class="ftco-section bg-light">
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
@@ -368,7 +391,7 @@ Home
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 
     <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
@@ -425,7 +448,7 @@ Home
     	</div>
     </section>
 
-		<section class="ftco-section bg-light">
+		<!-- <section class="ftco-section bg-light">
 			<div class="container">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
@@ -502,7 +525,7 @@ Home
           </div>
         </div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="ftco-section testimony-section">
       <div class="container">
@@ -625,4 +648,12 @@ Home
         </div>
     	</div>
     </section>
+@endsection
+@section("scripts")
+<script>
+	$('.cat-box .cat-container').hover(function(){
+		$(this).children().addClass('fill')
+	},function(){
+		$(this).children().removeClass('fill')})
+</script>
 @endsection

@@ -9965,4 +9965,83 @@ transition: all 0.2s linear;
       }
       .ftco-navbar-light .navbar-toggler {
         font-size: 22px;
-      }
+      }.course .cat-box{
+  width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    line-height: 100px;
+}
+.course .cat-box .cat-container{
+  text-align: center;
+  background: #ffffff;
+  border-radius: 50px;
+  vertical-align: middle;
+  border: 4px;
+  border-style: solid;
+  border-color: #fda638;
+}
+
+.course .cat-box .cat-container .ico{
+  font-size: 50px;
+  color: #535257;
+  position: relative;
+  margin: auto;
+  vertical-align: middle;
+  z-index:1;
+  transition: color 0.1s ease-in-out;
+  animation-delay: 0.2s;
+}
+.course .cat-box .cat-container .ico.fill{
+  color: #fff;
+}
+.course .text{
+  text-align: center;
+}
+.course .text a{
+  color: #535257 !important;
+}
+
+@media (min-width: 992px) {
+  .course::after{
+    content: "";
+      display: block;
+      width: 196px;
+      height: 1px;
+      background: #53525717;
+      left: -104px;
+      top: 34%;
+      position: absolute;
+  }
+  .course:last-child::after{
+    display: none !important;
+  }
+}
+.cat-box .cat-container .intern-circle{
+  position: absolute;
+  border-radius: 45%;
+  background: #fda638;
+  width: 93px;
+  height: 100px;
+  top: 4px;
+  z-index: 0;
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+.cat-box .cat-container .intern-circle.fill{
+  transform: scale(1) !important;
+}
+.course .text.pt-4 p{
+  font-size: 14px !important;
+}
+.course .btns_group{
+  width: 100%;
+  text-align: center;
+  }
+.course .btns_group button.btn{
+background:transparent !important;
+color:#fd5f00;
+}
+.course .btns_group button.btn:hover{
+  background:#fd5f00 !important;
+  color:#fff;
+  }
