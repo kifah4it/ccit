@@ -29,7 +29,9 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/switchlang/{id}','switchlang');
     Route::get('/courses','courses');
 });
-
+Route::get('login',function(){
+    return View('admin.login');
+});
 // Route::resource('courses', CourseController::class);
 
 //Route::get('/switchlang/{id}', [HomeController::class, 'switchlang']);
