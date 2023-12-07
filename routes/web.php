@@ -28,6 +28,7 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/','index');
     Route::get('/switchlang/{id}','switchlang');
     Route::get('/courses','courses');
+    Route::get('/course','course');
 });
 Route::get('login',function(){
     return View('admin.login');

@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap.css">
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     @endif
+    @yield('head')
   </head>
   <body>
 	  <!-- <div class="bg-top navbar-light">
