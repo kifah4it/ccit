@@ -25,6 +25,9 @@ return [
     'Acc_parg' => 'Learn accounting skills and master the best accounting programs to manage your business accounts',
     'GoveCirc' => 'Government curricula',
     'GoveCirc_parg' => 'We provide primary and secondary education students with the best teaching methods and the most experienced teachers',
-    'Browse_All' => 'Browse All Courses'
+    'Browse_All' => 'Browse All Courses',
+    'Certified_Certificates'=>'Certified Certificates',
+    'Certified_Certificates_Para'=>'Certificates certified by the Ministry of Education in addition to certificates from the Crafts Association.'
+    
 
 ];

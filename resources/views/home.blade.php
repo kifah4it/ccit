@@ -9,7 +9,7 @@ Home
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">{{__('messages.silder_title')}}</h1>
             <p>{{__('messages.slider_paragraph')}}</p>
-            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
+            <p><a href="login" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
           </div>
         </div>
   </div>
@@ -57,7 +57,7 @@ Home
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Book &amp; Library</h3>
+                <h3 class="heading">{{__('messages.International_curricula')}}</h3>
                 <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
               </div>
             </div>      
@@ -68,8 +68,8 @@ Home
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Sport Clubs</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.Certified_Certificates')}}</h3>
+                <p>{{__('messages.Certified_Certificates_Para')}}</p>
               </div>
             </div>      
           </div>
@@ -154,9 +154,9 @@ Home
     			<div class="col-md-6 align-items-stretch d-flex">
     				<div class="img img-video d-flex align-items-center" style="background-image: url(images/about-2.jpg);">
     					<div class="video justify-content-center">
-								<a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<video src="images/ccitvideo.mp4" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 									<span class="ion-ios-play"></span>
-		  					</a>
+</video>
 							</div>
     				</div>
     			</div>
