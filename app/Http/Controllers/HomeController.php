@@ -68,4 +68,7 @@ class HomeController extends Controller
             return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
     }
+    public function course(){
+        return view('course');
+    }
 }

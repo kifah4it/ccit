@@ -130,17 +130,7 @@
 					st = $w.scrollTop(),
 					navbar = $('.ftco_navbar'),
 					sd = $('.js-scroll-wrap');
-					var navbar2 = $('#ftco-navbar');
-
-					if (st > 150) {
-						navbar2.removeClass('fixed-trans-menu');
-						navbar2.addClass('fixed-white-menu');	
-					} 
-					if (st <= 150) {
-						navbar2.removeClass('fixed-white-menu');
-						navbar2.addClass('fixed-trans-menu');	
-					} 
-					
+										
 			if (st > 150) {
 				if ( !navbar.hasClass('scrolled') ) {
 					navbar.addClass('scrolled');	

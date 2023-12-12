@@ -661,6 +661,27 @@ Home
 @endsection
 @section("scripts")
 <script>
+	var scrollWindow = function() {
+		$(window).scroll(function(){
+			
+			
+			var $w = $(this),
+					st = $w.scrollTop(),
+					navbar = $('.ftco_navbar'),
+					sd = $('.js-scroll-wrap');
+					var navbar = $('#ftco-navbar');
+
+					if (st > 150) {
+						navbar.removeClass('fixed-trans-menu');
+						navbar.addClass('fixed-white-menu');	
+					} 
+					if (st <= 150) {
+						navbar.removeClass('fixed-white-menu');
+						navbar.addClass('fixed-trans-menu');	
+					} 	
+		});
+	};
+	scrollWindow();
 	$('.course .cat-widget').hover(function(){
 		$(this).children().addClass('fill')
 	},function(){
