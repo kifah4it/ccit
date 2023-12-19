@@ -17,26 +17,41 @@ Courses
 
     <section class="ftco-section">
 			<div class="container-fluid px-4">
-				<div class="row">
-					@foreach ($courseslst as $course)
+				<!-- <div class="row">
+				<?php /*	@foreach ($courseslst as $course)
 					@if(!isset($course->Name))
 						@continue
-					@else
+					@else*/ ?>
 					<div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url({{$course->imgSrc}}); background-size: contain;"></div>
+						<div class="img" style="background-image: url(<?php //{{$course->imgSrc}} ?>); background-size: contain;"></div>
 						<div class="text pt-4">
 							<p class="meta d-flex">
 								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
 								<span><i class="icon-table mr-2"></i>10 seats</span>
 								<span><i class="icon-calendar mr-2"></i>4 Years</span>
 							</p>
-							<h3><a href="#">{{$course->Name ?? ''}}</a></h3>
-							<p>{{$course->sDesc ?? ''}}</p>
+							<h3><a href="#"><?php //{{$course->Name ?? ''}}?></a></h3>
+							<p><?php //{{$course->sDesc ?? ''}} ?></p>
 							<p><a href="#" class="btn btn-primary">Apply now</a></p>
 						</div>
 					</div>
-					@endif
-					@endforeach
+					<?php //@endif ?>
+					<?php //@endforeach?>
+				</div> -->
+				<div class="row">
+					<div class="col-md-3 course ftco-animate">
+						<div class="img" style="background-image: url(); background-size: contain;"></div>
+						<div class="text pt-4">
+							<p class="meta d-flex">
+								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
+								<span><i class="icon-table mr-2"></i>10 seats</span>
+								<span><i class="icon-calendar mr-2"></i>4 Years</span>
+							</p>
+							<h3><a href="#"></a></h3>
+							<p></p>
+							<p><a href="#" class="btn btn-primary">Apply now</a></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

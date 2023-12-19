@@ -76,40 +76,6 @@
             ]
         },
         {
-            "id": 2,
-            "fullname": "Test Course",
-            "displayname": "Test Course",
-            "shortname": "tst",
-            "courseimage": "https:\/\/localhost\/pluginfile.php\/14\/course\/generated\/course.svg",
-            "categoryid": 1,
-            "categoryname": "Category 1",
-            "sortorder": 10001,
-            "summary": "<p>Test Course<\/p>",
-            "summaryformat": 1,
-            "summaryfiles": [],
-            "overviewfiles": [],
-            "showactivitydates": true,
-            "showcompletionconditions": true,
-            "contacts": [
-                {
-                    "id": 2,
-                    "fullname": "Admin User"
-                }
-            ],
-            "enrollmentmethods": [
-                "manual"
-            ],
-            "customfields": [
-                {
-                    "name": "Arabic Name",
-                    "shortname": "arname",
-                    "type": "text",
-                    "valueraw": "",
-                    "value": null
-                }
-            ]
-        },
-        {
             "id": 3,
             "fullname": "Interchange Intro",
             "displayname": "Interchange Intro",
@@ -135,8 +101,8 @@
             "showcompletionconditions": true,
             "contacts": [
                 {
-                    "id": 2,
-                    "fullname": "Admin User"
+                    "id": 6,
+                    "fullname": "Amer Dannoun"
                 }
             ],
             "enrollmentmethods": [

@@ -75,7 +75,10 @@
 </body>
 <script>
 	jQuery(function(){
-	jQuery('input[class="sign-up"]').trigger('click');
+        const params = new URLSearchParams(window.location.search)
+        const action = params.get('action');
+        if(action == 'signup')
+	    jQuery('input[class="sign-up"]').trigger('click');
 })
 </script>
 </html>
