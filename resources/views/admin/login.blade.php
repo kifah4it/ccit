@@ -57,6 +57,28 @@
 					<label for="pass" class="label">Email Address</label>
 					<input id="pass" type="text" class="input" placeholder="Enter your email address">
 				</div>
+				
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input" placeholder="Enter your email address">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input" placeholder="Enter your email address">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input" placeholder="Enter your email address">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input" placeholder="Enter your email address">
+				</div>
+
+
+
+
+
 				<div class="group">
 					<input type="submit" class="button" value="Sign Up">
 				</div>

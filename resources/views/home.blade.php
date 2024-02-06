@@ -46,8 +46,8 @@ Home
             		<span class="flaticon-reading"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">Special Education</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <h3 class="heading">{{__('messages.Special_Education')}}</h3>
+                <p>{{__('messages.Special_Education_Para')}}</p>
               </div>
             </div>    
           </div>
@@ -58,7 +58,7 @@ Home
               </div>
               <div class="media-body p-2 mt-3">
                 <h3 class="heading">{{__('messages.International_curricula')}}</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                <p>{{__('messages.desc_curricula')}}</p>
               </div>
             </div>      
           </div>
@@ -84,24 +84,24 @@ Home
 						<div class="img" style="background-image: url(images/about.jpg);"></div>
 					</div>
 					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-          	<h2 class="mb-4">What We Offer</h2>
-						<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>
+          	<h2 class="mb-4">{{__('messages.what_we_offer')}}</h2>
+						<p>{{__('messages.what_we_offer_para')}}</p>
 						<div class="row mt-5">
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security"></span></div>
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security "></span></div>
 									<div class="text pl-3">
-										<h3>Safety First</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.safety')}}</h3>
+										<p>{{__('messages.safety_para')}}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-reading"></span></div>
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-teacher"></span></div>
 									<div class="text pl-3">
-										<h3>Regular Classes</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.staff')}}</h3>
+										<p>{{__('messages.staff_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -109,8 +109,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 									<div class="text pl-3">
-										<h3>Certified Teachers</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.certified')}}</h3>
+										<p>{{__('messages.certified_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -118,17 +118,17 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 									<div class="text pl-3">
-										<h3>Sufficient Classrooms</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.classes')}}</h3>
+										<p>{{__('messages.classes_para')}}</p>
 									</div>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-jigsaw"></span></div>
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="icon-pool"></span></div>
 									<div class="text pl-3">
-										<h3>Creative Lessons</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.pool')}}</h3>
+										<p>{{__('messages.pool_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -136,8 +136,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
 									<div class="text pl-3">
-										<h3>Sports Facilities</h3>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia.</p>
+										<h3>{{__('messages.kids')}}</h3>
+										<p>{{__('messages.kids_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -161,9 +161,9 @@ Home
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
-            <h2 class="mb-4">Fox University</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <h2 class="mb-4">{{__('messages.ccit')}}</h2>
+            <p>{{__('messages.ccit_para1')}}</p>
+            <p>{{__('messages.ccit_para2')}}</p>
           </div>
         </div>	
     		<div class="row d-md-flex align-items-center justify-content-center">
@@ -404,59 +404,7 @@ Home
 		</section> -->
 
 
-    <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
-    	<div class="overlay"></div>
-    	<div class="container">
-    		<div class="row justify-content-end">
-    			<div class="col-md-6 py-5 px-md-5">
-    				<div class="py-md-5">
-		          <div class="heading-section heading-section-white ftco-animate mb-5">
-		            <h2 class="mb-4">Request A Quote</h2>
-		            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-		          </div>
-		          <form action="#" class="appointment-form ftco-animate">
-		    				<div class="d-md-flex">
-			    				<div class="form-group">
-			    					<input type="text" class="form-control" placeholder="First Name">
-			    				</div>
-			    				<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Last Name">
-			    				</div>
-		    				</div>
-		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			    					<div class="form-field">
-		        					<div class="select-wrap">
-		                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-		                    <select name="" id="" class="form-control">
-		                    	<option value="">Select Your Course</option>
-		                      <option value="">Art Lesson</option>
-		                      <option value="">Language Lesson</option>
-		                      <option value="">Music Lesson</option>
-		                      <option value="">Sports</option>
-		                      <option value="">Other Services</option>
-		                    </select>
-		                  </div>
-			              </div>
-			    				</div>
-		    					<div class="form-group ml-md-4">
-			    					<input type="text" class="form-control" placeholder="Phone">
-			    				</div>
-		    				</div>
-		    				<div class="d-md-flex">
-		    					<div class="form-group">
-			              <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
-			            </div>
-			            <div class="form-group ml-md-4">
-			              <input type="submit" value="Request A Quote" class="btn btn-primary py-3 px-4">
-			            </div>
-		    				</div>
-		    			</form>
-		    		</div>
-    			</div>
-        </div>
-    	</div>
-    </section>
+    
 
 		<!-- <section class="ftco-section bg-light">
 			<div class="container">
@@ -671,11 +619,11 @@ Home
 					sd = $('.js-scroll-wrap');
 					var navbar = $('#ftco-navbar');
 
-					if (st > 150) {
+					if (st > 10) {
 						navbar.removeClass('fixed-trans-menu');
 						navbar.addClass('fixed-white-menu');	
 					} 
-					if (st <= 150) {
+					if (st <= 10) {
 						navbar.removeClass('fixed-white-menu');
 						navbar.addClass('fixed-trans-menu');	
 					} 	

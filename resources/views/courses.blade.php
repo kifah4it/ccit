@@ -60,5 +60,12 @@ Courses
 <script>
 	$('#ftco-nav > ul > li.nav-item').removeClass('active');
 		$('#ftco-nav > ul > li.nav-item:eq(2)').addClass('active');
+		
+		jQuery(function(){
+        const params = new URLSearchParams(window.location.search)
+        const action = params.get('action');
+        if(action == 'signup')
+	    jQuery('input[class="sign-up"]').trigger('click');
+})	
 </script>
 @endsection

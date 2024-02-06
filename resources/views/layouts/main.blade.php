@@ -36,6 +36,7 @@
     @yield('head')
   </head>
   <body>
+  
 	  <!-- <div class="bg-top navbar-light">
     	<div class="container-fluid">
     		<div class="row no-gutters d-flex align-items-center align-items-stretch">
@@ -70,6 +71,7 @@
 		    </div>
 		  </div>
     </div> -->
+    
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
       <img src="./images/logo-small.png" class="logo" />
@@ -85,27 +87,33 @@
 	        	<li class="nav-item dropdown">
               <a href="./courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <li class="nav-item dropdown"><a class="dropdown-item" href="#">English</a></li>
-               <li><a class="dropdown-item" href="#">Dutch</a></li>
-               <li><a class="dropdown-item" href="#">Computer</a></li>
+               <li class="nav-item dropdown"><a class="dropdown-item" href="#">{{__('messages.dropE')}}</a></li>
+               <li><a class="dropdown-item" href="#">{{__('messages.dropD')}}</a></li>
+               <li><a class="dropdown-item" href="#">{{__('messages.dropC')}}</a></li>
                <div class="dropdown-divider"></div>
                <li></li>
             </ul>
             </li>
-	        	<li class="nav-item"><a href="teacher.html" class="nav-link">{{__('messages.Staff')}}</a></li>
-	        	<li class="nav-item"><a href="blog.html" class="nav-link">{{__('messages.Blog')}}</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">{{__('messages.Contact')}}</a></li>
-	        </ul>
-          <div class="d-flex">
-        <form action="#" class="searchform order-lg-last">
+            <a href="login?action=signup" class="btnnn">{{__('messages.login')}}</a>
+
+           
+
         
+	        <!--	<li class="nav-item"><a href="teacher.html" class="nav-link">{{__('messages.Staff')}}</a></li>
+	        	<li class="nav-item"><a href="blog.html" class="nav-link">{{__('messages.Blog')}}</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">{{__('messages.Contact')}}</a></li>-->  </ul>
+       
+       <!-- <form action="#" class="searchform order-lg-last">
+      
         <div class="form-group d-flex">
           <input type="text" class="form-control pl-3" placeholder="{{__('messages.Search')}}">
           <button type="submit" placeholder="" class="form-control search"><span class="ion-ios-search"></span></button>
         </div>
-      </form>
-      <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </form>  -->
+      
+      
+      <div class="dropdown" style="margin: 9px;margin-bottom:0px; ">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 31px;">
         {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -113,6 +121,20 @@
           <a class="dropdown-item" href="./switchlang/EN">EN</a>
         </div>
       </div>
+      <ul style="list-style-type: none ; margin-top:20px;padding: unset;text-align: center;">
+      <li>
+        
+      <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3 ">
+      <!--<a href="#"><span class=" nav-link pl-0" ></span><span class="text , nav-link pl-0" >+963 955 229 971</span></a> -->
+      
+                <li class="ftco-animate "><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-telegram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
+              </ul>
+  
+      </li>
+	    </ul> 
           </div>
 	      </div>
         
@@ -124,71 +146,47 @@
         <div class="row mb-5">
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">{{__('messages.questions')}}</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">{{__('messages.location')}}</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="ftco-footer-widget mb-5">
-              <h2 class="ftco-heading-2">Recent Blog</h2>
-              <div class="block-21 mb-4 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_1.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="block-21 mb-5 d-flex">
-                <a class="blog-img mr-4" style="background-image: url(images/image_2.jpg);"></a>
-                <div class="text">
-                  <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
-                  <div class="meta">
-                    <div><a href="#"><span class="icon-calendar"></span> June 27, 2019</a></div>
-                    <div><a href="#"><span class="icon-person"></span> Admin</a></div>
-                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          
+          
+
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>About</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Deparments</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contact</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.About')}}</a></li>
+                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Subscribe Us!</h2>
+            	<h2 class="ftco-heading-2">{{__('messages.')}}</h2>
               <form action="#" class="subscribe-form">
                 <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                  <input type="text" class="form-control mb-2 text-center" placeholder="{{__('messages.Home')}}">
                   <input type="submit" value="Subscribe" class="form-control submit px-3">
                 </div>
               </form>
             </div>
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2 mb-0">Connect With Us</h2>
+            	<h2 class="ftco-heading-2 mb-0">{{__('messages.conect_us')}}</h2>
+
             	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-telegram"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
               </ul>
             </div>
           </div>
