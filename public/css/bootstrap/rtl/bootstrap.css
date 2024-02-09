@@ -10821,7 +10821,7 @@ textarea.form-control {
             color:#565656 !important;
           }
 .navbar > .container-fluid{
-  padding: 10px;
+  padding: 0px;
 }
 .navbar .d-flex > .dropdown{
   margin-top: 0.3rem;

@@ -83,7 +83,7 @@
           
 	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="./" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
-	        	<li class="nav-item"><a href="./about" class="nav-link">{{__('messages.About')}}</a></li>
+	        	<li class="nav-item"><a href="#about" class="nav-link">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
               <a href="./courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -163,13 +163,13 @@
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.About')}}</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
+                <li><a href="./"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
+                <li><a href="#about"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.About')}}</a></li>
+                <li><a href="#courses"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
+          <div class="col-md-6 col-lg-3 " >
             <div class="ftco-footer-widget mb-5">
             	<h2 class="ftco-heading-2">{{__('messages.')}}</h2>
               <form action="#" class="subscribe-form">

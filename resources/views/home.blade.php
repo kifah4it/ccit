@@ -135,7 +135,7 @@ Home
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
-									<div class="text pl-3">
+									<div class="text pl-3" >
 										<h3>{{__('messages.kids')}}</h3>
 										<p>{{__('messages.kids_para')}}</p>
 									</div>
@@ -146,11 +146,11 @@ Home
 				</div>
 			</div>
 		</section>
-		
+		<a href="" id="about"></a>
 
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5" >
     	<div class="container">
-    		<div class="row justify-content-center mb-5 pb-2 d-flex">
+    		<div class="row justify-content-center mb-5 pb-2 d-flex" >
     			<div class="col-md-6 align-items-stretch d-flex">
     				<div class="img img-video d-flex align-items-center" style="background-image: url(images/about-2.jpg);">
     					<div class="video justify-content-center">
@@ -160,7 +160,7 @@ Home
 							</div>
     				</div>
     			</div>
-          <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5">
+          <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5" >
             <h2 class="mb-4">{{__('messages.ccit')}}</h2>
             <p>{{__('messages.ccit_para1')}}</p>
             <p>{{__('messages.ccit_para2')}}</p>
@@ -212,7 +212,7 @@ Home
     </section>
 
 
-		<section class="ftco-section">
+		<section class="ftco-section" id="courses">
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">

@@ -55,7 +55,14 @@ return [
     'kids'=>'Children’s courses',
     'kids_para'=>'Dedicated courses for children in especially fun and attractive ways.',
     'ccit'=>' CCIT',
-    'ccit_para1'=>'نبذه تانيه',
+    'ccit_para1'=>'نبذه
+    k
+    k
+    kfkdsjkfhsdjkfhjksdhfjksdhfkjsklfjksdhjkshfjkskfhsksdfkhsdjkfhjkshfshdjkfhsdjkfhjksdmfbwenmfbwekjfjkwebflbelsdjlclgcludbcnlebflweufhefehfehfefjkhjsdbnm,bvcjvxcvmnbruvkdbsvnbeikjdbvljbruhvurvnfjkdvuirhkndbvbruihsjkfnkrbfjkdhjksb;vjkbrsvdsvsdvsdfsdfsdfsdfsdfsdfsdfsdfsfsdfsdf
+    k
+    kk
+    
+تانيه',
     'ccit_para2'=>' انطلاقا من ايماننا ان العلم رسالة و الرسالة للعالم,وفرنا خدماتنا عن بعد لتكون متاحة بسهولة و يسر بغض النظر عن موقعك الجغرافي.',
     
 
