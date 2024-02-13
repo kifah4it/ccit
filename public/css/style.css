@@ -10049,3 +10049,86 @@ color:#fd5f00;
 .course .cat-widget a p{
   color: #666666;
 }
+
+.InterChange_image{
+   position: relative;
+   width: 240px;
+   height:200px;
+   margin-top: 80px;
+}
+.English_top span{
+font-size: 33px;
+color: #535257;
+margin-top: 30px;
+margin-left: -8px;
+
+}
+.English_top .First_icon {
+  width: 55px;
+  height: 55px;
+
+}
+.Course span{
+  font-size: 22px;
+}
+.Course{
+ margin-top: 50px; 
+ text-align: center;  
+ height: 270px;
+ max-height: 270px;
+ border-radius: 18px;
+ background: #ffffff;
+ box-shadow:  -5px -5px 5px #e8e8e8,
+  5px 5px 5px #ffffff;
+}
+
+.Course_Im{
+  position: relative;
+  width: 120px;
+  height:155px;
+  margin-top: 5px;
+  margin-right:300px;
+  margin-left: 10px;
+}
+
+.Course h5{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.English_top{
+ display: flex;
+ justify-content: center;
+ align-items: center;}
+
+.English{
+justify-content: center;
+align-items: center;
+}
+
+.Doutch_top{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ 
+}
+.Doutch_top .First_icon
+{
+  height: 55px;
+  width: 55px;
+  margin-top: 50px;
+}
+
+.Doutch_top span{
+font-size: 30px;
+color: #535257;
+margin-top: 62px;
+margin-left: 9px;
+
+}
+
+.Languages{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+}
+
