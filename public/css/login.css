@@ -208,8 +208,9 @@ top: 0;
 
 .warpper .info-text.login{
     right: 0;
-    text-align: right;
+    text-align: left;
     padding: 0 40px 60px 150px;
+    margin-left: 100px;
     
 }
 
@@ -303,6 +304,12 @@ transition-delay: 0.5s;
 }
 
 @media only screen and (max-width: 600px) {
+    #edit{
+        margin-bottom: 38px;
+    }
+    #edit1{
+        display: none;
+    }
     .warpper {
         width: 400px;
         height: 840px;
@@ -352,3 +359,4 @@ transition-delay: 0.5s;
   #full_name{
     margin-left: 70px;
   }
+  

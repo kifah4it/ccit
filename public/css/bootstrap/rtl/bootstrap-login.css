@@ -231,7 +231,7 @@ top: 0;
 
 .warpper .info-text.register{
     left: 0;
-    text-align: left;
+    text-align: right;
     padding: 0 150px 60px 40px;
     pointer-events: none;
 }
@@ -304,6 +304,12 @@ transition-delay: 0.5s;
 }
 
 @media only screen and (max-width: 600px) {
+    #edit{
+        margin-bottom: 38px;
+    }
+    #edit1{
+        display: none;
+    }
     .warpper {
         width: 400px;
         height: 840px;

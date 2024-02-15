@@ -27,7 +27,22 @@ return [
     'GoveCirc_parg' => 'We provide primary and secondary education students with the best teaching methods and the most experienced teachers',
     'Browse_All' => 'Browse All Courses',
     'Certified_Certificates'=>'Certified Certificates',
-    'Certified_Certificates_Para'=>'Certificates certified by the Ministry of Education in addition to certificates from the Crafts Association.'
+    'Certified_Certificates_Para'=>'Certificates certified by the Ministry of Education in addition to certificates from the Crafts Association.',
+    'first_name'=>'First name',
+    'last_name'=>'Last name',
+    'middle_name'=>'Mid name',
+    'phone_number'=>'Phone number',
+    'username'=>'Username',
+    'email'=>'Email',
+    'password'=>'Password',
+    'have_account'=>'Already have an account?',
+    'login'=>'Log in',
+     'Welcome_CCIT'=>'Welcome to CCIT center!',
+     'register_with'=>'register with us to advance your education',
+     'signup'=>'Create new account',
+     'dont_have_account'=>'Dont have an account?',
+     'date_birth'=>'Date birth',
+     'full_name'=>'Full name in arabic'
     
 
 ];

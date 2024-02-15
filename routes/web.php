@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CourseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AuthController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -26,13 +28,29 @@ Route::post('users',function(Request $request){
 
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','index');
-    Route::get('/switchlang/{id}','switchlang');
+   Route::get('/switchlang/{id}','switchlang');
     Route::get('/courses','courses');
     Route::get('/course','course');
 });
 Route::get('login',function(){
-    return View('admin.login');
+    return View('login');
 });
+
+// Route::get('/dashboard','DashboardController@index');
+//  Route::post('/Login',"AuthController@Login");
+// Route::get('/','AuthController@show');
+
+Route::controller(AuthController::class)->group(function(){
+    Route::post('/Login','Login');
+});
+
+Route::controller(DashboardController::class)->group(function(){
+    Route::get('/dashboard','index');
+});
+
+
 // Route::resource('courses', CourseController::class);
 
 //Route::get('/switchlang/{id}', [HomeController::class, 'switchlang']);
+
+Route::resource('signup',SignupController::class);

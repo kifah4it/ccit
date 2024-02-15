@@ -3,6 +3,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Login</title>
+        <link rel="icon" href="./images/login_logo2.png">
         
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         @if(Cookie::get('lang') == 'EN')
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap-login.css">
     @endif
+    
     </head>
     <body>              
     <div class="warpper">
@@ -45,7 +47,7 @@
    </div>
    <div class="info-text login" >
     <h2 class="animation" style="--i:0; --j:20;">{{__('messages.Welcome_CCIT')}}</h2>
-    <p class="animation" style="--i:1; --j:21;">{{__('messages.register_with')}}</p>
+    <p class="animation" style="--i:1; --j:21;" id="edit1">{{__('messages.register_with')}}</p>
    </div>
    <div class="form-box register">
     <h2 class="animation" style="--i:17; --j:0;  margin-left: 16px;  ">{{__('messages.signup')}}</h2>
@@ -65,8 +67,8 @@
        </div>
     </div>
     <div class="input-box animation" style="--i:20; --j:3;">
-        <input type="text" required name="last name">
-        <label id='full_name'>{{__('messages.full_name')}}</label>
+        <input type="text" required name="last name" id="arabicinput" style="direction:rtl;" onkeyup="checkForEnglish(this.value)">
+        <label id='full_name' for="arabicinput">{{__('messages.full_name')}}</label>
         <!--<i class='bx bxs-user'></i>-->
         
     </div> 
@@ -104,15 +106,15 @@
     </div>
     <button type="submit" class="btn animation" style="--i:21; --j:4;">{{__('messages.signup')}}</button>
     <div class="logreg-link animation" style="--i:22; --j:5;">
-        <p>{{__('messages.have_account')}}
-        <a href="#" class="login-link">{{__('messages.login')}}</a></p>
+        <p id="edit">{{__('messages.have_account')}}
+        <a href="#" class="login-link" id="edit">{{__('messages.login')}}</a></p>
     </div>
     </form>
    </div>
 
    <div class="info-text register">
     <h2 class="animation" style="--i:17; --j:0;">{{__('messages.Welcome_CCIT')}}</h2>
-    <p class="animation" style="--i:18; --j:1;">{{__('messages.register_with')}}</p>
+    <p class="animation" style="--i:18; --j:1;" id="edit1">{{__('messages.register_with')}}</p>
    </div>
 
     </div>

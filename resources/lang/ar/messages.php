@@ -28,5 +28,22 @@ return [
     'Browse_All' => 'تصفح جميع الدورات',
     'Certified_Certificates'=>'شهادات مصدقة',
     'Certified_Certificates_Para'=>'شهادات مصدقة من وزارة التربية بالاضافة الى شهادات من الجمعية الحرفية',
-    'International_curricula'=>'مناهج عالمية'
+    'International_curricula'=>'مناهج عالمية',
+    'first_name'=>'الإسم الأول',
+    'last_name'=>'الإسم الأخير',
+    'middle_name'=>'اسم الأب',
+    'phone_number'=>'رقم الهاتف',
+    'username'=>'اسم المستخدم',
+    'email'=>'البريد الاكتروني',
+    'password'=>'كلمة السر',
+    'have_account'=>'هل لديك حساب بالفعل؟',
+    'login'=>'تسجيل الدخول',
+    'Welcome_CCIT'=>'أهلاً بكم في مركز CCIT!',
+    'register_with'=>'قم بالتسجيل معنا لرفع مستوى تعليمك',
+    'signup'=>'إنشاء حساب جديد',
+    'dont_have_account'=>'ليس لديك حساب؟',
+    'date_birth'=>'تاريخ الميلاد',
+    'full_name'=>'الإسم الكامل باللغة العربية'
+
+
 ];
