@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\Middleware;
