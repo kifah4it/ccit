@@ -27,7 +27,13 @@ return [
     'GoveCirc_parg' => 'We provide primary and secondary education students with the best teaching methods and the most experienced teachers',
     'Browse_All' => 'Browse All Courses',
     'Certified_Certificates'=>'Certified Certificates',
-    'Certified_Certificates_Para'=>'Certificates certified by the Ministry of Education in addition to certificates from the Crafts Association.'
-    
+    'Certified_Certificates_Para'=>'Certificates certified by the Ministry of Education in addition to certificates from the Crafts Association.',
+    'Foundation'=>'Foundation',
+    'Beginner'=>'Beginner',
+    'Pre-intermediate'=>'Pre-intermediate',
+    'intermediate'=>'intermediate',
+    'Upper-intermediate'=>'Upper-intermediate',
+    'Advanced'=>'Advanced',
+
 
 ];

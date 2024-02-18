@@ -28,5 +28,11 @@ return [
     'Browse_All' => 'تصفح جميع الدورات',
     'Certified_Certificates'=>'شهادات مصدقة',
     'Certified_Certificates_Para'=>'شهادات مصدقة من وزارة التربية بالاضافة الى شهادات من الجمعية الحرفية',
-    'International_curricula'=>'مناهج عالمية'
+    'International_curricula'=>'مناهج عالمية',
+    'Foundation'=>'تأسيس',
+    'Beginner'=>'مبتدئ',
+    'Pre-intermediate'=>'متوسط أول',
+    'intermediate'=>'متوسط',
+    'Upper-intermediate'=>'متوسط متقدم',
+    'Advanced'=>'متقدم',
 ];

@@ -18,7 +18,7 @@ Courses
 
      <section class="container-fluid Languages">
     
-    <div class=" row English_top ">
+    <div class=" row English_top " style="direction:ltr;">
 		
 	<br>
 	<img class="First_icon" src="images/E_icon.PNG" > 
@@ -36,7 +36,7 @@ Courses
 <div class="col-md-4">
 	<div class="Course">
 <span style=color:#fecd29><b>Ventures</b></span>
- <h5>Foundation</h5>
+ <h5>{{__('messages.Foundation')}}</h5>
 <img class="Course_Im" src="images/Ve_Im.JPEG" >
 
 </div>
@@ -45,7 +45,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#e9d129><b>Intro A</b></span>
-<h5>Foundation</h5>
+<h5>{{__('messages.Foundation')}}</h5>
 <img class="Course_Im" src="images/Intro.JPG" >
 </div>
 </div>
@@ -53,7 +53,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#e9d129><b>Intro B</b></span>
-<h5>Beginner</h5>
+<h5>{{__('messages.Beginner')}}</h5>
 <img class="Course_Im" src="images/Intro.JPG" >
 
 </div>
@@ -62,7 +62,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#e96c00><b>Let's Talk 1</b></span>
-<h5>Beginner</h5>
+<h5>{{__('messages.Beginner')}}</h5>
 <img class="Course_Im" src="images/Talk1.JPG" >
 </div>
 </div>
@@ -70,7 +70,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#d52316><b>1A</b></span > 
-<h5>Beginner</h5>
+<h5>{{__('messages.Beginner')}}</h5>
 <img class="Course_Im" src="images/L1.JPG">
 </div>
 </div>
@@ -78,7 +78,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#d52316><b>1B</b></span>
-<h5>Beginner</h5>
+<h5>{{__('messages.Beginner')}}</h5>
 <img class="Course_Im" src="images/L1.JPG">
 </div>
 </div>
@@ -86,7 +86,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#67b142><b>Let's Talk 2</b></span>
-<h5>Pre-intermediate</h5>
+<h5>{{__('messages.Pre-intermediate')}}</h5>
 <img class="Course_Im" src="images/Talk2.JPG" >
 </div>
 </div>
@@ -94,7 +94,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#2c59c3><b>2A</b></span>
-<h5>Pre-intermediate</h5>
+<h5>{{__('messages.Pre-intermediate')}}</h5>
 <img class="Course_Im" src="images/L2.JPG">
 </div>  
 </div>
@@ -102,7 +102,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#2c59c3><b>2B</b></span>
-<h5>Intermediate</h5>
+<h5>{{__('messages.intermediate')}}</h5>
 <img class="Course_Im" src="images/L2.JPG">
 </div>
 </div> 
@@ -110,7 +110,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#96579d><b>Let's Talk 3</b></span>
-<h5>Intermediate</h5>
+<h5>{{__('messages.intermediate')}}</h5>
 <img class="Course_Im" src="images/Talk3.JPG" >
 </div>
 </div>
@@ -118,7 +118,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#10964d><b>3A</b></span>
-<h5>Intermediate</h5>
+<h5>{{__('messages.intermediate')}}</h5>
 <img class="Course_Im" src="images/L3.JPG" >
 </div>
 </div>
@@ -126,7 +126,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#10964d><b>3B</b></span>
-<h5>Upper-intermediate</h5>
+<h5>{{__('messages.Upper-intermediate')}}</h5>
 <img class="Course_Im" src="images/L3.JPG" >
 </div>
 </div>
@@ -134,7 +134,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#e54327><b>4A</b></span>
-<h5>Upper-intermediate</h5>
+<h5>{{__('messages.Upper-intermediate')}}</h5>
 <img class="Course_Im" src="images/L4.JPG" >
 </div>
 </div>
@@ -142,7 +142,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#e54327><b>4B</b></span>
-<h5>Upper-intermediate</h5>
+<h5>{{__('messages.Upper-intermediate')}}</h5>
 <img class="Course_Im" src="images/L4.JPG" >
 </div>
 </div>
@@ -150,7 +150,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#2075b3><b>5A</b></span>
-<h5>Advanced</h5>
+<h5>{{__('messages.Advanced')}}</h5>
 <img class="Course_Im" src="images/L5.JPG" >
 </div>
 </div>
@@ -158,7 +158,7 @@ Courses
 <div class="col-md-4">
 <div class="Course">
 <span style=color:#2075b3><b>5B</b></span>
-<h5>Advanced</h5>
+<h5>{{__('messages.Advanced')}}</h5>
 <img class="Course_Im" src="images/L5.JPG" >
 </div>
 </div>
@@ -170,7 +170,59 @@ Courses
 <img class="row First_icon" src="images/D_icon.png" > 
 	<span><b>outch Courses</b></span>
 		 <br><br>    
-</div> 
+</div>
+
+
+
+ <div class="row Doutch">
+   
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#ab1c0e><b>A1-1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#ab1c0e><b>A1-2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#005896><b>A2-1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A2.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#005896><b>A2-2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/A2.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#00924a><b>B1</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/B1.JPG" >
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span style=color:#00924a><b>B2</b></span>
+<h5></h5>
+<img class="Course_Im" src="images/B1.JPG" >
+</div>
+</div>
 
 </section>
 
