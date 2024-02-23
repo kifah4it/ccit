@@ -51,7 +51,7 @@
    </div>
    <div class="form-box register">
     <h2 class="animation" style="--i:17; --j:0;  margin-left: 16px;  ">{{__('messages.signup')}}</h2>
-    <form action="{{route('signup.store')}}" method="post">
+    <form id="frmSignup" action="{{route('signup.store')}}" method="post">
         @csrf
     
         <div class='input-container'>
@@ -67,20 +67,20 @@
        </div>
     </div>
     <div class="input-box animation" style="--i:20; --j:3;">
-        <input type="text" required name="last name" id="arabicinput" style="direction:rtl;" onkeyup="checkForEnglish(this.value)">
+        <input type="text" required name="arabicname" id="arabicname" style="direction:rtl;" onkeyup="checkForEnglish(this.value)">
         <label id='full_name' for="arabicinput">{{__('messages.full_name')}}</label>
         <!--<i class='bx bxs-user'></i>-->
         
     </div> 
 
     <div class="input-box animation" style="--i:20; --j:3; ">
-        <input type="phone" required name="date birth">
+        <input type="phone" required name="birthdate">
         <label>{{__('messages.date_birth')}}</label>
         <i class='bx bx-calendar'></i>
     
 </div>
     <div class="input-box animation" style="--i:20; --j:3; ">
-        <input type="phone" required name="Phone number">
+        <input type="phone" required name="mob_num">
         <label>{{__('messages.phone_number')}}</label>
         <i class='bx bxs-phone'></i>
     
@@ -119,6 +119,7 @@
 
     </div>
     <img src="./images/login_logo2.png" alt="user" class="image-container">
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/login.js" ></script>
     </body>
 </html>

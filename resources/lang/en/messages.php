@@ -86,4 +86,12 @@ return [
      'dont_have_account'=>'Dont have an account?',
      'date_birth'=>'Date birth',
      'full_name'=>'Full name in arabic',
+     
+     //Validation messages
+
+     'invalid_password' => 'Passwords must be at least 8 characters and contains special character(s) such as *, -, or #',
+     'Invalid_email' => 'This email address has been used or you entered incorrectly',
+     'used_mobilenumber' => 'The mobile number has already been used.',
+     'used_username' => 'This username already exists, choose another',
+
 ];
