@@ -9040,15 +9040,12 @@ textarea.form-control {
 
 .ftco-footer {
   font-size: 14px;
+  height: 250px;
   background: #232323;
-  padding: 6em 0; }
-  .ftco-footer .ftco-footer-widget {
-    width: 100%;
-    display: block; }
+}
     .ftco-footer .ftco-footer-widget h2 {
       font-weight: normal;
       color: #fff;
-      margin-bottom: 40px;
       font-size: 22px;
       font-weight: 500; }
     .ftco-footer .ftco-footer-widget .logo {
@@ -9084,16 +9081,6 @@ textarea.form-control {
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0; }
-    .ftco-footer .subscribe-form .form-group input {
-      -webkit-border-radius: 2px;
-      -moz-border-radius: 2px;
-      -ms-border-radius: 2px;
-      border-radius: 2px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.1) !important;
-      border: none;
-      color: rgba(255, 255, 255, 0.7) !important;
-      font-size: 16px; }
       .ftco-footer .subscribe-form .form-group input::-webkit-input-placeholder {
         /* Chrome/Opera/Safari */
         color: rgba(255, 255, 255, 0.7) !important; }
@@ -9147,7 +9134,6 @@ textarea.form-control {
 
 .ftco-footer-social li {
   list-style: none;
-  margin: 0 10px 0 0;
   display: inline-block; }
   .ftco-footer-social li a {
     height: 40px;
@@ -10079,12 +10065,9 @@ color:#c76413;
 }
 
 .btnnn:hover {
-  box-shadow: 0 0 20px rgba(253, 95, 0, 0.7);
--webkit-transform: scale(1.1) ;
-transform:scale(1.2);
-border-color: blue ;
-color: white;
-
+  border: 1px solid #c76413;
+  background: transparent;
+  color: #c76413
 }
 
 
