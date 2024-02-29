@@ -54,6 +54,9 @@ jQuery('#frmSignup').submit(function (e) {
            if(res.status == 'warnings'){
                validMsgs(res.messages)
            }
+           else if(res.status == 'success'){
+                console.log('success');
+           }
         },
       error: function(errors){
           res = errors;

@@ -14,32 +14,32 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     @endif
     
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/ionicons.min.css">
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/flaticon.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/icomoon.css">
     @if(Cookie::get('lang') === 'EN')
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css">
     @else
-    <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css">
+    <!-- <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css"> -->
     @endif
     @yield('head')
     @if(Cookie::get('lang') == 'EN') 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css"> 
     @else 
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/bootstrap/rtl/bootstrab.css"> 
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrab.css"> 
     @endif
 
 
@@ -83,7 +83,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
-      <img src="./images/logo-small.png" class="logo" />
+      <img src="{{env('APP_URL')}}/images/logo-small.png" class="logo" />
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span>
 	      </button>
@@ -91,10 +91,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
           
 	        <ul class="offset-md-1 navbar-nav mr-auto">
-	        	<li class="nav-item active"><a href="./" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
+	        	<li class="nav-item active"><a href="{{env('APP_URL')}}/" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="#about" class="nav-link">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
-              <a href="./courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
+              <a href="{{env('APP_URL')}}/courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                <li class="nav-item dropdown"><a class="dropdown-item" href="#">{{__('messages.dropE')}}</a></li>
                <li><a class="dropdown-item" href="#">{{__('messages.dropD')}}</a></li>
@@ -126,8 +126,8 @@
         {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="./switchlang/AR">AR</a>
-          <a class="dropdown-item" href="./switchlang/EN">EN</a>
+          <a class="dropdown-item" href="{{env('APP_URL')}}/switchlang/AR">AR</a>
+          <a class="dropdown-item" href="{{env('APP_URL')}}/switchlang/EN">EN</a>
         </div>
       </div>
       <ul style="list-style-type: none ; margin-top:20px;padding: unset;text-align: center;">
@@ -172,7 +172,7 @@
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="./"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
+                <li><a href="{{env('APP_URL')}}/"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
                 <li><a href="#about"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.About')}}</a></li>
                 <li><a href="#courses"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
               </ul>
@@ -217,24 +217,24 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/popper.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/bootstrap.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.easing.1.3.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.waypoints.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.stellar.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/owl.carousel.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.magnific-popup.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/aos.js"></script>
+  <script src="{{env('APP_URL')}}/js/jquery.animateNumber.min.js"></script>
+  <script src="{{env('APP_URL')}}/js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
+  <script src="{{env('APP_URL')}}/js/google-map.js"></script>
   @if(Cookie::get('lang') === 'EN')
-  <script src="js/main.js"></script>
+  <script src="{{env('APP_URL')}}/js/main.js"></script>
   @else
-  <script src="js/main-rtl.js"></script>
+  <script src="{{env('APP_URL')}}/js/main-rtl.js"></script>
   @endif
     @yield('scripts')
   </body>

@@ -30,6 +30,7 @@ Route::post('users',function(Request $request){
 Route::controller(HomeController::class)->group(function(){
     Route::get('/','index');
    Route::get('/switchlang/{id}','switchlang');
+    Route::get('/courses/{cat}','courses');
     Route::get('/courses','courses');
     Route::get('/course','course');
 });

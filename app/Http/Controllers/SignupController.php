@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use stdClass;
 
@@ -21,7 +21,8 @@ class SignupController extends Controller
         $data = "&username=".$request->username."&password=".$request->Password."&firstname=".$request->name
         ."&lastname=".$request->last_name."&email=".$request->Email."&arabfullname=".$request->arabicname
         ."&mobnum=".$request->mob_num."&birthdate=".$request->birthdate;
-        $url = 'https://localhost/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=local_ops_register_student'
+        $LMS_URL = env('LMS_URL');
+        $url = $LMS_URL.'/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=local_ops_register_student'
         .$data.'&moodlewsrestformat=json';
         
         $ch = curl_init();
@@ -46,6 +47,7 @@ class SignupController extends Controller
             case 'error':
                 $res['status'] = 'error';
                 $res['messages'] = (array) $result['messages'];
+                Log::error('Signup error occured: '. json_encode($result['messages']));
                 break;
             case 'success':
                 $res['status'] = 'success';

@@ -14,9 +14,10 @@ class HomeController extends Controller
     public function index(){
         return view('home');
     }
-    public function courses(){
-        // $url = 'https://localhost/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=core_course_get_courses_by_field&moodlewsrestformat=json';
-        $url = 'http://localhost:8080/ccit/resources/Courses.json';
+    public function courses($cat = null){
+        $LMS_URL = env('LMS_URL');
+         $url = $LMS_URL.'/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=local_ops_get_courses_with_parent_cat&catname='.$cat.'&moodlewsrestformat=json';
+      //  $url = 'http://localhost:8080/ccit/resources/Courses.json';
         // $response = HTTP::withOptions([
             
         // ])->get($url);
@@ -36,10 +37,11 @@ class HomeController extends Controller
  
       $response = curl_exec($ch);
         $courses = json_decode($response,true);
+      //  return var_dump($courses);
        // var_dump($courses['courses']);
         $courseslst[] = array();
         
-        foreach($courses as $course){
+        foreach($courses['courses'] as $course){
            $CourseV = new CoursesView();
             $CourseV->Name = $course['fullname'];
             // $CourseV->Name = $course['customfields'][0]['value'] ?? '';

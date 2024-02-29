@@ -3,7 +3,12 @@
 Courses
 @endsection
 @section('content')
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/courses_top.jpg');">
+<style>
+	.hero-wrap-2{
+		background-image: url("{{env('APP_URL')}}/images/courses_top.jpg") !important;
+	}
+</style>
+<section class="hero-wrap hero-wrap-2">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -21,10 +26,10 @@ Courses
     <div class=" row English_top " style="direction:ltr;">
 		
 	<br>
-	<img class="First_icon" src="images/E_icon.PNG" > 
+	<img class="First_icon" src="{{env('APP_URL')}}/images/E_icon.PNG" > 
 	<span><b>nglish Courses</b></span>
 		 
-    <img class="InterChange_image" src="images/InterChange.PNG" >
+    <img class="InterChange_image" src="{{env('APP_URL')}}/images/InterChange.PNG" >
 	
 
 </div>
@@ -172,7 +177,7 @@ Courses
 
 <div class="row Doutch_top"> 
 <br>
-<img class="row First_icon" src="images/D_icon.png" > 
+<img class="row First_icon" src="{{env('APP_URL')}}/images/D_icon.png" > 
 	<span><b>outch Courses</b></span>
 		 <br><br>    
 </div>
@@ -185,7 +190,7 @@ Courses
 <div class="Course"> 
 <span style=color:#ab1c0e><b>A1-1</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/A1.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/A1.JPG" >
 </div>
 </div>
 
@@ -193,7 +198,7 @@ Courses
 <div class="Course"> 
 <span style=color:#ab1c0e><b>A1-2</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/A1.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/A1.JPG" >
 </div>
 </div>
 
@@ -201,7 +206,7 @@ Courses
 <div class="Course"> 
 <span style=color:#005896><b>A2-1</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/A2.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/A2.JPG" >
 </div>
 </div>
 
@@ -209,7 +214,7 @@ Courses
 <div class="Course"> 
 <span style=color:#005896><b>A2-2</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/A2.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/A2.JPG" >
 </div>
 </div>
 
@@ -217,7 +222,7 @@ Courses
 <div class="Course"> 
 <span style=color:#00924a><b>B1</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/B1.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/B1.JPG" >
 </div>
 </div>
 
@@ -225,7 +230,7 @@ Courses
 <div class="Course"> 
 <span style=color:#00924a><b>B2</b></span>
 <h5></h5>
-<img class="Course_Im" src="images/B1.JPG" >
+<img class="Course_Im" src="{{env('APP_URL')}}/images/B1.JPG" >
 </div>
 </div>
 
