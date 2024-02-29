@@ -46,7 +46,7 @@ Courses
 <span style=color:#fecd29><b>{{$course->Name}}</b></span>
  <h5>{{$course->catName}}</h5>
 <img class="Course_Im" src="{{$course->imgSrc}}" >
-
+<p>{{$course->sDesc ?? ''}}</p>
 </div>
 </div>
 
