@@ -61,16 +61,18 @@ return [
     'pool_para'=>'Distance education with renewed offers.',
     'kids'=>'Children’s courses',
     'kids_para'=>'Dedicated courses for children in especially fun and attractive ways.',
-    'ccit'=>' CCIT',
-    'ccit_para1'=>'نبذه
-    k
-    k
-    kfkdsjkfhsdjkfhjksdhfjksdhfkjsklfjksdhjkshfjkskfhsksdfkhsdjkfhjkshfshdjkfhsdjkfhjksdmfbwenmfbwekjfjkwebflbelsdjlclgcludbcnlebflweufhefehfehfefjkhjsdbnm,bvcjvxcvmnbruvkdbsvnbeikjdbvljbruhvurvnfjkdvuirhkndbvbruihsjkfnkrbfjkdhjksb;vjkbrsvdsvsdvsdfsdfsdfsdfsdfsdfsdfsdfsfsdfsdf
-    k
-    kk
-    
-تانيه',
-    'ccit_para2'=>' انطلاقا من ايماننا ان العلم رسالة و الرسالة للعالم,وفرنا خدماتنا عن بعد لتكون متاحة بسهولة و يسر بغض النظر عن موقعك الجغرافي.',
+    'ccit'=>' CCIT Highlights',
+    'ccit_para1'=>'Many years ago, we started here. 
+    At this very place, everything started as an idea that was implemented. 
+    We built hope with hardworking hands and bright minds. 
+    CCIT 
+    Change Center for Information and Technology
+    A language centre, oozing with desire to learn more about foreign cultures; English, German, French, Spanish, and the list goes on. 
+    Different ages and levels, 15 in total. ',
+    'ccit_para2'=>'One classroom wasnt enough. Therefore, we brought many others to quench the increasing thirst for knowledge. 
+    Computer science, including Word, Excel, PowerPoint, Access, and many others.
+    We turned the dream into an objective, and made the dream come true. 
+    CCIT, your second home.',
     'first_name'=>'First name',
     'last_name'=>'Last name',
     'middle_name'=>'Mid name',

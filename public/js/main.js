@@ -267,3 +267,10 @@
 
 })(jQuery);
 
+function scrollToSection(){
+	var section= document.getElementById('section1')
+	section.scrollIntoView({
+		behavior:'smooth'
+	});
+}
+

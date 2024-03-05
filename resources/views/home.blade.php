@@ -9,7 +9,7 @@ Home
           <div class="col-md-6 ftco-animate">
             <h1 class="mb-4">{{__('messages.silder_title')}}</h1>
             <p>{{__('messages.slider_paragraph')}}</p>
-            <p><a href="login" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
+            <p><a onclick="scrollToSection()" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
           </div>
         </div>
   </div>
@@ -152,11 +152,16 @@ Home
     	<div class="container">
     		<div class="row justify-content-center mb-5 pb-2 d-flex" >
     			<div class="col-md-6 align-items-stretch d-flex">
-    				<div class="img img-video d-flex align-items-center" style="background-image: url(images/about-2.jpg);">
+    				<div class="img img-video d-flex align-items-center">
     					<div class="video justify-content-center">
-								<video src="images/ccitvideo.mp4" class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<<!--<video controls class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<source src="./images/ccitvideo.mp4" type="video/mp4">
 									<span class="ion-ios-play"></span>
-</video>
+									</video>-->
+									<video width="540" height="340"controls id="video">
+										<source  src="./images/ccitvideo.mp4" type="video/mp4">
+									</video>
+
 							</div>
     				</div>
     			</div>
@@ -216,11 +221,11 @@ Home
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">{{__('messages.Cats')}}</h2>
+            <h2 class="mb-4" id="section1">{{__('messages.Cats')}}</h2>
             <p>{{__('messages.Cats_parg')}}</p>
           </div>
         </div>	
-				<div class="row">
+				<div class="row" >
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
@@ -232,7 +237,7 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.langs')}}</h3>
+							<h3 >{{__('messages.langs')}}</h3>
 							<p>{{__('messages.langs_parg')}}</p>
 							
 						</div>
@@ -302,9 +307,9 @@ Home
 						</div>
 					</div> -->
 				</div>
-				<div class="row">
-				<div class="btns_group">
-				<button type="button" class="btn btn-primary">{{__('messages.Browse_All')}}</button>
+				<div class="row" >
+				<div  class="btns_group">
+				<button  type="button" class="btn btn-primary">{{__('messages.Browse_All')}}</button>
 				</div>
 				</div>
 			</div>
@@ -576,28 +581,28 @@ Home
     	<div class="container-wrap">
     		<div class="row no-gutters">
 					<div class="col-md-3 ftco-animate">
-						<a href="images/image_1.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/course-1.jpg);">
+						<a href="images/image_11.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_11.jpg);">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-instagram"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="images/image_2.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_2.jpg);">
+						<a href="images/image_22.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_22.jpg);">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-instagram"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="images/image_3.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_3.jpg);">
+						<a href="images/image_33.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_33.jpg);">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-instagram"></span>
     					</div>
 						</a>
 					</div>
 					<div class="col-md-3 ftco-animate">
-						<a href="images/image_4.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_4.jpg);">
+						<a href="images/image_44.jpg" class="gallery image-popup img d-flex align-items-center" style="background-image: url(images/image_44.jpg);">
 							<div class="icon mb-4 d-flex align-items-center justify-content-center">
     						<span class="icon-instagram"></span>
     					</div>
