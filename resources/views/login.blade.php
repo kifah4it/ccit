@@ -21,7 +21,7 @@
     <span class="bg-animate2"></span>
    <div class="form-box login">
     <h2 class="animation" style="--i:0; --j:21; " >{{__('messages.login')}}</h2>
-    <form action="{{url('Login')}}" method="post">
+    <form id="frmLogin" action="{{url('Login')}}" method="post">
         @csrf
     <div class="input-box animation " style="--i:1; --j:22;" >
         <input type="text" required name="email">
@@ -120,6 +120,7 @@
     </div>
     <img src="./images/login_logo2.png" alt="user" class="image-container">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.cookie.js" ></script>
     <script src="js/login.js" ></script>
     </body>
 </html>

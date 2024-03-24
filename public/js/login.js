@@ -85,3 +85,25 @@ function validMsgs(warns){
              })
  })
 }
+jQuery('#frmLogin').submit(function (e) {
+    e.preventDefault();
+    form = $(this);
+    var saveData = $.ajax({
+        type: "POST",
+        url: "http://localhost:8080/ccit/public/Login",
+        data: form.serialize(),
+        dataType: "text",
+        success: function(resultData){
+            res = JSON.parse(resultData);
+           if(res.status){
+            window.location.href =res.loginurl;
+           }
+           else{
+            console.log(res.errMsg);
+           }
+        },
+      error: function(errors){
+          res = errors;
+      }
+  });
+})
