@@ -33,10 +33,9 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/courses/{cat}','courses');
     Route::get('/courses','courses');
     Route::get('/course','course');
+    Route::get('/login','login');
 });
-Route::get('login',function(){
-    return View('login');
-});
+
 
 // Route::get('/dashboard','DashboardController@index');
 //  Route::post('/Login',"AuthController@Login");
@@ -44,7 +43,9 @@ Route::get('login',function(){
 
 Route::controller(AuthController::class)->group(function(){
     Route::post('/Login','Login');
+    Route::get('/Logout','Logout');
 });
+
 
 Route::controller(DashboardController::class)->group(function(){
     Route::get('/dashboard','index');
@@ -62,3 +63,8 @@ Route::controller(DashboardController::class)->group(function(){
 //Route::get('/switchlang/{id}', [HomeController::class, 'switchlang']);
 
 Route::resource('signup',SignupController::class);
+Route::post('/checkenrolmentavailability',[SignupController::class,'checkenrolmentavailability'])->name('checkenrolmentavailability');
+// Route::controller(SignupController::class)->group(function(){
+//     Route::post('/signup','SignupController@store')->name('signup.store');
+//     Route::post('/checkenrolmentavailability','SignupController@checkenrolmentavailability')->name('signup.checkenrolmentavailability');
+// });

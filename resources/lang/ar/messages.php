@@ -79,7 +79,9 @@ return [
     'intermediate'=>'متوسط',
     'Upper-intermediate'=>'متوسط متقدم',
     'Advanced'=>'متقدم',
-    
+    'logoutprogress' => 'جارِ تسجيل الخروج...',
+    'logout' => 'تسجيل خروج',
+    'LearningPlatform' => 'المنصة التعليمية',
     //Validation
     'invalid_password' => ' كلمة السر يجب أن تكون 8 أحرف على الأقل وأن تتضمن رموز مثل: * أو - أو # إلخ..',
      'Invalid_email' => 'العنوان الذي أدخلته غير صحيح أو مستخدم سابقاً',

@@ -88,7 +88,9 @@ return [
      'dont_have_account'=>'Dont have an account?',
      'date_birth'=>'Date birth',
      'full_name'=>'Full name in arabic',
-     
+     'logoutprogress' => 'Logging Out...',
+     'logout' => 'logout',
+     'LearningPlatform' => 'Learning Platform',
      //Validation messages
 
      'invalid_password' => 'Passwords must be at least 8 characters and contains special character(s) such as *, -, or #',

@@ -84,12 +84,26 @@
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
       <img src="{{env('APP_URL')}}/images/logo-small.png" class="logo" />
+      <?php 
+              if(!isset($_SESSION))
+                session_start();
+      ?>
+      @if(isset($_SESSION['mdl_sesskey']))
+      
+      <div class="lmsitem mob">
+      <div class="nav-btn">
+        <a href="{{env('LMS_URL')}}/my" class="nav-link pl-0">{{__('messages.LearningPlatform')}}</a>
+      </div>
+        <span class="icon-graduation-cap LMSico"></span>
+        </div>
+
+        @endif
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span>
 	      </button>
-	     
+        
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-          
+        
 	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="{{env('APP_URL')}}/" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="#about" class="nav-link">{{__('messages.About')}}</a></li>
@@ -101,10 +115,30 @@
                <li><a class="dropdown-item" href="#">{{__('messages.dropC')}}</a></li>
                <div class="dropdown-divider"></div>
                <li></li>
-            </ul>
+                </ul>
+               <li class="nav-item">
+               @if(isset($_SESSION['mdl_sesskey']))
+      
+                    <div class="lmsitem desk">
+                    <div class="nav-btn">
+                      <a href="{{env('LMS_URL')}}/my" class="nav-link pl-0">{{__('messages.LearningPlatform')}}</a>
+                    </div>
+                      <span class="icon-graduation-cap LMSico"></span>
+                      </div>
+            
+              @endif
             </li>
-            <a href="login?action=signup" class="btnnn">{{__('messages.login')}}</a>
-
+            </ul>
+           
+              <?php 
+              if(!isset($_SESSION))
+                session_start();
+              ?>
+              @if(!isset($_SESSION['mdl_sesskey']))
+                <a href="login?action=signup" class="btnnn" id="login">{{__('messages.login')}}</a>
+              @else
+                  <a href="{{env('LMS_URL')}}/login/logout.php?sesskey={{$_SESSION['mdl_sesskey']}}" class="btnnn" id="logout">{{__('messages.logout')}}</a>
+              @endif
            
 
         
@@ -229,7 +263,7 @@
   <script src="{{env('APP_URL')}}/js/aos.js"></script>
   <script src="{{env('APP_URL')}}/js/jquery.animateNumber.min.js"></script>
   <script src="{{env('APP_URL')}}/js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
   <script src="{{env('APP_URL')}}/js/google-map.js"></script>
   @if(Cookie::get('lang') === 'EN')
   <script src="{{env('APP_URL')}}/js/main.js"></script>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Auth;
 use Exception;
 
@@ -31,7 +32,7 @@ class AuthController extends Controller
 
 
         // return redirect()->back()->withErrors(['email'=>'Invalid Credentials!']);
-            
+            session_start();
             $uerid = $_REQUEST['email'];
             $password = $_REQUEST['password'];
             $token        = '91da73c2148895cbf3ed23f9760e0cce';
@@ -66,4 +67,30 @@ class AuthController extends Controller
             
          
 }
+public function Logout(Request $req)
+{
+    
+    if(!isset($_SESSION)){
+        session_start();
+    }
+    if($req->ajax()){
+        if(isset($_SESSION['mdl_userinfo'])){
+        unset($_SESSION['mdl_userinfo']);
+        return 'success';
+        }
+        else{
+            return 'error ajax';
+        }
+    }
+        else{
+            if(isset($_SESSION['mdl_userinfo'])){
+                unset($_SESSION['mdl_userinfo']);
+                unset($_SESSION['mdl_sesskey']);
+                return Redirect::to(env('APP_URL'));
+                }
+                else{
+                    return 'error http';
+                }
+        }
+    }
 }
