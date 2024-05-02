@@ -33,9 +33,15 @@ Route::controller(HomeController::class)->group(function(){
     Route::get('/courses/{cat}','courses');
     Route::get('/courses','courses');
     Route::get('/course','course');
+    
+
 });
 Route::get('login',function(){
     return View('login');
+});
+
+Route::get('Languages',function(){
+    return View('Languages');
 });
 
 // Route::get('/dashboard','DashboardController@index');

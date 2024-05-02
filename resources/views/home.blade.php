@@ -226,24 +226,26 @@ Home
           </div>
         </div>	
 				<div class="row" >
-					<div class="col-md-3 course ftco-animate">
+				<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
-						<a href="./">
-							<div class="cat-box">
+						<a href="{{env('APP_URL')}}/Languages"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-language"></span>
 						<div class="intern-circle"></div>
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3 >{{__('messages.langs')}}</h3>
-							<p>{{__('messages.langs_parg')}}</p>
-							
+							<h3>{{__('messages.Languages')}}</h3>
+							<p>{{__('messages.GoveCirc_parg')}}</p>
 						</div>
 						</a>
 						</div>
 					</div>
+				
+		
+				
+					
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
@@ -277,6 +279,7 @@ Home
 						</a>
 						</div>
 					</div>
+
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
@@ -293,6 +296,11 @@ Home
 						</a>
 						</div>
 					</div>
+					
+
+					</div>
+
+					
 					<!-- <div class="col-md-3 course ftco-animate">
 						<div class="img" style="background-image: url(images/course-4.jpg);"></div>
 						<div class="text pt-4">
@@ -307,11 +315,7 @@ Home
 						</div>
 					</div> -->
 				</div>
-				<div class="row" >
-				<div  class="btns_group">
-				<button  type="button" class="btn btn-primary">{{__('messages.Browse_All')}}</button>
-				</div>
-				</div>
+				
 			</div>
 		</section>
 
@@ -509,9 +513,9 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{__('messages.Comment_1')}}</p>
                     <p class="name">Racky Henderson</p>
-                    <span class="position">Father</span>
+                    
                   </div>
                 </div>
               </div>
@@ -523,9 +527,9 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{__('messages.Comment_2')}}</p>
                     <p class="name">Henry Dee</p>
-                    <span class="position">Mother</span>
+                
                   </div>
                 </div>
               </div>
@@ -537,9 +541,9 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{__('messages.Comment_3')}}</p>
                     <p class="name">Mark Huff</p>
-                    <span class="position">Mother</span>
+                    
                   </div>
                 </div>
               </div>
@@ -551,9 +555,9 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{__('messages.Comment_4')}}</p>
                     <p class="name">Rodel Golez</p>
-                    <span class="position">Mother</span>
+                    
                   </div>
                 </div>
               </div>
@@ -565,10 +569,8 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p>{{__('messages.Comment_5')}}</p>
                     <p class="name">Ken Bosh</p>
-                    <span class="position">Mother</span>
-                  </div>
                 </div>
               </div>
             </div>
