@@ -1,38 +1,18 @@
+//
 const warpper = document.querySelector('.warpper');
 const registerLink = document.querySelector('.register-link');
 const loginLink = document.querySelector('.login-link');
 var res = null;
+if($('.register-link').length > 0){
 registerLink.onclick = () => {
     warpper.classList.add('active');
 }
-
+}
+if($('login-link').length > 0){
 loginLink.onclick = () => {
     warpper.classList.remove('active');
 }
-
-/*const arabicinput=document.getElementById('arabicinput');
-arabicinput.addEventListener('input',function(event){
-    const inputText=event.target.value;
-    const arabicRegex=/[\u0600-\u06FF\s]/;
-    if(!arabicRegex.test(inputText)){
-        alert("يرجى ادخال نص باللغة العربية")
-    }
-});*/
-
-/*function validateArabicInput(){
-    var arabicinput=document.getElementById("arabicinput")
-    var errorMessage=document.getElementById("errorMessage")
-    var inputValue=arabicinput.value;
-    if(/^[a-zA-Z]*$/.test(inputValue)){
-        errorMessage.style.display="block";
-        arabicinput.setCustomValidaty("يرجى ادخال حروف عربية فقط");
-    }
-    else{
-        errorMessage.style.display="none";
-        arabicinput.setCustomValidaty("");
-    }
-}*/
-
+}
 function checkForEnglish(inputText) {
     var englishPatterm = /[a-zA-Z]/;
     if (englishPatterm.test(inputText)) {
@@ -44,24 +24,51 @@ function checkForEnglish(inputText) {
 jQuery('#frmSignup').submit(function (e) {
     e.preventDefault();
     form = $(this);
+  //  document.getElementById('submitBtn').disabled = true;
+    
+    $('#submitBtn').addClass('btnDisabled').attr('disabled');
+    $('#submitBtn *').hide();
+    $('#submitBtn .creating_account').show();
+    $('.validation').hide();
+    // document.getElementById('frmSignup').style.display = 'none';
+    // document.getElementById('Sin').style.display = 'none';
+    // document.getElementById('cart').style.display = 'block';
+    // document.querySelector('cart').classList.add('active');
+    
     var saveData = $.ajax({
         type: "POST",
-        url: "http://localhost:8080/ccit/public/signup",
+        url: $(form).prop('action'),
         data: form.serialize(),
         dataType: "text",
+
         success: function(resultData){
+            // jQuery('#submitBtn').removeClass('btnDisabled');
+            // document.getElementById('submitBtn').disabled = true;
             res = JSON.parse(resultData);
            if(res.status == 'warnings'){
-               validMsgs(res.messages)
+               validMsgs(res.messages);
            }
            else if(res.status == 'success'){
                 console.log('success');
+                loginaftersignup();
+                return;
+                // document.getElementById('frmSignup').style.display = 'none';
+                // document.getElementById('Sin').style.display = 'none';
+                // document.getElementById('cart').style.display = 'block';
            }
+           else
+           console.log('internal erro');
+
+           $('#submitBtn *').hide();
+            $('#submitBtn > div').show();
+           $('#submitBtn').removeClass('btnDisabled').removeAttr('disabled');
         },
       error: function(errors){
-          res = errors;
+            jQuery('#submitBtn').removeClass('btnDisabled').removeAttr('disabled');
+            console.log('internal erro');
       }
   });
+  return 0;
 })
 
 function validMsgs(warns){
@@ -70,27 +77,29 @@ function validMsgs(warns){
              $.each(value,function(k,v){
                  switch(k){
                      case 'password':
-                         console.log(v);
+                         $('#errorpass').text(v).show();
                          break;
                      case 'email':
-                             console.log(v);
+                        $('#erroremail').text(v).show();
                              break;
                      case 'username':
-                             console.log(v);
+                        $('#errorusername').text(v).show();
                              break;
                      case 'mobilenum':
-                             console.log(v);
+                        $('#errormob').text(v).show();
                              break;
                  }
              })
  })
 }
+
 jQuery('#frmLogin').submit(function (e) {
     e.preventDefault();
     form = $(this);
+    showloader();
     var saveData = $.ajax({
         type: "POST",
-        url: "http://localhost:8080/ccit/public/Login",
+        url: $(form).prop('action'),
         data: form.serialize(),
         dataType: "text",
         success: function(resultData){
@@ -100,10 +109,76 @@ jQuery('#frmLogin').submit(function (e) {
            }
            else{
             console.log(res.errMsg);
+            hideloader();
            }
         },
       error: function(errors){
           res = errors;
+          hideloader();
       }
   });
 })
+
+jQuery('#frmCart').submit(function (e) {
+    e.preventDefault();
+    form = $(this);
+    showenorlloader();
+    var saveData = $.ajax({
+        type: "POST",
+        url: $(form).prop('action'),
+        data: form.serialize(),
+        dataType: "text",
+        success: function(resultData){
+            res = JSON.parse(resultData);
+           if(res.status == 'success'){
+            hideCart();
+           }
+           else{
+            hideenorlloader();
+            console.log(res);
+           }
+        },
+      error: function(errors){
+            hideenorlloader();
+          console.log(errors);
+      }
+  });
+})
+
+function hideCart(){
+    $('.courses-cart').fadeOut(500);
+    showEnrolMsg();
+}
+
+async function showEnrolMsg(){
+    await new Promise(r => setTimeout(r, 500));
+    $('.enroll-requrested').fadeIn(500);
+}
+
+function loginaftersignup(){
+    $('#submitBtn *').hide();
+    $('#submitBtn .logingmsg').show();
+    $('#frmLogin input[name="email"]').val($('#frmSignup input[name="username"]').val());
+    $('#frmLogin input[name="password"]').val($('#frmSignup input[name="Password"]').val());
+    $('#frmLogin').trigger('submit');
+}
+function showloader(){
+    $('#frmLogin button[type="submit"]').addClass('btnDisabled').attr('disabled');
+    $('#frmLogin button[type="submit"] *').hide();
+    $('#frmLogin button[type="submit"] img').show();
+}
+function hideloader(){
+    $('#frmLogin button[type="submit"]').removeClass('btnDisabled').removeAttr('disabled');
+    $('#frmLogin button[type="submit"] *').hide();
+    $('#frmLogin button[type="submit"] span').show();
+}
+function showenorlloader(){
+    $('#frmCart button[type="submit"]').addClass('btnDisabled').attr('disabled');
+    $('#frmCart button[type="submit"] *').hide();
+    $('#frmCart button[type="submit"] img').show();
+}
+function hideenorlloader(){
+    $('#frmCart button[type="submit"]').removeClass('btnDisabled').removeAttr('disabled');
+    $('#frmCart button[type="submit"] *').hide();
+    $('#frmCart button[type="submit"] span').show();
+}
