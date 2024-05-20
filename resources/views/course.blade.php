@@ -5,8 +5,8 @@ Courses
 @section('head')
 <style type="text/css">
 	.hero-wrap-2 {
-		height: 350px !important;
-		padding-top: var(--menu-height);
+		height: 278px !important;
+		padding-top: var(--menu-height) !important;
 		background-image: url('images/bg_1.jpg');
 		background-position-y: 12%;
 	}
@@ -94,7 +94,7 @@ Courses
 		height: 40px;
 		border: 0;
 		padding: 0 25px;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		font-weight: regular;
 		color: #fff;
 		background-color: #fd5f00;
@@ -148,7 +148,7 @@ Courses
 	}
 
 	.fixed-white-menu {
-		position: relative;
+		position: relative !important;
 	}
 
 	.ftco-section {
@@ -166,6 +166,58 @@ Courses
 	padding-bottom: 10px;
 	margin-bottom: 10px;	
 	}
+	.course-price .value{
+		text-align:center;
+	}
+	.course-start-date{
+		text-align:center;
+		padding-left: 1%;
+    	padding-right: 1%;
+	}
+	.course-start-date .date{
+		display: flex;
+		font-size: 15px;
+		align-items: center;
+		justify-content: center;
+	}
+	.course-start-date .date .sprtr{
+		margin-left:1%;
+		margin-right:1%;
+	}
+	.icon-calendar,.icon-clock-o{
+		color:#03a503;
+		margin:4px;
+	}
+	.requirements{
+		background: #ff000026;
+		border-radius: 5px;
+		border: solid 1px #e30c0c;
+		padding: 1px;
+		margin-bottom:10px;
+	}
+	.requirements ul{
+		font-size: 13px;
+		margin: 2px;
+		padding: 2% 6% 2% 6%;
+	}
+	#notacptdbtn{
+		background: #939191;
+	}
+	#loginbtn > button,#accptdbtn{
+		cursor: pointer;
+	}
+	#accptdbtn{
+		background-color: #03a503;
+	}
+	#enrolledbtn,#pendingbtn{
+		background-color: #939191;
+		height:unset;
+	}
+	#pendingbtn{
+		padding:2px;
+
+	}
+	
 </style>
 @endsection
 @section('content')
@@ -174,12 +226,18 @@ Courses
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>كورس Ventures </h2>
-				<h6>أول كورس في مرحلة التأسيس في اللغة الانكليزية</h6>
+				<h2>{{$courseObj['fullname']}}</h2>
+				<h6>
+					@if(Cookie::get('lang') == 'EN')
+					{{$courseObj['short_desc_en']}}
+					@else
+					{{$courseObj['short_desc_ar']}}
+					@endif
+				</h6>
 			</div>
 			<div class="col-md-12">
 				<div class="course-meta course-meta-single">
-					<div class="course-author">
+					<!-- <div class="course-author">
 						<img alt="User Avatar" src="https://eduma.thimpress.com/demo-udemy/wp-content/uploads//learn-press-profile/7/e5c6a6fb8aa3864eacaec471611e0470.jpeg" height="150" width="150">
 						<div class="author-contain">
 							<label itemprop="jobTitle">المدرس</label>
@@ -187,7 +245,7 @@ Courses
 								<a href="https://eduma.thimpress.com/demo-udemy/instructor-4/keny/"><span><span class="instructor-display-name">أحمد يوسف</span></span></a>
 							</div>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
@@ -198,18 +256,13 @@ Courses
 		<div class="row">
 			<div class="col-md-8">
 				<div class="overview">
-					<h2>حول الكورس</h2>
+					<h2>{{__('messages.About_course')}}</h2>
 					<div>
-						<p>منهاج Ventures 1 هو منهج تعليم اللغة الإنجليزية للمبتدئين من إعداد جامعة كامبريدج. يهدف المنهج إلى تعليم الطلاب المهارات الأساسية في اللغة الإنجليزية، بما في ذلك القراءة والكتابة والاستماع والتحدث.</p>
-						<p>يتكون المنهج من كتاب مدرسي وكتاب عمل، بالإضافة إلى موارد رقمية. يغطي الكتاب المدرسي الموضوعات التالية:</p>
-						<ul>
-							<li>أساسيات اللغة الإنجليزية</li>
-							<li>المفردات والقواعد</li>
-							<li>القراءة والكتابة</li>
-							<li>الاستماع والتحدث</li>
-						</ul>
-						<p>يقدم الكتاب العمل فرصًا للممارسة والمراجعة. كما يتضمن الموارد الرقمية أنشطة وألعابًا واختبارات.</p>
-						<p>تشير نتائج الدراسات التي أجريت على منهاج Ventures 1 إلى أنه فعال في تعليم الطلاب اللغة الإنجليزية. فقد وجدت إحدى الدراسات أن الطلاب الذين درسوا باستخدام المنهج حققوا نتائج أفضل في الاختبارات مقارنة بالطلاب الذين لم يدرسوا باستخدامه.</p>
+					@if(Cookie::get('lang') == 'EN')
+						{{$courseObj['summary']}}
+					@else
+						{{$courseObj['ardesc']}}
+					@endif
 					</div>
 				</div>
 			</div>
@@ -219,61 +272,91 @@ Courses
 						<div>
 							<div class="course-thumbnail">
 								<div class="media-intro">
-									<image src="images/ventures1.jpg" width="200px" height="250px" />
+									<image src="{{env('LMS_URL').'/'.$courseObj['courseimage']}}" width="200px" height="250px" />
 								</div>
 							</div>
 						</div>
 						<div class="course-payment">
 							<div class="course-price">
 								<div class="value  free-course">
-									100.000 ل.س
+									@if($courseObj['interprice'] == null)
+									{{$courseObj['price']}}
+									@else
+									{{$courseObj['interprice'].'$'}}
+									@endif
 								</div>
 							</div>
 							<div class="lp-course-buttons">
-								<button class="lp-button button button-enroll-course">سجل الآن</button>
+							<?php if(!isset($_SESSION))
+											session_start(); ?>
+											@if(!isset($_SESSION['mdl_userinfo']))
+											<a id="loginbtn" href="{{env('APP_URL')}}/login">
+											<button class="lp-button button button-enroll-course">
+											{{__('messages.login')}}
+											</button></a>
+											@else
+												@if($courseObj['avail'][0]['status'] == 'not accepted')
+												<button id="notacptdbtn" class="lp-button button button-enroll-course" disabled>
+												{{__('messages.prerequirements_not_achived')}}
+												</button>
+												@elseif($courseObj['avail'][0]['status'] == 'enrolled')
+												<button id="enrolledbtn" class="lp-button button button-enroll-course" disabled>
+												{{__('messages.allready_enroled')}}
+												<a href="{{env('LMS_URL')}}/course/view.php?id={{$courseObj['id']}}">{{__('messages.gotocourse')}}</a>
+												</button>
+												@elseif($courseObj['avail'][0]['status'] == 'pending')
+												<button id="pendingbtn" class="lp-button button button-enroll-course" disabled>
+												{{__('messages.pendingRegister')}}
+												</button>
+												@else
+												<form method="post" action="{{env('APP_URL')}}/Login?action=enroll">
+													@csrf
+												<input type="submit" id="accptdbtn" class="lp-button button button-enroll-course" value="{{__('messages.enrol_now')}}">
+												</input>
+												<input type="checkbox" name="courses[]" value="{{$courseObj['id']}}" style="display:none" checked/>
+												</form>
+												@endif
+											@endif
 							</div>
 						</div>
-						<div class="thim-course-info">
-							<h3 class="title">تفاصيل الكورس</h3>
+					@if(isset($_SESSION['mdl_userinfo']))
+						@if($courseObj['avail'][0]['status'] == 'not accepted')
+						<p style="margin-bottom:2px;font-size:12px;">{{__('messages.requirements')}}</p>
+						<div class="requirements">
 							<ul>
-								<li class="lectures-feature">
-									<i class="fa fa-files-o"></i>
-									<span class="label">الجلسات</span>
-									<span class="value">
-										6 </span>
-								</li>
-								<li class="quizzes-feature">
-									<i class="fa fa-puzzle-piece"></i>
-									<span class="label">الاختبارات</span>
-									<span class="value">
-										1 </span>
-								</li>
-								<li class="duration-feature">
-									<i class="fa fa-clock-o"></i>
-									<span class="label">مدة الدرس</span>
-									<span class="value">ساعة ونصف</span>
-								</li>
-								<li class="skill-feature">
-									<i class="fa fa-level-up"></i>
-									<span class="label">المستوى</span>
-									<span class="value">تأسيس</span>
-								</li>
-								<li class="language-feature">
-									<i class="fa fa-language"></i>
-									<span class="label">اللغة</span>
-									<span class="value">الانكليزية</span>
-								</li>
-								<li class="students-feature">
-									<i class="fa fa-users"></i>
-									<span class="label">عدد الطلاب</span>
-									<span class="value">30</span>
-								</li>
-								<li class="assessments-feature">
-									<i class="fa fa-check-square-o"></i>
-									<span class="label">وظائف</span>
-									<span class="value"></span>
-								</li>
+							@foreach($courseObj['avail'][0]['prereqs'] as $prq)
+								@if($prq['criteriatype'] == 9)
+								<li>{{__('messages.need_topass_withgrade',['course'=>$prq['courseiname'],'grade' => (int) $prq['requiredgrade'],'url' => env("APP_URL")."/course/".$prq['courseiname']])}}</li>
+								@elseif($prq['criteriatype'] == 8)
+								<li>{{__('messages.need_topass',['course'=>$prq['courseiname'],'url' => env("APP_URL")."/course/".$prq['courseiname']])}}</li>
+								@endif
+							@endforeach
 							</ul>
+						</div>
+						@endif
+					@endif
+					@if(!str_contains($courseObj['fullname'],'Placement Test'))
+						<div class="course-start-date">
+							<div class="date">
+							<p>{{__('messages.starts_on')}}</p>
+							<p class="sprtr"></p>
+							<p><span class="icon-calendar"></span></p>
+							<p> {{date("Y-m-d", $courseObj['startdate'])}}</p>
+							<p class="sprtr"></p>
+							<p><span class="icon-clock-o"></span></p>
+							<p> {{date("H:i", $courseObj['startdate'])}} </p>
+							</div>
+						</div>
+					@endif
+						<div class="thim-course-info">
+							<h3 class="title">{{__('messages.course_details')}}</h3>
+							<div class="content">
+							@if(Cookie::get('lang') == 'EN')
+							{{$courseObj['course_details_en']}}
+							@else
+							{{$courseObj['course_details']}}
+							@endif
+							</div>
 						</div>
 					</div>
 				</div>
@@ -287,7 +370,30 @@ Courses
 		var navbar = $('nav');
 		navbar.removeClass('fixed-trans-menu');
 		navbar.addClass('fixed-white-menu');
-	});
+	}
+	);
+	$(function(){
+		var htmlcont = $.parseHTML($('.overview > div').text());
+		$('.overview > div').html(htmlcont);
+		htmlcont = $.parseHTML($('.thim-course-info > .content').text());
+		$('.thim-course-info > .content').html(htmlcont);
+		$.each($('.requirements li'),function(i){
+		htmlcont = $.parseHTML($(this).text());
+		$(this).html(htmlcont);
+		})
+	})
+	$(function(){
+		$url = $('#loginbtn').prop('href')+'?redirect='+window.location.href;
+		$('#loginbtn').prop('href',$url);
+	})
+	// $(function(){
+	// 	var courses = {{$courseObj['id']}} ;
+	// 	$('#accptdbtn').click(function(s,e){
+	// 		e.preventDefault();
+	// 		$.cookie('courses', array('{{$courseObj['id']}}'), { expires: 7, path: '/' });
+	// 	})
+	// })
+
 	// var scrollWindow = function() {
 	// 	$(window).scroll(function(){
 
