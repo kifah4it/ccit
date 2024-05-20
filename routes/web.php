@@ -38,6 +38,10 @@ Route::controller(HomeController::class)->group(function(){
 });
 
 
+Route::get('Languages',function(){
+    return View('Languages');
+});
+
 // Route::get('/dashboard','DashboardController@index');
 //  Route::post('/Login',"AuthController@Login");
 // Route::get('/','AuthController@show');

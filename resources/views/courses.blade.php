@@ -30,7 +30,6 @@ Courses
 	<span><b>nglish Courses</b></span>
 		 
     <img class="InterChange_image" src="{{env('APP_URL')}}/images/InterChange.PNG" >
-	
 
 </div>
 
@@ -282,6 +281,27 @@ Courses
 @endsection
 @section('scripts')
 <script>
+	var scrollWindow = function() {
+		$(window).scroll(function(){
+			
+			
+			var $w = $(this),
+					st = $w.scrollTop(),
+					navbar = $('.ftco_navbar'),
+					sd = $('.js-scroll-wrap');
+					var navbar = $('#ftco-navbar');
+
+					if (st > 10) {
+						navbar.removeClass('fixed-trans-menu');
+						navbar.addClass('fixed-white-menu');	
+					} 
+					if (st <= 10) {
+						navbar.removeClass('fixed-white-menu');
+						navbar.addClass('fixed-trans-menu');	
+					} 	
+		});
+	};
+	scrollWindow();
 	$('#ftco-nav > ul > li.nav-item').removeClass('active');
 		$('#ftco-nav > ul > li.nav-item:eq(2)').addClass('active');
 		

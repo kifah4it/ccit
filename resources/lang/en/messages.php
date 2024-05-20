@@ -73,6 +73,11 @@ return [
     Computer science, including Word, Excel, PowerPoint, Access, and many others.
     We turned the dream into an objective, and made the dream come true. 
     CCIT, your second home.',
+    'Comment_1'=>'My experience at CCIT was great, I learned many languages thanks to their excellent classes.',
+    'Comment_2'=>'I recommend visiting CCIT if you are looking to learn new languages, they offer useful training programs.',
+    'Comment_3'=>'The atmosphere at CCIT is comfortable and the language learning classes are engaging and effective.',
+    'Comment_4'=>'Thank you CCIT for the quality language learning programs they offer, I benefited greatly from their classes.',
+    'Comment_5'=>'CCIT Institute provided me with the tools and resources to improve my language skills, I am grateful for the opportunity to learn with them.',
     'first_name'=>'First name',
     'last_name'=>'Last name',
     'middle_name'=>'Mid name',
@@ -119,5 +124,7 @@ return [
      'Invalid_email' => 'This email address has been used or you entered incorrectly',
      'used_mobilenumber' => 'The mobile number has already been used.',
      'used_username' => 'This username already exists, choose another',
+
+    'Languages'=>'Languages'
 
 ];
