@@ -32,7 +32,8 @@ Route::controller(HomeController::class)->group(function(){
    Route::get('/switchlang/{id}','switchlang');
     Route::get('/courses/{cat}','courses');
     Route::get('/courses','courses');
-    Route::get('/course','course');
+    Route::get('/course/{name}','course');
+    Route::get('/curriculum/{name}','curriculum');
     Route::get('/login','login');
 });
 
@@ -44,6 +45,10 @@ Route::controller(HomeController::class)->group(function(){
 Route::controller(AuthController::class)->group(function(){
     Route::post('/Login','Login');
     Route::get('/Logout','Logout');
+});
+
+Route::controller(CourseController::class)->group(function(){
+    Route::post('/enroll','enroll');
 });
 
 
