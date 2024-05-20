@@ -18,30 +18,19 @@ class SignupController extends Controller
         // $user->password=$request->password;
         // $user->save();
         // return response('successfully');
-        $data = "&username=".$request->username."&password=".$request->Password."&firstname=".$request->name
+        $data = "&username=".$request->username."&password=".$request->Password."&firstname=".$request->first_name
         ."&lastname=".$request->last_name."&email=".$request->Email."&arabfullname=".$request->arabicname
-        ."&mobnum=".$request->mob_num."&birthdate=".$request->birthdate;
+        ."&mobnum=".$request->mob_num."&birthdate=".$request->month.'/'.$request->day.'/'.$request->year;
         $LMS_URL = env('LMS_URL');
-        $url = $LMS_URL.'/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=local_ops_register_student'
-        .$data.'&moodlewsrestformat=json';
-        $ch = curl_init();
-        $headers = array(
-            'Accept: application/json',
-            'Content-Type: application/json',
-        );
-        
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($ch,CURLOPT_POST,1);
-        //curl_setopt($ch,CURLOPT_POSTFIELDS,"username=testtooo266");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        // Timeout in seconds
-        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
-        $response = curl_exec($ch);
-        $result = json_decode($response, true);
+        $key = env('localops_API_key');
+        $url = $LMS_URL.'/webservice/rest/server.php?wstoken='.$key.'&wsfunction=local_ops_register_student'.$data.'&moodlewsrestformat=json';
+
+        $client = new \GuzzleHttp\Client(['verify' => false]);
+        $r = $client->request('GET', $url);
+        $result = json_decode($r->getBody(),true);
+
         $res = array();
+        Log::error($r->getBody());
         switch($result['status']){
             case 'error':
                 $res['status'] = 'error';
@@ -74,6 +63,7 @@ class SignupController extends Controller
                 break;
         }
         return $res;
+    
     }
     public function checkenrolmentavailability(Request $req){
         $LMS_URL = env('LMS_URL');
