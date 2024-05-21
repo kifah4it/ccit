@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Home
+Accounting
 @endsection
 @section("content")
 <style>
@@ -22,51 +22,24 @@ Home
 
 <div class="container-fluid Languages">
 <div class="row English_top">
-<br>
-	<img class="L_icon" src="{{env('APP_URL')}}/images/L_icon.PNG" > 
-	<span class="Lan"><b>anguages</b></span>
+        <br>
+        <img class="A_icon" src="{{env('APP_URL')}}/images/A_icon.PNG">
+        <span class="Lan"><b>ccounting</b></span>
 
-
-</div>
+    </div>
 <div class="container-fluid">
 	<div class="row">
 
-		<div class="col-md-4">
-			<a href="{{env('APP_URL')}}/courses/English">
-				<div class="City">
-					<img class="City_Im" src="{{env('APP_URL')}}/images/English.JPG">
-					<div class="City_te">
-						<p>English</p>
-					</div>
-			</a>
-		</div>
+    <div class="col-md-4">
+        <a href="{{env('APP_URL')}}">
+            <div class="City">
+                <img class="City_Im" src="{{env('APP_URL')}}/images/Ameen.JPG">
+                <div class="City_te">
+                    <p>alameen</p>
+                </div>
+        </a>
+    </div>
 	</div>
-
-	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/courses/Frensh">
-			<div class="City">
-
-				<img class="City_Im" src="{{env('APP_URL')}}/images/France.JPG">
-				<div class="City_te">
-					<p>Frensh</p>
-				</div>
-
-			</div>
-		</a>
-	</div>
-
-	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/courses/Germany">
-			<div class="City">
-
-				<img class="City_Im" src="{{env('APP_URL')}}/images/Germany.JPG">
-				<div class="City_te">
-					<p>German</p>
-				</div>
-			</div>
-		</a>
-	</div>
-
 </div>
 </div>
 </div>

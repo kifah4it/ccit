@@ -29,7 +29,7 @@ Courses
 	<img class="First_icon" src="{{env('APP_URL')}}/images/E_icon.PNG" > 
 	<span><b>nglish Courses</b></span>
 		 
-    <img class="InterChange_image" src="{{env('APP_URL')}}/images/InterChange.PNG" >
+
 
 </div>
 
@@ -233,6 +233,136 @@ Courses
 </div>
 </div>
 
+
+<div class="container-fluid"> 
+<div class=" row English_top " style="direction:ltr;">
+		
+	<br>
+	<img class="F_icon" src="{{env('APP_URL')}}/images/F_icon.PNG" > 
+	<span><b>rensh Courses</b></span>
+		
+</div>
+
+<div class="container-fluid">
+
+    <div class="row English" >
+	<div class="col-md-4">
+<div class="Course"> 
+<span><b>F1</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>F2</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>F3</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>F4</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>F5</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+
+<div class="container-fluid"> 
+<div class=" row English_top " style="direction:ltr;">
+		
+	<br>
+	<img class="K_icon" src="{{env('APP_URL')}}/images/K_icon.PNG" > 
+	<span><b>ids Courses</b></span>
+		
+</div>
+
+<div class="container-fluid">
+
+    <div class="row English" >
+	<div class="col-md-4">
+<div class="Course"> 
+<span><b>Gogo1</b></span>
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>Gogo2</b></span>
+
+<h5></h5>
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>L1</b></span>
+
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>L2</b></span>
+
+<h5></h5>
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>L3</b></span>
+
+<h5></h5>
+
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>L4</b></span>
+
+<h5></h5>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="Course"> 
+<span><b>L5</b></span>
+
+<h5></h5>
+
+</div>
+</div>
 </section>
 
     <section class="ftco-section">

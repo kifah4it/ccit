@@ -10248,5 +10248,33 @@ margin-left: 10px;
   padding-left: 10px;
   padding-bottom: -12px;
  }
+ .F_icon{
+  height: 55px;
+  width: 40px;
+  margin-right: 5px;
+ }
+.K_icon{
+  height: 55px;
+  width: 40px;
+  margin-right: 9px;
+  margin-top: -3px;
+}
 
- 
+.I_icon{
+  height: 65px;
+  width: 20px;
+margin-top: -10px;
+
+}
+.T_icon{
+height:70px;
+margin-top: -15px;
+margin-right: -16px;
+width: 50px;
+}
+ .A_icon{
+  width: 60px;
+  height: 60px;
+  margin-bottom: 7px;
+  margin-right: -2px;
+ }

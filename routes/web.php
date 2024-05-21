@@ -44,6 +44,14 @@ Route::get('Languages',function(){
     return View('Languages');
 });
 
+Route::get('IT',function(){
+    return View('IT');
+});
+
+Route::get('Accounting',function(){
+    return View('Accounting');
+});
+
 // Route::get('/dashboard','DashboardController@index');
 //  Route::post('/Login',"AuthController@Login");
 // Route::get('/','AuthController@show');
