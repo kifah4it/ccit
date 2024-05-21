@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Courses
+Curriculum
 @endsection
 @section('head')
 <style type="text/css">
@@ -170,9 +170,7 @@ Courses
 		text-align:center;
 	}
 	.course-start-date{
-		text-align:center;
-		padding-left: 1%;
-    	padding-right: 1%;
+		margin-top:5%;
 	}
 	.course-start-date .date{
 		display: flex;
@@ -217,6 +215,21 @@ Courses
 		padding:2px;
 
 	}
+	.total{
+		text-align: center;
+		border: solid 1px;
+		border-radius: 8%;
+		background: #ffffff;
+	}
+	.courses{
+		margin-top:5%;
+		margin-bottom: 5%;
+		font-size: 14px;
+		border: solid 1px #03a503;
+		padding: 4%;
+		border-radius: 3%;
+		background: #03a5030d;
+	}
 	
 </style>
 @endsection
@@ -226,12 +239,12 @@ Courses
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h2>{{$courseObj['fullname']}}</h2>
+				<h2>{{$courseObj[0]['fullname']}}</h2>
 				<h6>
 					@if(Cookie::get('lang') == 'EN')
-					{{$courseObj['short_desc_en']}}
+					{{$courseObj[0]['short_desc_en']}}
 					@else
-					{{$courseObj['short_desc_ar']}}
+					{{$courseObj[0]['short_desc_ar']}}
 					@endif
 				</h6>
 			</div>
@@ -259,9 +272,9 @@ Courses
 					<h2>{{__('messages.About_course')}}</h2>
 					<div>
 					@if(Cookie::get('lang') == 'EN')
-						{{$courseObj['summary']}}
+						{{$courseObj[0]['summary']}}
 					@else
-						{{$courseObj['ardesc']}}
+						{{$courseObj[0]['ardesc']}}
 					@endif
 					</div>
 				</div>
@@ -272,17 +285,17 @@ Courses
 						<div>
 							<div class="course-thumbnail">
 								<div class="media-intro">
-									<image src="{{env('LMS_URL').'/'.$courseObj['courseimage']}}" width="200px" height="250px" />
+									<image src="{{env('LMS_URL').'/'.$courseObj[0]['courseimage']}}" width="200px" height="250px" />
 								</div>
 							</div>
 						</div>
 						<div class="course-payment">
 							<div class="course-price">
 								<div class="value  free-course">
-									@if($courseObj['interprice'] == null)
-									{{$courseObj['price']}}
+									@if($courseObj[0]['interprice'] == null)
+									{{$courseObj[0]['price']}}
 									@else
-									{{$courseObj['interprice'].'$'}}
+									{{$courseObj[0]['interprice'].'$'}}
 									@endif
 								</div>
 							</div>
@@ -295,66 +308,69 @@ Courses
 											{{__('messages.login')}}
 											</button></a>
 											@else
-												@if($courseObj['avail'][0]['status'] == 'not accepted')
+												@if($courseObj[0]['avail'][0]['status'] == 'not accepted')
 												<button id="notacptdbtn" class="lp-button button button-enroll-course" disabled>
 												{{__('messages.prerequirements_not_achived')}}
 												</button>
-												@elseif($courseObj['avail'][0]['status'] == 'enrolled')
+												@elseif($courseObj[0]['avail'][0]['status'] == 'enrolled')
 												<button id="enrolledbtn" class="lp-button button button-enroll-course" disabled>
 												{{__('messages.allready_enroled')}}
-												<a href="{{env('LMS_URL')}}/course/view.php?id={{$courseObj['id']}}">{{__('messages.gotocourse')}}</a>
+												<a href="{{env('LMS_URL')}}/course/view.php?id={{$courseObj[0]['id']}}">{{__('messages.LearningPlatform')}}</a>
 												</button>
-												@elseif($courseObj['avail'][0]['status'] == 'pending')
+												@elseif($courseObj[0]['avail'][0]['status'] == 'pending')
 												<button id="pendingbtn" class="lp-button button button-enroll-course" disabled>
 												{{__('messages.pendingRegister')}}
 												</button>
 												@else
-												<form method="post" action="{{env('APP_URL')}}/Login?action=enroll">
+											<?php 
+											if(!isset($_SESSION))
+											session_start();
+
+											$_SESSION['currancy'] = isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' ? '$' : ' ل.س ' : ' ل.س ';
+											?>
+											
+												<form id="frm_enroll" method="post" action="{{env('APP_URL')}}/Login?action=enroll">
 													@csrf
+													<div class="courses">
+													<p>{{__('messages.materials')}}</p>
+													<p style="display:none;"><input type="checkbox" name="courses[]" value="{{$courseObj[0]['id']}}" cost="0" checked></input></p>
+                                                @foreach($courseObj[0]['courses'] as $cr)
+												<p><input type="checkbox" name="courses[]" value="{{$cr['id']}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p>
+                                                @endforeach
+												<div class="total">
+													<span>{{__('messages.cost')}}</span><span class="cost"></span><span>{{$_SESSION['currancy']}}</span>
+												</div>
+												</div>
+												<div class="course-start-date">
+													<div class="date">
+													<p>{{__('messages.starts_on')}}</p>
+													<p class="sprtr"></p>
+													<p><span class="icon-calendar"></span></p>
+													<p> {{date("Y-m-d", $courseObj[0]['startdate'])}}</p>
+													<p class="sprtr"></p>
+													<p><span class="icon-clock-o"></span></p>
+													<p> {{date("H:i", $courseObj[0]['startdate'])}} </p>
+													</div>
+												</div>
 												<input type="submit" id="accptdbtn" class="lp-button button button-enroll-course" value="{{__('messages.enrol_now')}}">
 												</input>
-												<input type="checkbox" name="courses[]" value="{{$courseObj['id']}}" style="display:none" checked/>
 												</form>
+												
+												
 												@endif
 											@endif
 							</div>
 						</div>
-					@if(isset($_SESSION['mdl_userinfo']))
-						@if($courseObj['avail'][0]['status'] == 'not accepted')
-						<p style="margin-bottom:2px;font-size:12px;">{{__('messages.requirements')}}</p>
-						<div class="requirements">
-							<ul>
-							@foreach($courseObj['avail'][0]['prereqs'] as $prq)
-								@if($prq['criteriatype'] == 9)
-								<li>{{__('messages.need_topass_withgrade',['course'=>$prq['courseiname'],'grade' => (int) $prq['requiredgrade'],'url' => env("APP_URL")."/course/".$prq['courseiname']])}}</li>
-								@elseif($prq['criteriatype'] == 8)
-								<li>{{__('messages.need_topass',['course'=>$prq['courseiname'],'url' => env("APP_URL")."/course/".$prq['courseiname']])}}</li>
-								@endif
-							@endforeach
-							</ul>
-						</div>
-						@endif
-					@endif
-					@if(!str_contains($courseObj['fullname'],'Placement Test'))
-						<div class="course-start-date">
-							<div class="date">
-							<p>{{__('messages.starts_on')}}</p>
-							<p class="sprtr"></p>
-							<p><span class="icon-calendar"></span></p>
-							<p> {{date("Y-m-d", $courseObj['startdate'])}}</p>
-							<p class="sprtr"></p>
-							<p><span class="icon-clock-o"></span></p>
-							<p> {{date("H:i", $courseObj['startdate'])}} </p>
-							</div>
-						</div>
-					@endif
+
+					
+						
 						<div class="thim-course-info">
 							<h3 class="title">{{__('messages.course_details')}}</h3>
 							<div class="content">
 							@if(Cookie::get('lang') == 'EN')
-							{{$courseObj['course_details_en']}}
+							{{$courseObj[0]['course_details_en']}}
 							@else
-							{{$courseObj['course_details']}}
+							{{$courseObj[0]['course_details']}}
 							@endif
 							</div>
 						</div>
@@ -383,14 +399,31 @@ Courses
 		})
 	})
 	$(function(){
+		totalcost();
+
 		$url = $('#loginbtn').prop('href')+'?redirect='+window.location.href;
 		$('#loginbtn').prop('href',$url);
-	})
+		
+		$('#frm_enroll :checkbox').change(function(e){
+			totalcost();
+		})
+
+	}
+	)
+	function totalcost(){
+		var sum = 0;
+			$('#frm_enroll input[type=checkbox]').each(function(s,e){
+				if ($(this).is(':checked')) {
+					sum += Number($(this).attr('cost'));
+				}
+			})
+			$('.total > .cost').text(sum);
+	}
 	// $(function(){
-	// 	var courses = {{$courseObj['id']}} ;
+	// 	var courses = {{$courseObj[0]['id']}} ;
 	// 	$('#accptdbtn').click(function(s,e){
 	// 		e.preventDefault();
-	// 		$.cookie('courses', array('{{$courseObj['id']}}'), { expires: 7, path: '/' });
+	// 		$.cookie('courses', array('{{$courseObj[0]['id']}}'), { expires: 7, path: '/' });
 	// 	})
 	// })
 

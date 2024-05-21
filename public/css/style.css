@@ -32,7 +32,9 @@
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; 
+  --menu-height:7%;
+}
 
 *,
 *::before,
@@ -10212,7 +10214,43 @@ margin-left: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
 }
-
+#modal{
+    display:none;
+    padding-top: 18em;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: #ffffff82;
+    text-align: center;
+}
+#modal .box{
+  border-radius: 4px;
+    width: 16em;
+    height: 5em;
+    margin: auto;
+    text-align: center;
+    padding-top: 1em;
+}
+.show-loader{
+  opacity: 0.7 !important;
+  visibility: visible !important;
+}
+.LMSico{
+  font-size: 20px;
+    margin-left: -19px;
+    margin-top: -11px;
+    rotate: 16deg;
+    color: #ffffff;
+}
+#logout,#login{
+  margin-top:30px;
+}
+.lmsitem{
+  display: flex;
+    margin: 12px;
+    font-size: 12px;
+}
 .City_Im{
  height: 90%;
  width: 100%;
@@ -10223,10 +10261,7 @@ margin-left: 10px;
   height: 270px;
   max-height: 270px;
   border-radius: 18px;
-  margin-top: 50px;
-  
-  
-    
+  margin-top: 50px;   
 }
 
  .City_te{
@@ -10248,6 +10283,45 @@ margin-left: 10px;
   padding-left: 10px;
   padding-bottom: -12px;
  }
+.lmsitem .nav-link{
+  color:#fff !important;
+    padding: 4px;
+    padding-left: 4px !important;
+}
+.lmsitem .nav-btn{
+  border: solid 1px #c76413;
+  border-radius: 7px;
+  background-color: #c76413;
+  padding-left: 2px;
+}
+.fixed-white-menu .lmsitem .nav-link{
+  color:#fff !important;
+}
+.fixed-white-menu .lmsitem .LMSico{
+  color:#535257;
+}
+@media (max-width: 991.98px){
+.desk{
+  display: none;
+}
+.mob{
+  display: flex;
+}
+.fixed-trans-menu .LMSico{
+color:#535257;
+}
+}
+@media (min-width: 992px){
+  .desk{
+    display: flex;
+  }
+  .mob{
+    display: none;
+  }
+  .lmsitem{
+    margin:20px;
+  }
+  }
  .F_icon{
   height: 55px;
   width: 40px;
