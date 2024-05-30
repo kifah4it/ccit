@@ -24,13 +24,13 @@ class SignupController extends Controller
         $LMS_URL = env('LMS_URL');
         $key = env('localops_API_key');
         $url = $LMS_URL.'/webservice/rest/server.php?wstoken='.$key.'&wsfunction=local_ops_register_student'.$data.'&moodlewsrestformat=json';
-
+ 
         $client = new \GuzzleHttp\Client(['verify' => false]);
         $r = $client->request('GET', $url);
         $result = json_decode($r->getBody(),true);
 
         $res = array();
-        Log::error($r->getBody());
+
         switch($result['status']){
             case 'error':
                 $res['status'] = 'error';
