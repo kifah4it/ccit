@@ -28,15 +28,16 @@ class SwtichLang {
           //  Cookie::queue(Cookie::make('lang', 'AR',));
 
             //return $next($request)->withCookie(cookie()->forever('lang','AR'));
-            app()->setLocale('ar');            
-            Log::info(app()->getLocale());
+          //  app()->setLocale('ar');            
+          config(['app.locale' => 'ar']);
             return $next($request)->withCookie(cookie()->forever('lang','AR'));
            //return $next($request);
         }
         else{
 
          // session(['lang' => $request->cookie('lang')]);
-          app()->setLocale($request->cookie('lang'));
+       //   app()->setLocale($request->cookie('lang'));
+         config(['app.locale' => $request->cookie('lang')]);
         //  Log::info("Locale is: ". $request->cookie('lang'));
         //  return $next($request)->withCookie(cookie()->forever('lang',$request->cookie('lang')));
           Log::info(app()->getLocale());
