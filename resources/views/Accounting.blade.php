@@ -31,7 +31,7 @@ Accounting
 	<div class="row">
 
     <div class="col-md-4">
-        <a href="{{env('APP_URL')}}">
+        <a href="{{env('APP_URL')}}/course/Al Ameen">
             <div class="City">
                 <img class="City_Im" src="{{env('APP_URL')}}/images/Ameen.JPG">
                 <div class="City_te">

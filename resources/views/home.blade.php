@@ -236,7 +236,7 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.Languages')}}</h3>
+							<h3>{{__('messages.langs')}}</h3>
 							<p>{{__('messages.GoveCirc_parg')}}</p>
 						</div>
 						</a>
@@ -643,7 +643,7 @@ Home
 	},function(){
 		$(this).children().removeClass('fill')});
 		$(function(){
-			$(".nav-link.about").click(function() {
+			$(".about").click(function() {
 				$([document.documentElement, document.body]).animate({
 					scrollTop: $("#about").offset().top
 				}, 700);
