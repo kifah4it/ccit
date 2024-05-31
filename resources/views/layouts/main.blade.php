@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css"> 
     @else 
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrab.css"> 
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css"> 
     @endif
 
 
@@ -106,7 +106,7 @@
         
 	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="{{env('APP_URL')}}/" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
-	        	<li class="nav-item"><a href="#about" class="nav-link">{{__('messages.About')}}</a></li>
+	        	<li class="nav-item"><a href="{{env('APP_URL')}}#about" class="nav-link about">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
               <a href="{{env('APP_URL')}}/courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -270,6 +270,15 @@
   @else
   <script src="{{env('APP_URL')}}/js/main-rtl.js"></script>
   @endif
+  <script>
+    $(function(){
+      if(window.location.hash == '#about'){
+				$([document.documentElement, document.body]).animate({
+					scrollTop: $("#about").offset().top
+				}, 700);
+      }
+		})
+    </script>
     @yield('scripts')
   </body>
 </html>

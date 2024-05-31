@@ -616,6 +616,7 @@ Home
 @endsection
 @section("scripts")
 <script>
+	var app_url = '{{env("APP_URL")}}';
 	var scrollWindow = function() {
 		$(window).scroll(function(){
 			
@@ -640,6 +641,13 @@ Home
 	$('.course .cat-widget').hover(function(){
 		$(this).children().addClass('fill')
 	},function(){
-		$(this).children().removeClass('fill')})
+		$(this).children().removeClass('fill')});
+		$(function(){
+			$(".nav-link.about").click(function() {
+				$([document.documentElement, document.body]).animate({
+					scrollTop: $("#about").offset().top
+				}, 700);
+});
+		})
 </script>
 @endsection
