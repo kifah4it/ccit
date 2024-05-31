@@ -101,13 +101,15 @@ class HomeController extends Controller
         if($lang ==='AR'){
         //session(['lang' => 'AR']);
         //Cookie::queue(Cookie::make('lang', 'AR'));
-        app()->setLocale('ar');
+       // app()->setLocale('ar');
+       config(['app.locale' => 'ar']);
         return redirect()->back()->withCookie(cookie()->forever('lang','AR'));
         }
         else{
             //session(['lang' => 'EN']);
             //Cookie::queue(Cookie::make('lang', 'EN'));
-            app()->setLocale('en');
+          //  app()->setLocale('en');
+          config(['app.locale' => 'en']);
             return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
     }
