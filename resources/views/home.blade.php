@@ -7,9 +7,9 @@ Home
   <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">{{__('messages.silder_title')}}</h1>
-            <p>{{__('messages.slider_paragraph')}}</p>
-            <p><a onclick="scrollToSection()" class="btn btn-primary px-4 py-3 mt-3">{{__('messages.browse_courses')}}</a></p>
+            <h1 class="mb-4">{{trans('messages.silder_title')}}</h1>
+            <p>{{trans('messages.slider_paragraph')}}</p>
+            <p><a onclick="scrollToSection()" class="btn btn-primary px-4 py-3 mt-3">{{trans('messages.browse_courses')}}</a></p>
           </div>
         </div>
   </div>
@@ -35,8 +35,8 @@ Home
             		<span class="flaticon-teacher"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">{{__('messages.Certified_Teachers')}}</h3>
-                <p>{{__('messages.Certified_Teachers_Para')}}</p>
+                <h3 class="heading">{{trans('messages.Certified_Teachers')}}</h3>
+                <p>{{trans('messages.Certified_Teachers_Para')}}</p>
               </div>
             </div>      
           </div>
@@ -46,8 +46,8 @@ Home
             		<span class="flaticon-reading"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">{{__('messages.Special_Education')}}</h3>
-                <p>{{__('messages.Special_Education_Para')}}</p>
+                <h3 class="heading">{{trans('messages.Special_Education')}}</h3>
+                <p>{{trans('messages.Special_Education_Para')}}</p>
               </div>
             </div>    
           </div>
@@ -57,8 +57,8 @@ Home
             		<span class="flaticon-books"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">{{__('messages.International_curricula')}}</h3>
-                <p>{{__('messages.desc_curricula')}}</p>
+                <h3 class="heading">{{trans('messages.International_curricula')}}</h3>
+                <p>{{trans('messages.desc_curricula')}}</p>
               </div>
             </div>      
           </div>
@@ -68,8 +68,8 @@ Home
             		<span class="flaticon-diploma"></span>
               </div>
               <div class="media-body p-2 mt-3">
-                <h3 class="heading">{{__('messages.Certified_Certificates')}}</h3>
-                <p>{{__('messages.Certified_Certificates_Para')}}</p>
+                <h3 class="heading">{{trans('messages.Certified_Certificates')}}</h3>
+                <p>{{trans('messages.Certified_Certificates_Para')}}</p>
               </div>
             </div>      
           </div>
@@ -84,15 +84,15 @@ Home
 						<div class="img" style="background-image: url(images/about.jpg);"></div>
 					</div>
 					<div class="col-md-7 wrap-about py-5 pr-md-4 ftco-animate">
-          	<h2 class="mb-4">{{__('messages.what_we_offer')}}</h2>
-						<p>{{__('messages.what_we_offer_para')}}</p>
+          	<h2 class="mb-4">{{trans('messages.what_we_offer')}}</h2>
+						<p>{{trans('messages.what_we_offer_para')}}</p>
 						<div class="row mt-5">
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-security "></span></div>
 									<div class="text pl-3">
-										<h3>{{__('messages.safety')}}</h3>
-										<p>{{__('messages.safety_para')}}</p>
+										<h3>{{trans('messages.safety')}}</h3>
+										<p>{{trans('messages.safety_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -100,8 +100,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-teacher"></span></div>
 									<div class="text pl-3">
-										<h3>{{__('messages.staff')}}</h3>
-										<p>{{__('messages.staff_para')}}</p>
+										<h3>{{trans('messages.staff')}}</h3>
+										<p>{{trans('messages.staff_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -109,8 +109,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-diploma"></span></div>
 									<div class="text pl-3">
-										<h3>{{__('messages.certified')}}</h3>
-										<p>{{__('messages.certified_para')}}</p>
+										<h3>{{trans('messages.certified')}}</h3>
+										<p>{{trans('messages.certified_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -118,8 +118,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-education"></span></div>
 									<div class="text pl-3">
-										<h3>{{__('messages.classes')}}</h3>
-										<p>{{__('messages.classes_para')}}</p>
+										<h3>{{trans('messages.classes')}}</h3>
+										<p>{{trans('messages.classes_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -127,8 +127,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="icon-pool"></span></div>
 									<div class="text pl-3">
-										<h3>{{__('messages.pool')}}</h3>
-										<p>{{__('messages.pool_para')}}</p>
+										<h3>{{trans('messages.pool')}}</h3>
+										<p>{{trans('messages.pool_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -136,8 +136,8 @@ Home
 								<div class="services-2 d-flex">
 									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-kids"></span></div>
 									<div class="text pl-3" >
-										<h3>{{__('messages.kids')}}</h3>
-										<p>{{__('messages.kids_para')}}</p>
+										<h3>{{trans('messages.kids')}}</h3>
+										<p>{{trans('messages.kids_para')}}</p>
 									</div>
 								</div>
 							</div>
@@ -166,9 +166,9 @@ Home
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5" >
-            <h2 class="mb-4">{{__('messages.ccit')}}</h2>
-            <p>{{__('messages.ccit_para1')}}</p>
-            <p>{{__('messages.ccit_para2')}}</p>
+            <h2 class="mb-4">{{trans('messages.ccit')}}</h2>
+            <p>{{trans('messages.ccit_para1')}}</p>
+            <p>{{trans('messages.ccit_para2')}}</p>
           </div>
         </div>	
     		<div class="row d-md-flex align-items-center justify-content-center">
@@ -221,8 +221,8 @@ Home
 			<div class="container-fluid px-4">
 				<div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4" id="section1">{{__('messages.Cats')}}</h2>
-            <p>{{__('messages.Cats_parg')}}</p>
+            <h2 class="mb-4" id="section1">{{trans('messages.Cats')}}</h2>
+            <p>{{trans('messages.Cats_parg')}}</p>
           </div>
         </div>	
 				<div class="row" >
@@ -236,8 +236,8 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.langs')}}</h3>
-							<p>{{__('messages.GoveCirc_parg')}}</p>
+							<h3>{{trans('messages.langs')}}</h3>
+							<p>{{trans('messages.GoveCirc_parg')}}</p>
 						</div>
 						</a>
 						</div>
@@ -256,8 +256,8 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.IT')}}</h3>
-							<p>{{__('messages.IT_parg')}}</p>
+							<h3>{{trans('messages.IT')}}</h3>
+							<p>{{trans('messages.IT_parg')}}</p>
 						</div>
 						</a>
 						</div>
@@ -273,8 +273,8 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.Accounting')}}</h3>
-							<p>{{__('messages.Acc_parg')}}</p>
+							<h3>{{trans('messages.Accounting')}}</h3>
+							<p>{{trans('messages.Acc_parg')}}</p>
 						</div>
 						</a>
 						</div>
@@ -290,8 +290,8 @@ Home
 						</div>
 						</div>
 						<div class="text pt-4">
-							<h3>{{__('messages.GoveCirc')}}</h3>
-							<p>{{__('messages.GoveCirc_parg')}}</p>
+							<h3>{{trans('messages.GoveCirc')}}</h3>
+							<p>{{trans('messages.GoveCirc_parg')}}</p>
 						</div>
 						</a>
 						</div>
@@ -513,7 +513,7 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>{{__('messages.Comment_1')}}</p>
+                    <p>{{trans('messages.Comment_1')}}</p>
                     <p class="name">Racky Henderson</p>
                     
                   </div>
@@ -527,7 +527,7 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>{{__('messages.Comment_2')}}</p>
+                    <p>{{trans('messages.Comment_2')}}</p>
                     <p class="name">Henry Dee</p>
                 
                   </div>
@@ -541,7 +541,7 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>{{__('messages.Comment_3')}}</p>
+                    <p>{{trans('messages.Comment_3')}}</p>
                     <p class="name">Mark Huff</p>
                     
                   </div>
@@ -555,7 +555,7 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>{{__('messages.Comment_4')}}</p>
+                    <p>{{trans('messages.Comment_4')}}</p>
                     <p class="name">Rodel Golez</p>
                     
                   </div>
@@ -569,7 +569,7 @@ Home
                   	<span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
-                    <p>{{__('messages.Comment_5')}}</p>
+                    <p>{{trans('messages.Comment_5')}}</p>
                     <p class="name">Ken Bosh</p>
                 </div>
               </div>

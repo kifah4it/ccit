@@ -28,9 +28,8 @@ class SwtichLang {
           //  Cookie::queue(Cookie::make('lang', 'AR',));
 
             //return $next($request)->withCookie(cookie()->forever('lang','AR'));
-            app()->setLocale('ar');
-        
-          
+            app()->setLocale('ar');            
+            Log::info(app()->getLocale());
             return $next($request)->withCookie(cookie()->forever('lang','AR'));
            //return $next($request);
         }
@@ -40,8 +39,10 @@ class SwtichLang {
           app()->setLocale($request->cookie('lang'));
         //  Log::info("Locale is: ". $request->cookie('lang'));
         //  return $next($request)->withCookie(cookie()->forever('lang',$request->cookie('lang')));
+          Log::info(app()->getLocale());
           return $next($request);
 
         }
+        
     }
 }
