@@ -249,7 +249,7 @@ Home
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
-						<a href="./"><div class="cat-box">
+						<a href="{{env('APP_URL')}}/IT"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-qrcode"></span>
 						<div class="intern-circle"></div>
@@ -266,7 +266,7 @@ Home
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
-						<a href="./"><div class="cat-box">
+						<a href="{{env('APP_URL')}}/Accounting"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-calculator"></span>
 						<div class="intern-circle"></div>

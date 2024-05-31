@@ -29,7 +29,7 @@ Courses
 	<img class="First_icon" src="{{env('APP_URL')}}/images/E_icon.PNG" > 
 	<span><b>nglish Courses</b></span>
 		 
-    <img class="InterChange_image" src="{{env('APP_URL')}}/images/InterChange.PNG" >
+
 
 </div>
 

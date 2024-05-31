@@ -108,7 +108,7 @@
 	        	<li class="nav-item active"><a href="{{env('APP_URL')}}/" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
 	        	<li class="nav-item"><a href="{{env('APP_URL')}}#about" class="nav-link about">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
-              <a href="{{env('APP_URL')}}/courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
+              <a href="#" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                <li class="nav-item dropdown"><a class="dropdown-item" href="#">{{__('messages.dropE')}}</a></li>
                <li><a class="dropdown-item" href="#">{{__('messages.dropD')}}</a></li>
