@@ -18,6 +18,8 @@ class AuthController extends Controller
     public function Login(Request $req)
     {
        try{ 
+        if(!isset($_SESSION))
+                session_start();
         // Courses to enroll
         if(isset($_GET['action'])){
             if($_GET['action'] == 'enroll'){
@@ -25,8 +27,7 @@ class AuthController extends Controller
                 $cache = new CacheManagement();
                 $cachedcourses = $cache->getcache();
                 $courses = array();
-                if(!isset($_SESSION))
-                session_start();
+                
                 foreach($req->courses as $cr){
                     foreach($cachedcourses as $c){
                         if($c['id'] == $cr){
@@ -39,7 +40,6 @@ class AuthController extends Controller
                 //return var_dump($courses);
               
             }
-            session_start();
 
             $uerid = $_REQUEST['email'];
             $password = $_REQUEST['password'];
