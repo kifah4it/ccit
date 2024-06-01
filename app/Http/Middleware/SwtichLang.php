@@ -20,8 +20,10 @@ class SwtichLang {
      */
     public function handle(Request $request, Closure $next)
     {
+      if(!isset($_SESSION))
+      session_start();
        // return $next($request);
-        if(!$request->hasCookie('lang')){
+        if(!isset($_SESSION['lang'])){
 
            // session(['lang' => 'AR']);
           
@@ -34,13 +36,12 @@ class SwtichLang {
            //return $next($request);
         }
         else{
-
+          
          // session(['lang' => $request->cookie('lang')]);
        //   app()->setLocale($request->cookie('lang'));
-         config(['app.locale' => $request->cookie('lang')]);
+         config(['app.locale' => $_SESSION['lang']]);
         //  Log::info("Locale is: ". $request->cookie('lang'));
         //  return $next($request)->withCookie(cookie()->forever('lang',$request->cookie('lang')));
-          Log::info(app()->getLocale());
           return $next($request);
 
         }

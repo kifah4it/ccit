@@ -5,11 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\CoursesView;
 use GuzzleHttp\Client;
 use GuzzleHttp\Psr7\Response;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 class HomeController extends Controller
 {
     //
@@ -98,21 +100,24 @@ class HomeController extends Controller
 
     public function switchlang(string $lang)
     {
+        if(!isset($_SESSION))
+                session_start();
         if($lang ==='AR'){
-        //session(['lang' => 'AR']);
+        $_SESSION['lang'] = 'ar';
         //Cookie::queue(Cookie::make('lang', 'AR'));
        // app()->setLocale('ar');
        config(['app.locale' => 'ar']);
         return redirect()->back()->withCookie(cookie()->forever('lang','AR'));
         }
         else{
-            //session(['lang' => 'EN']);
+            $_SESSION['lang'] = 'en';
             //Cookie::queue(Cookie::make('lang', 'EN'));
           //  app()->setLocale('en');
           config(['app.locale' => 'en']);
             return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
     }
+    
     private function checkcourseavailabilty($username,$cid){
         $LMS_URL = env('LMS_URL');
         $key = env('localops_API_key');
