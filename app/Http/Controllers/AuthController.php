@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Log;
 use Auth;
 use Exception;
 
@@ -16,6 +17,7 @@ class AuthController extends Controller
     }
     public function Login(Request $req)
     {
+       try{ 
         // Courses to enroll
         if(isset($_GET['action'])){
             if($_GET['action'] == 'enroll'){
@@ -70,6 +72,9 @@ class AuthController extends Controller
                     'errMsg' => $resp->loginurl
                 ));
             }
+        }catch(Exception $ex){
+            Log::error('login Error: '.json_encode($ex));
+        }
             
          
 }
