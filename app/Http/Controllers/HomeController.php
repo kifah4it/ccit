@@ -16,19 +16,28 @@ class HomeController extends Controller
 {
     //
     public function index(){
+        
         if(!isset($_SESSION))
                 session_start();
         
+
         if(isset($_GET['sesskey'])){
         $_SESSION['mdl_sesskey'] = $_GET['sesskey'];
         
+
         if(isset($_SESSION['redirect'])){
-            $redir = $_SESSION['redirect'];
+           
+            $section = isset($_SESSION['section']) ? $_SESSION['section'] : '';
+            $redir = $_SESSION['redirect'] . $section;
             unset($_SESSION['redirect']);
+            unset($_SESSION['section']);
             return Redirect::to($redir);
             }
             else
                 return Redirect::to(env('LMS_URL')."/my");
+
+                
+                
         }
 
         
@@ -60,26 +69,6 @@ class HomeController extends Controller
     }
 
     public function courses($cat = null){
-    //     if(!Cache::has('courses_cache')){
-    //     $LMS_URL = env('LMS_URL');
-    //      $url = $LMS_URL.'/webservice/rest/server.php?wstoken=505320c31891faef39a5c0c900220763&wsfunction=local_ops_get_courses_with_parent_cat&catname='.$cat.'&moodlewsrestformat=json';
-        
-    //     $ch = curl_init();
-    //  $headers = array(
-    //     'Accept: application/json',
-    //     'Content-Type: application/json',
-    //     );
-        
-    //  curl_setopt($ch, CURLOPT_URL,$url);
-    // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    //  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //     curl_setopt($ch,CURLOPT_SSL_VERIFYHOST,0);
-    //     curl_setopt($ch,CURLOPT_SSL_VERIFYPEER,0);
-    //  // Timeout in seconds
-    //  curl_setopt($ch, CURLOPT_TIMEOUT, 30);
- 
-    //   $response = curl_exec($ch);
-    //     $courses = json_decode($response,true);
         require_once('CacheManagement.php');
         $cache = new CacheManagement();
         $courses = $cache->getcache();
@@ -117,7 +106,7 @@ class HomeController extends Controller
             return redirect()->back()->withCookie(cookie()->forever('lang','EN'));
         }
     }
-    
+
     private function checkcourseavailabilty($username,$cid){
         $LMS_URL = env('LMS_URL');
         $key = env('localops_API_key');
@@ -153,6 +142,7 @@ class HomeController extends Controller
                     
                    $c = array_merge((array)$c,array('avail'=>self::checkcourseavailabilty($_SESSION['mdl_userinfo']->username,$c['id']),true));
                 }
+                Log::info(json_encode($c));
                 return view('course')->with('courseObj',$c);
             }
         }

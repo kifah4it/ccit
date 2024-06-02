@@ -17,7 +17,7 @@ class AuthController extends Controller
     }
     public function Login(Request $req)
     {
-       try{ 
+
         if(!isset($_SESSION))
                 session_start();
         // Courses to enroll
@@ -50,8 +50,11 @@ class AuthController extends Controller
             $serverurl = $domainname . '/webservice/rest/server.php' . '?wstoken=' . $token . '&wsfunction=' 
             . $functionname . '&userid='.$uerid.'&password='.$password.'&moodlewsrestformat=json';
             
-        
-           
+            // if(isset($_SESSION['redirect'])){
+            // Log::info('(Auth) $_SESSION[redirect]='.$_SESSION['redirect']);
+            // $path = '&wantsurl='.urlencode($_SESSION['redirect']);
+            // }
+            // else
             $path = '&wantsurl='.urlencode(env('APP_URL'));
           
             $client = new \GuzzleHttp\Client(['verify' => false]);
@@ -72,9 +75,6 @@ class AuthController extends Controller
                     'errMsg' => $resp->loginurl
                 ));
             }
-        }catch(Exception $ex){
-            Log::error('login Error: '.json_encode($ex));
-        }
             
          
 }
