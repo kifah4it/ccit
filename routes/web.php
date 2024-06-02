@@ -50,6 +50,10 @@ Route::get('Accounting',function(){
     return View('Accounting');
 });
 
+Route::get('Curriculums',function(){
+    return View('curriculums');
+});
+
 // Route::get('/dashboard','DashboardController@index');
 //  Route::post('/Login',"AuthController@Login");
 // Route::get('/','AuthController@show');

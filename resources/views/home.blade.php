@@ -154,10 +154,7 @@ Home
     			<div class="col-md-6 align-items-stretch d-flex">
     				<div class="img img-video d-flex align-items-center">
     					<div class="video justify-content-center">
-								<<!--<video controls class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
-								<source src="./images/ccitvideo.mp4" type="video/mp4">
-									<span class="ion-ios-play"></span>
-									</video>-->
+							
 									<video width="540" height="340"controls id="video">
 										<source  src="./images/ccitvideo.mp4" type="video/mp4">
 									</video>
@@ -227,7 +224,7 @@ Home
         </div>	
 				<div class="row" >
 				<div class="col-md-3 course ftco-animate">
-						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+
 						<div class="cat-widget">
 						<a href="{{env('APP_URL')}}/Languages"><div class="cat-box">
 						<div class="cat-container">
@@ -247,7 +244,7 @@ Home
 				
 					
 					<div class="col-md-3 course ftco-animate">
-						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+
 						<div class="cat-widget">
 						<a href="{{env('APP_URL')}}/IT"><div class="cat-box">
 						<div class="cat-container">
@@ -264,7 +261,7 @@ Home
 					</div>
 					
 					<div class="col-md-3 course ftco-animate">
-						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
+					
 						<div class="cat-widget">
 						<a href="{{env('APP_URL')}}/Accounting"><div class="cat-box">
 						<div class="cat-container">
@@ -283,7 +280,7 @@ Home
 					<div class="col-md-3 course ftco-animate">
 						<!-- <div class="img" style="background-image: url(images/course-1.jpg);"></div> -->
 						<div class="cat-widget">
-						<a href="./"><div class="cat-box">
+						<a href="{{env('APP_URL')}}/Curriculums"><div class="cat-box">
 						<div class="cat-container">
 						<span class="ico icon-library_books"></span>
 						<div class="intern-circle"></div>
@@ -301,205 +298,19 @@ Home
 					</div>
 
 					
-					<!-- <div class="col-md-3 course ftco-animate">
-						<div class="img" style="background-image: url(images/course-4.jpg);"></div>
-						<div class="text pt-4">
-							<p class="meta d-flex">
-								<span><i class="icon-user mr-2"></i>Mr. Khan</span>
-								<span><i class="icon-table mr-2"></i>10 seats</span>
-								<span><i class="icon-calendar mr-2"></i>4 Years</span>
-							</p>
-							<h3><a href="#">Electric Engineering</a></h3>
-							<p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-							<p><a href="#" class="btn btn-primary">Apply now</a></p>
-						</div>
-					</div> -->
 				</div>
 				
 			</div>
 		</section>
 
-		<!-- <section class="ftco-section bg-light">
-			<div class="container-fluid px-4">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">Certified Teachers</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>	
-				<div class="row">
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-1.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Bianca Wilson</h3>
-								<span class="position mb-2">Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-2.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Mitch Parker</h3>
-								<span class="position mb-2">English Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-3.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Stella Smith</h3>
-								<span class="position mb-2">Art Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6 col-lg-3 ftco-animate">
-						<div class="staff">
-							<div class="img-wrap d-flex align-items-stretch">
-								<div class="img align-self-stretch" style="background-image: url(images/teacher-4.jpg);"></div>
-							</div>
-							<div class="text pt-3 text-center">
-								<h3>Monshe Henderson</h3>
-								<span class="position mb-2">Science Teacher</span>
-								<div class="faded">
-									<p>I am an ambitious workaholic, but apart from that, pretty simple person.</p>
-									<ul class="ftco-social text-center">
-		                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-google-plus"></span></a></li>
-		                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-		              </ul>
-	              </div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
 
-
-    
-
-		<!-- <section class="ftco-section bg-light">
-			<div class="container">
-				<div class="row justify-content-center mb-5 pb-2">
-          <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4"><span>Recent</span> Blog</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
-          </div>
-        </div>
-				<div class="row">
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_1.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_2.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 ftco-animate">
-            <div class="blog-entry">
-              <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_3.jpg');">
-								<div class="meta-date text-center p-2">
-                  <span class="day">26</span>
-                  <span class="mos">June</span>
-                  <span class="yr">2019</span>
-                </div>
-              </a>
-              <div class="text bg-white p-4">
-                <h3 class="heading"><a href="#">Skills To Develop Your Child Memory</a></h3>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <div class="d-flex align-items-center mt-4">
-	                <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
-	                <p class="ml-auto mb-0">
-	                	<a href="#" class="mr-2">Admin</a>
-	                	<a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
-	                </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section> -->
 
 		<section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
           <div class="col-md-8 text-center heading-section ftco-animate">
-            <h2 class="mb-4">Student Says About Us</h2>
-            <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+            <h2 class="mb-4">{{__('messages.testimonials')}}</h2>
+            {{-- <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p> --}}
           </div>
         </div>
         <div class="row ftco-animate justify-content-center">
@@ -514,7 +325,7 @@ Home
                       <i class="icon-quote-left"></i>
                     </span>
                     <p>{{trans('messages.Comment_1')}}</p>
-                    <p class="name">Racky Henderson</p>
+                    {{-- <p class="name">Racky Henderson</p> --}}
                     
                   </div>
                 </div>
@@ -528,7 +339,7 @@ Home
                       <i class="icon-quote-left"></i>
                     </span>
                     <p>{{trans('messages.Comment_2')}}</p>
-                    <p class="name">Henry Dee</p>
+                    {{-- <p class="name">Henry Dee</p> --}}
                 
                   </div>
                 </div>
@@ -542,7 +353,7 @@ Home
                       <i class="icon-quote-left"></i>
                     </span>
                     <p>{{trans('messages.Comment_3')}}</p>
-                    <p class="name">Mark Huff</p>
+                    {{-- <p class="name">Mark Huff</p> --}}
                     
                   </div>
                 </div>
@@ -556,7 +367,7 @@ Home
                       <i class="icon-quote-left"></i>
                     </span>
                     <p>{{trans('messages.Comment_4')}}</p>
-                    <p class="name">Rodel Golez</p>
+                    {{-- <p class="name">Rodel Golez</p> --}}
                     
                   </div>
                 </div>
@@ -570,7 +381,7 @@ Home
                       <i class="icon-quote-left"></i>
                     </span>
                     <p>{{trans('messages.Comment_5')}}</p>
-                    <p class="name">Ken Bosh</p>
+                    {{-- <p class="name">Ken Bosh</p> --}}
                 </div>
               </div>
             </div>
@@ -643,7 +454,8 @@ Home
 	},function(){
 		$(this).children().removeClass('fill')});
 		$(function(){
-			$(".about").click(function() {
+			$(".about").click(function(e) {
+				e.preventDefault();
 				$([document.documentElement, document.body]).animate({
 					scrollTop: $("#about").offset().top
 				}, 700);

@@ -110,10 +110,11 @@
 	        	<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-               <li class="nav-item dropdown"><a class="dropdown-item" href="#">{{__('messages.dropE')}}</a></li>
-               <li><a class="dropdown-item" href="#">{{__('messages.dropD')}}</a></li>
-               <li><a class="dropdown-item" href="#">{{__('messages.dropC')}}</a></li>
-               <div class="dropdown-divider"></div>
+               <li><a class="dropdown-item" href="{{env('APP_URL')}}/Languages">{{__('messages.dropE')}}</a></li>
+               <li><a class="dropdown-item" href="{{env('APP_URL')}}/IT">{{__('messages.dropD')}}</a></li>
+               <li><a class="dropdown-item" href="{{env('APP_URL')}}/Accounting">{{__('messages.dropC')}}</a></li>
+               <li><a class="dropdown-item" href="{{env('APP_URL')}}/Curriculums">{{__('messages.dropB')}}</a></li>
+               {{-- <div class="dropdown-divider"></div> --}}
                <li></li>
                 </ul>
                <li class="nav-item">
@@ -157,7 +158,7 @@
       
       <div class="dropdown" style="margin: 9px;margin-bottom:0px; ">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="height: 31px;">
-        {{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}
+        <span>{{Cookie::get('lang') == 'EN' ? 'EN' : 'AR'}}</span>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="{{env('APP_URL')}}/switchlang/AR">AR</a>
@@ -193,8 +194,8 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">{{__('messages.location')}}</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+963 955 229 971</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">centerccit2@gmail.com</span></a></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text phone">+963 955 229 971</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@change-cit.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -204,32 +205,23 @@
 
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-5 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
+              <h2 class="ftco-heading-2">{{__('messages.Links')}}</h2>
               <ul class="list-unstyled">
                 <li><a href="{{env('APP_URL')}}/"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
                 <li><a href="{{env('APP_URL')}}/#about"><span class="ion-ios-arrow-round-forward mr-2 about"></span>{{__('messages.About')}}</a></li>
-                <li><a href="{{env('APP_URL')}}/courses"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
+                <li><a href="{{env('APP_URL')}}/#section1"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 " >
             <div class="ftco-footer-widget mb-5">
-             <!--	<h2 class="ftco-heading-2">{{__('messages.')}}</h2>
-             <form action="#" class="subscribe-form">
-                <div class="form-group">
-                  <input type="text" class="form-control mb-2 text-center" placeholder="{{__('messages.Home')}}">
-                  <input type="submit" value="Subscribe" class="form-control submit px-3">
-                </div>
-              </form>-->
-            </div>
-            <div class="ftco-footer-widget mb-5">
             	<h2 class="ftco-heading-2 mb-0">{{__('messages.conect_us')}}</h2>
 
             	<ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-telegram"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-youtube"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/CCITclassmates"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/ccitclassmates"><span class="icon-instagram"></span></a></li>
+                <li class="ftco-animate"><a href="https://t.me/ccitclassmates"><span class="icon-telegram"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.youtube.com/@ccitclassmates6116"><span class="icon-youtube"></span></a></li>
               </ul>
             </div>
           </div>
@@ -272,9 +264,10 @@
   @endif
   <script>
     $(function(){
-      if(window.location.hash == '#about'){
+      var hash = window.location.hash;
+      if(hash.length > 0){
 				$([document.documentElement, document.body]).animate({
-					scrollTop: $("#about").offset().top
+					scrollTop: $(hash).offset().top
 				}, 700);
       }
 		})

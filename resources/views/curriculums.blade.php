@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-IT
+Home
 @endsection
 @section("content")
 <style>
@@ -22,25 +22,49 @@ IT
 
 <div class="container-fluid Languages">
 <div class="row English_top">
-        <br>
-        <img class="I_icon" src="{{env('APP_URL')}}/images/I_icon.PNG">
-        <span class="Lan"><b>nformation</b></span>
+<br>
 
-        <img class="T_icon" src="{{env('APP_URL')}}/images/T_icon.PNG">
-        <span class="Lan"><b>echnology</b></span>
-    </div>
+	<span class="Lan"><b>المناهج الحكومية</b></span>
+
+
+</div>
 <div class="container-fluid">
 	<div class="row">
 
-    <div class="col-md-4">
-        <a href="{{env('APP_URL')}}/course/ICDL">
-            <div class="City">
-                <img class="City_Im" src="{{env('APP_URL')}}/images/Icdl.JPG">
-                <div class="City_te">
-                    <p>{{__('messages.ICDL')}}</p>
-                </div>
-        </a>
-    </div>
+		<div class="col-md-4">
+			<a href="{{env('APP_URL')}}/curriculum/Primary">
+				<div class="City">
+					<img class="City_Im" src="{{env('APP_URL')}}/images/curr_primary.png">
+					<div class="City_te">
+						<p>منهاج الصف التاسع</p>
+					</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="col-md-4">
+		<a href="{{env('APP_URL')}}/curriculum/Scientefic">
+			<div class="City">
+
+				<img class="City_Im" src="{{env('APP_URL')}}/images/scientefic.png">
+				<div class="City_te">
+					<p>منهاج البكالوريا العلمي</p>
+				</div>
+
+			</div>
+		</a>
+	</div>
+
+	<div class="col-md-4">
+		<a href="{{env('APP_URL')}}/curriculum/Literary">
+			<div class="City">
+
+				<img class="City_Im" src="{{env('APP_URL')}}/images/literary.png">
+				<div class="City_te">
+					<p>منهاج البكالوريا الأدبي</p>
+				</div>
+			</div>
+		</a>
 	</div>
 
 </div>

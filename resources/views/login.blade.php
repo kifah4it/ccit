@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
     <!--@error('password')
     <span class="text-danger">{{$message}}</span>
     @enderror-->
-    <button type="submit" class="btn animation" style="--i:3; --j:24;"><span>{{__('messages.login')}}</span><img src="./images/login-loader.gif" height="40px" style="display:none"></button>
+    <button type="submit" class="btn animation" style="--i:3; --j:24;"><span>{{__('messages.loginto')}}</span><img src="./images/login-loader.gif" height="40px" style="display:none"></button>
     <div class="logreg-link animation" style="--i:4; --j:25;">
         <p>{{__('messages.dont_have_account')}} <a href="#" class="register-link">{{__('messages.signup')}}</a></p>
     </div>
@@ -133,15 +133,15 @@ if(isset($_POST['submit'])){
        </div>
     </div>
     <div class="input-box animation" style="--i:20; --j:3;">
-        <input type="text" required name="arabicname" id="arabicname" style="direction:rtl;" onkeyup="checkForEnglish(this.value)">
+        <input type="text" required name="arabicname" id="arabicname" style="direction:rtl;">
         <label id='full_name' for="arabicinput">{{__('messages.full_name')}}</label>
         <!--<i class='bx bxs-user'></i>-->
         
     </div> 
-    <div class='input-container'>
+    <div class='input-container' style="{{Cookie::get('lang') == 'EN' ? 'direction:rtl' : 'direction:ltr'}}">
     <div class="input-box animation" style="--i:20; --j:3; width: 31%; ">
         <input list="year1" type="text" required name="year" id="year1-input">
-        <label>Year</label>
+        <label>{{__('messages.year')}}</label>
         <datalist id="year1">
             <option value="1970"></option>
             <option value="1971"></option>
@@ -198,7 +198,7 @@ if(isset($_POST['submit'])){
 
 <div class="input-box animation" style="--i:20; --j:3; width: 31%;  ">
         <input type="text" required name="month" list="month1" id="month1-input">
-        <label style=" margin-right: 25;">Month</label>
+        <label style=" margin-right: 25;">{{__('messages.month')}}</label>
         <datalist id="month1">
             <option value="1">jan</option>
             <option value="2">Feb</option>
@@ -219,7 +219,7 @@ if(isset($_POST['submit'])){
 
 <div class="input-box animation" style="--i:20; --j:3; width: 31%; ">
         <input type="phone" required name="day" list="day1">
-        <label>Day</label>
+        <label>{{__('messages.day')}}</label>
         <datalist id="day1">
             <option value="1"></option>
             <option value="2"></option>
@@ -294,7 +294,7 @@ if(isset($_POST['submit'])){
     </button>
     <div class="logreg-link animation" style="--i:22; --j:5;">
         <p id="edit">{{__('messages.have_account')}}
-        <a href="#" class="login-link" id="edit">{{__('messages.login')}}</a></p>
+        <a href="#" class="login-link" id="edit">{{__('messages.loginto')}}</a></p>
         </div>
     </div>
     </form>
@@ -307,7 +307,7 @@ if(isset($_POST['submit'])){
    </div>
 
     </div>
-    <img src="./images/login_logo2.png" alt="user" class="image-container">
+    <a href="{{env('APP_URL')}}" style="position: absolute;width: 85px;height: 85px;top: 10%;"><img src="./images/login_logo2.png" alt="user" class="image-container"></a>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/login.js" ></script>
 <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->

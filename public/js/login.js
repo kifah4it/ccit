@@ -8,7 +8,7 @@ registerLink.onclick = () => {
     warpper.classList.add('active');
 }
 }
-if($('login-link').length > 0){
+if($('.login-link').length > 0){
 loginLink.onclick = () => {
     warpper.classList.remove('active');
 }
