@@ -71,7 +71,7 @@ class HomeController extends Controller
     public function courses($cat = null){
         require_once('CacheManagement.php');
         $cache = new CacheManagement();
-        $courses = $cache->getcache();
+        $courses = $cache->getcache($cat);
         $courseslst[] = array();
         
         foreach($courses as $course){
