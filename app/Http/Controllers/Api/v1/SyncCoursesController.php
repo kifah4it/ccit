@@ -10,11 +10,19 @@ use Illuminate\Support\Facades\Log;
 class SyncCoursesController extends Controller
 {
     public function index(){
-        if(Cache::has('courses_cache')){
-        $courses = Cache::get('courses_cache');
-        return($courses);
-        }else
-        return "false";
+        // if(Cache::has('courses_cache')){
+        // $courses = Cache::get('courses_cache');
+        // return($courses);
+        // }else
+        // return "false";
+        
+        Cache::flush();
+        //Cache::add('courses_cache',$courses,10000);
+        //Cache::remember('courses_cache',10000,$courses);
+           // Cache::put('courses_cache',json_decode($req,true));
+           Log::info('courses modified or created by LMS');
+           return "success";
+         //  return response()->json($courses);
     }
     public function store(Request $req){
         Cache::flush();
