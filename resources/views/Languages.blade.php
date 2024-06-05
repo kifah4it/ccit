@@ -23,7 +23,7 @@ Home
 <div class="container-fluid Languages">
 <div class="row English_top">
 <br>
-	<img class="L_icon" src="{{env('APP_URL')}}/images/L_icon.PNG" > 
+	<img class="L_icon" src="{{env('APP_URL')}}/images/L_icon.png" > 
 	<span class="Lan"><b>anguages</b></span>
 
 
@@ -34,7 +34,7 @@ Home
 		<div class="col-md-4">
 			<a href="{{env('APP_URL')}}/courses/English">
 				<div class="City">
-					<img class="City_Im" src="{{env('APP_URL')}}/images/English.JPG">
+					<img class="City_Im" src="{{env('APP_URL')}}/images/English.png">
 					<div class="City_te">
 						<p>English</p>
 					</div>
@@ -46,7 +46,7 @@ Home
 		<a href="{{env('APP_URL')}}/courses/Frensh">
 			<div class="City">
 
-				<img class="City_Im" src="{{env('APP_URL')}}/images/France.JPG">
+				<img class="City_Im" src="{{env('APP_URL')}}/images/France.jpg">
 				<div class="City_te">
 					<p>Frensh</p>
 				</div>
@@ -59,7 +59,7 @@ Home
 		<a href="{{env('APP_URL')}}/courses/Germany">
 			<div class="City">
 
-				<img class="City_Im" src="{{env('APP_URL')}}/images/Germany.JPG">
+				<img class="City_Im" src="{{env('APP_URL')}}/images/Germany.jpg">
 				<div class="City_te">
 					<p>German</p>
 				</div>

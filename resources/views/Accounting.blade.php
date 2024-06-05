@@ -23,7 +23,7 @@ Accounting
 <div class="container-fluid Languages">
 <div class="row English_top">
         <br>
-        <img class="A_icon" src="{{env('APP_URL')}}/images/A_icon.PNG">
+        <img class="A_icon" src="{{env('APP_URL')}}/images/A_icon.png">
         <span class="Lan"><b>ccounting</b></span>
 
     </div>
@@ -33,7 +33,7 @@ Accounting
     <div class="col-md-4">
         <a href="{{env('APP_URL')}}/course/Al Ameen">
             <div class="City">
-                <img class="City_Im" src="{{env('APP_URL')}}/images/Ameen.JPG">
+                <img class="City_Im" src="{{env('APP_URL')}}/images/Ameen.png">
                 <div class="City_te">
                     <p>alameen</p>
                 </div>

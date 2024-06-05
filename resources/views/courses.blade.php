@@ -10,7 +10,9 @@
         .course_cont{
             display:flex;
         }
-        
+        .Course{
+            min-height: 270px;
+        }
     </style>
     <section class="hero-wrap hero-wrap-2">
         <div class="overlay"></div>
@@ -29,9 +31,8 @@
 
         <div class=" row English_top " style="direction:ltr;">
 
-            <br>
-            <img class="First_icon" src="{{ env('APP_URL') }}/images/E_icon.PNG">
-            <span><b>nglish Courses</b></span>
+            <br>            
+            <span><b>{{request()->segment(count(request()->segments()))}} Courses</b></span>
 
 
 

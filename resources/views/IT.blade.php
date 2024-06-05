@@ -23,10 +23,10 @@ IT
 <div class="container-fluid Languages">
 <div class="row English_top">
         <br>
-        <img class="I_icon" src="{{env('APP_URL')}}/images/I_icon.PNG">
+        <img class="I_icon" src="{{env('APP_URL')}}/images/I_icon.png">
         <span class="Lan"><b>nformation</b></span>
 
-        <img class="T_icon" src="{{env('APP_URL')}}/images/T_icon.PNG">
+        <img class="T_icon" src="{{env('APP_URL')}}/images/T_icon.png">
         <span class="Lan"><b>echnology</b></span>
     </div>
 <div class="container-fluid">
@@ -35,7 +35,7 @@ IT
     <div class="col-md-4">
         <a href="{{env('APP_URL')}}/course/ICDL">
             <div class="City">
-                <img class="City_Im" src="{{env('APP_URL')}}/images/Icdl.JPG">
+                <img class="City_Im" src="{{env('APP_URL')}}/images/Icdl.jpg">
                 <div class="City_te">
                     <p>{{__('messages.ICDL')}}</p>
                 </div>
