@@ -34,7 +34,7 @@ Home
 		<div class="col-md-4">
 			<a href="{{env('APP_URL')}}/courses/English">
 				<div class="City">
-					<img class="City_Im" src="{{env('APP_URL')}}/images/English.png">
+					<img class="City_Im" src="{{env('APP_URL')}}/images/English.jpg">
 					<div class="City_te">
 						<p>English</p>
 					</div>
