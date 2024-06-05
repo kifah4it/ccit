@@ -43,7 +43,7 @@ Home
 	</div>
 
 	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/courses/Frensh">
+		<a href="{{env('APP_URL')}}/courses/French">
 			<div class="City">
 
 				<img class="City_Im" src="{{env('APP_URL')}}/images/France.jpg">
