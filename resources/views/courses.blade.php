@@ -7,6 +7,10 @@
         .hero-wrap-2 {
             background-image: url("{{ env('APP_URL') }}/images/courses_top.jpg") !important;
         }
+        .course_cont{
+            display:flex;
+        }
+        
     </style>
     <section class="hero-wrap hero-wrap-2">
         <div class="overlay"></div>
@@ -41,12 +45,16 @@
                         @continue
                     @else
                         <div class="col-md-4">
-                            <div class="Course">
+                            <a href="{{env('APP_URL').'/course/'.$course->Name}}">
+                                <div class="Course">
                                 <span style=color:#fecd29><b>{{ $course->Name }}</b></span>
                                 <h5>{{ $course->catName }}</h5>
+                                <div class="course_cont">
                                 <img class="Course_Im" src="{{ $course->imgSrc }}">
-                                <p>{{ $course->sDesc ?? '' }}</p>
+                                {!! html_entity_decode($course->sDesc) !!}
+                                </div>
                             </div>
+                            </a>
                         </div>
                     @endif
                 @endforeach

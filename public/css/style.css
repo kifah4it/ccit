@@ -14523,7 +14523,8 @@ img.logo {
 
 .ftco-footer {
   padding-top: 40px;
-  padding-bottom: 40px
+  padding-bottom: 40px;
+  margin-top:20px;
 }
 
 .InterChange_image {
@@ -14554,12 +14555,9 @@ img.logo {
 .Course {
   margin-top: 50px;
   text-align: center;
-  height: 400px;
-  max-height: 400px;
   border-radius: 18px;
   background: #ffffff;
-  box-shadow: -5px -5px 5px #e8e8e8,
-    5px 5px 5px #ffffff;
+  box-shadow: -1px 2px 5px 4px #e8e8e8, 0 0 5px 5px #ffffff;
 }
 
 .Course_Im {
@@ -14567,7 +14565,6 @@ img.logo {
   width: 120px;
   height: 155px;
   margin-top: 5px;
-  margin-right: 300px;
   margin-left: 10px;
 }
 
@@ -14799,4 +14796,18 @@ img.logo {
 
 .phone {
   direction: ltr;
+}
+.course_cont li, .course_cont li span{
+  font-size: 13px;
+  margin-left:3px;
+}
+
+.course_cont li{
+  list-style-type: "✔";
+  text-align: left;
+  color: #000;
+}
+
+.course_cont li::marker{
+color:green;
 }

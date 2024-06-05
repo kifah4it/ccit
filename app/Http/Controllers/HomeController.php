@@ -79,7 +79,7 @@ class HomeController extends Controller
             $CourseV->Name = $course['fullname'];
             // $CourseV->Name = $course['customfields'][0]['value'] ?? '';
             $CourseV->imgSrc = env('LMS_URL').'/'.(string) $course['courseimage'];
-            $CourseV->sDesc = strip_tags($course['summary']);
+            $CourseV->sDesc = Cookie::get('lang') == 'EN' ? $course['course_details_en'] : $course['course_details'];
             $CourseV->catName = (string) $course['categoryname'];
             $courseslst[] = $CourseV;
         }

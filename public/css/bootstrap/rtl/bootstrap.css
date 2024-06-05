@@ -11365,6 +11365,7 @@ textarea.form-control {
   font-size: 14px;
   background: #232323;
   padding: 6em 0;
+  margin-top:20px;
 }
 
 .ftco-footer .ftco-footer-widget {
@@ -12826,12 +12827,9 @@ img.logo {
 .Course {
   margin-top: 50px;
   text-align: center;
-  height: 270px;
-  max-height: 270px;
   border-radius: 18px;
   background: #ffffff;
-  box-shadow: 5px -5px 5px #e8e8e8,
-    -5px 5px 5px #ffffff;
+  box-shadow: -1px 2px 5px 4px #e8e8e8, 0 0 5px 5px #ffffff;
 }
 
 .Course_Im {
@@ -12839,7 +12837,6 @@ img.logo {
   width: 120px;
   height: 155px;
   margin-top: 5px;
-  margin-left: 300px;
   margin-right: 10px;
 }
 
@@ -13041,4 +13038,17 @@ img.logo {
   }
   .phone{
     direction: ltr;
+  }
+  .course_cont li span{
+    font-size: 13px;
+    margin-right:3px;
+  }
+  .course_cont li{
+    text-align: right;
+    list-style-type: "✔";
+    color: #000;
+  }
+ 
+  .course_cont li::marker{
+  color:green;
   }
