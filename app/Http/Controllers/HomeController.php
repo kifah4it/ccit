@@ -141,8 +141,7 @@ class HomeController extends Controller
                    //$avail = self::checkcourseavailabilty($_SESSION['mdl_userinfo']->username,$c['id']);
                     
                    $c = array_merge((array)$c,array('avail'=>self::checkcourseavailabilty($_SESSION['mdl_userinfo']->username,$c['id']),true));
-                }
-                Log::info(json_encode($c));
+                }               
                 return view('course')->with('courseObj',$c);
             }
         }

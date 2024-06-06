@@ -32,7 +32,7 @@ Home
 	<div class="row">
 
 		<div class="col-md-4">
-			<a href="{{env('APP_URL')}}/curriculum/Primary">
+			<a href="{{env('APP_URL')}}/curriculum/منهاج الصف التاسع">
 				<div class="City">
 					<img class="City_Im" src="{{env('APP_URL')}}/images/curr_primary.png">
 					<div class="City_te">
@@ -43,7 +43,7 @@ Home
 	</div>
 
 	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/curriculum/Scientefic">
+		<a href="{{env('APP_URL')}}/curriculum/منهاج البكالوريا العلمي">
 			<div class="City">
 
 				<img class="City_Im" src="{{env('APP_URL')}}/images/scientefic.png">
@@ -56,7 +56,7 @@ Home
 	</div>
 
 	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/curriculum/Literary">
+		<a href="{{env('APP_URL')}}/curriculum/منهاج البكالوريا الأدبي">
 			<div class="City">
 
 				<img class="City_Im" src="{{env('APP_URL')}}/images/literary.png">

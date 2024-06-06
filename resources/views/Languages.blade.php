@@ -48,7 +48,7 @@ Home
 
 				<img class="City_Im" src="{{env('APP_URL')}}/images/France.jpg">
 				<div class="City_te">
-					<p>Frensh</p>
+					<p>French</p>
 				</div>
 
 			</div>

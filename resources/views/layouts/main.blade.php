@@ -209,7 +209,7 @@
               <ul class="list-unstyled">
                 <li><a href="{{env('APP_URL')}}/"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Home')}}</a></li>
                 <li><a href="{{env('APP_URL')}}/#about"><span class="ion-ios-arrow-round-forward mr-2 about"></span>{{__('messages.About')}}</a></li>
-                <li><a href="{{env('APP_URL')}}/#section1"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
+                <li><a href="{{env('APP_URL')}}/#courses"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('messages.Courses')}}</a></li>
               </ul>
             </div>
           </div>

@@ -268,7 +268,7 @@
 })(jQuery);
 
 function scrollToSection(){
-	var section= document.getElementById('section1')
+	var section= document.getElementById('courses')
 	section.scrollIntoView({
 		behavior:'smooth'
 	});
