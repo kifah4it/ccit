@@ -14802,12 +14802,12 @@ img.logo {
   margin-left:3px;
 }
 
-.course_cont li{
+.course_cont li,.thim-course-info li{
   list-style-type: "✔";
   text-align: left;
   color: #000;
 }
 
-.course_cont li::marker{
+.course_cont li::marker,.thim-course-info li::marker{
 color:green;
 }

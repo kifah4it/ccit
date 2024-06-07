@@ -13043,12 +13043,12 @@ img.logo {
     font-size: 13px;
     margin-right:3px;
   }
-  .course_cont li{
+  .course_cont li,.thim-course-info li{
     text-align: right;
     list-style-type: "✔";
     color: #000;
   }
  
-  .course_cont li::marker{
+  .course_cont li::marker,.thim-course-info li::marker{
   color:green;
   }
