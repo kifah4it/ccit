@@ -309,7 +309,7 @@ Courses
 												{{__('messages.pendingRegister')}}
 												</button>
 												@else
-												<form method="post" action="{{env('APP_URL')}}/Login?action=enroll">
+												<form method="post" action="{{url('Login')}}?action=enroll">
 													@csrf
 												<input type="submit" id="accptdbtn" class="lp-button button button-enroll-course" value="{{__('messages.enrol_now')}}">
 												</input>

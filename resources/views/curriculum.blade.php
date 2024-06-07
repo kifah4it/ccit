@@ -329,7 +329,7 @@ Curriculum
 											$_SESSION['currancy'] = isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' ? '$' : ' ل.س ' : ' ل.س ';
 											?>
 											
-												<form id="frm_enroll" method="post" action="{{env('APP_URL')}}/Login?action=enroll">
+											<form id="frm_enroll" method="POST" action="{{url('Login')}}?action=enroll">
 													@csrf
 													<div class="courses">
 													<p>{{__('messages.materials')}}</p>
