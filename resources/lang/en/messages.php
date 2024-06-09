@@ -69,10 +69,7 @@ return [
     Change Center for Information and Technology
     A language centre, oozing with desire to learn more about foreign cultures; English, German, French, Spanish, and the list goes on. 
     Different ages and levels, 15 in total. ',
-    'ccit_para2'=>'One classroom wasnt enough. Therefore, we brought many others to quench the increasing thirst for knowledge. 
-    Computer science, including Word, Excel, PowerPoint, Access, and many others.
-    We turned the dream into an objective, and made the dream come true. 
-    CCIT, your second home.',
+    'ccit_para2'=>'knowledge is believed to be a message for the whole world as CCIT has made remote learning available to everyone regardless of where they are.',
     'Comment_1'=>'My experience at CCIT was great, I learned many languages thanks to their excellent classes.',
     'Comment_2'=>'I recommend visiting CCIT if you are looking to learn new languages, they offer useful training programs.',
     'Comment_3'=>'The atmosphere at CCIT is comfortable and the language learning classes are engaging and effective.',

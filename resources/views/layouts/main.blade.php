@@ -83,7 +83,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
-      <img src="{{env('APP_URL')}}/images/logo-small.png" class="logo" />
+      <img src="{{env('APP_URL')}}/images/logofinal.png" class="logo" />
       <?php 
               if(!isset($_SESSION))
                 session_start();
@@ -106,7 +106,7 @@
         
 	        <ul class="offset-md-1 navbar-nav mr-auto">
 	        	<li class="nav-item active"><a href="{{env('APP_URL')}}/" class="nav-link pl-0" >{{__('messages.Home')}}</a></li>
-	        	<li class="nav-item"><a href="#about" class="nav-link">{{__('messages.About')}}</a></li>
+	        	<li class="nav-item"><a href="#" class="nav-link" onclick="scrollToSection1()">{{__('messages.About')}}</a></li>
 	        	<li class="nav-item dropdown">
               <a href="{{env('APP_URL')}}/courses" class="nav-link dropdown-toggle">{{__('messages.Courses')}}</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

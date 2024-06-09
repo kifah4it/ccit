@@ -10940,14 +10940,15 @@ color:#c76413;
     justify-content: center;
     align-items: center;
     background-color: #c76413;
-    border-radius: 35px;
+    border-radius: 14px;
     height: 30px;
     text-align: center;
-      max-width: 100px;
-      font-size: 14px;
-      margin: 20px 0px 20px 0px;
-      width: unset !important;
-      padding: 2px 8px 2px 8px;
+    max-width: 100px;
+    min-width: 60px;
+    font-size: 13px;
+    margin: 20px 0px 20px 0px;
+    width: unset !important;
+    padding: 2px 8px 2px 8px;
   
     -webkit-transition-duration:3s;
     transition-duration: 0.3s;
@@ -10956,14 +10957,12 @@ color:#c76413;
   
   
   }
-  .btnnn:hover {
-    box-shadow: 0 0 20px rgba(253, 95, 0, 0.7);
-  -webkit-transform: scale(1.1) ;
-  transform:scale(1.2);
-  border-color: blue ;
-  color: white;
   
-  }  
+  .btnnn:hover {
+    border: 1px solid #c76413;
+    background: transparent;
+    color: #c76413
+  } 
   .soc{
     padding: -10px;
     margin: 10px;

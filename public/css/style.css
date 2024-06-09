@@ -9905,7 +9905,8 @@ height: 700px;
     border-radius: 20px;
   }
   img.logo{
-    width: 134px;
+    width: 120px;
+    height: 80px;
   }
   .fixed-trans-menu{
 position: fixed;
@@ -10127,7 +10128,7 @@ padding: 0px;
 }
 .ftco-footer{
   padding-top: 40px;
-    padding-bottom: 40px
+    padding-bottom: 40px;
 }
 
 .InterChange_image{
