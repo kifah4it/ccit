@@ -154,7 +154,7 @@ Home
     			<div class="col-md-6 align-items-stretch d-flex">
     				<div class="img img-video d-flex align-items-center">
     					<div  class="video justify-content-center">
-								<<!--<video controls class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<!--<video controls class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
 								<source src="./images/ccitvideo.mp4" type="video/mp4">
 									<span class="ion-ios-play"></span>
 									</video>-->
