@@ -14258,27 +14258,24 @@ textarea.form-control {
 .user-img {
   background-position-y: -19px;
 }
-
-.ftco-navbar-light .navbar-nav>.nav-item>.nav-link {
-  color: #fff;
-}
-
-.form-control.pl-3 {
-  border-width: thin;
-  border-color: rgb(82 82 84 / 18%);
-  border-style: double;
-  border-radius: 20px;
-}
-
-img.logo {
-  width: 134px;
-}
-
-.fixed-trans-menu {
-  position: fixed;
-  width: 100%;
-  transition: all 0.2s linear;
-}
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  color:#fff;
+  }
+  .form-control.pl-3{
+    border-width: thin;
+    border-color: rgb(82 82 84 / 18%);
+    border-style: double;
+    border-radius: 20px;
+  }
+  img.logo{
+    width: 120px;
+    height: 80px;
+  }
+  .fixed-trans-menu{
+position: fixed;
+width: 100%;
+transition: all 0.2s linear;
+  }
 
 .fixed-trans-menu .container-fluid {
   background-color: #fff0;

@@ -83,7 +83,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
 	    <div class="container-fluid d-flex align-items-center px-4">
-      <img src="{{env('APP_URL')}}/images/logo-small.png" class="logo" />
+      <img src="{{env('APP_URL')}}/images/logofinal.png" class="logo" />
       <?php 
               if(!isset($_SESSION))
                 session_start();

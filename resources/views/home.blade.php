@@ -125,7 +125,7 @@ Home
 							</div>
 							<div class="col-lg-6">
 								<div class="services-2 d-flex">
-									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="icon-pool"></span></div>
+									<div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="icon-speaker_phone"></span></div>
 									<div class="text pl-3">
 										<h3>{{trans('messages.pool')}}</h3>
 										<p>{{trans('messages.pool_para')}}</p>
@@ -149,13 +149,16 @@ Home
 		<a href="" id="about"></a>
 
 		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5" >
-    	<div class="container">
+    	<div  class="container">
     		<div class="row justify-content-center mb-5 pb-2 d-flex" >
     			<div class="col-md-6 align-items-stretch d-flex">
     				<div class="img img-video d-flex align-items-center">
-    					<div class="video justify-content-center">
-							
-									<video width="540" height="340"controls id="video">
+    					<div  class="video justify-content-center">
+								<<!--<video controls class="icon-video popup-vimeo d-flex justify-content-center align-items-center">
+								<source src="./images/ccitvideo.mp4" type="video/mp4">
+									<span class="ion-ios-play"></span>
+									</video>-->
+									<video id="section2" width="540" height="340"controls id="video">
 										<source  src="./images/ccitvideo.mp4" type="video/mp4">
 									</video>
 
@@ -163,9 +166,8 @@ Home
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5" >
-            <h2 class="mb-4">{{trans('messages.ccit')}}</h2>
-            <p>{{trans('messages.ccit_para1')}}</p>
-            <p>{{trans('messages.ccit_para2')}}</p>
+           <!-- <h2 class="mb-4">{{__('messages.ccit')}}</h2>-->
+            <p style="margin-top:80px; font-size:23px;">{{__('messages.ccit_para2')}}</p>
           </div>
         </div>	
     		<div class="row d-md-flex align-items-center justify-content-center">
