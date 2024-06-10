@@ -338,16 +338,35 @@ transition-delay: 0.5s;
     }
 
     .warpper .info-text.login{
-        right: 60px;
+        right: 29px;
         text-align: left;
         padding: 0 40px 60px 150px;
     }
     
     .warpper .info-text.register{
-        left: 60px;
+        left: 84px;
         text-align: left;
         padding: 0 150px 60px 40px;
         pointer-events: none;
+        height: 100px;
+        top: 18%;
+    }
+    .logo-container{
+        position: absolute;
+        width: 85px;
+        height: 85px;
+        top: 5% !important;
+    }
+    .warpper .form-box.enrol {
+        right: 0;
+        padding: 0 24px 0 24px;
+        pointer-events: none;
+        margin-top: 60%;
+        right: 7%;
+    }
+    .form-box.enroll-requrested{
+    position: relative;
+    left: 7%;
     }
   }
   .input-container{
@@ -455,4 +474,10 @@ height:60px;
     border-radius: 50px;
     padding: 5px;
     color: green;
+}
+.logo-container{
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: 10%;
 }

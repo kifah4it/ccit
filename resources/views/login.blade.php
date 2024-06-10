@@ -71,7 +71,7 @@ if(isset($_POST['submit'])){
     <h2 class="animation" style="--i:0; --j:20;">{{__('messages.Welcome_CCIT')}}</h2>
     <p class="animation" style="--i:1; --j:21;" id="edit1">{{__('messages.register_with')}}</p>
    </div>
-   <div class="form-box register">
+   <div class="form-box register {{isset($courses) ? 'enrol' : ''}}">
 @if(isset($courses))
 <div id="cart"  class="courses-cart">
 <form id="frmCart" method="post" action="{{url('enroll')}}">
@@ -307,7 +307,7 @@ if(isset($_POST['submit'])){
    </div>
 
     </div>
-    <a href="{{env('APP_URL')}}" style="position: absolute;width: 85px;height: 85px;top: 10%;"><img src="./images/login_logo2.png" alt="user" class="image-container"></a>
+    <a href="{{env('APP_URL')}}" class="logo-container"><img src="./images/login_logo2.png" alt="user" class="image-container"></a>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/login.js" ></script>
 <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
