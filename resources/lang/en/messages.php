@@ -63,7 +63,7 @@ return [
     'pool_para'=>'Distance education with renewed offers.',
     'kids'=>'Children’s courses',
     'kids_para'=>'Dedicated courses for children in especially fun and attractive ways.',
-    'ccit'=>' CCIT Highlights',
+    'ccit'=>' Change Center for Info & Tech',
     'ccit_para1'=>'Many years ago, we started here. 
     At this very place, everything started as an idea that was implemented. 
     We built hope with hardworking hands and bright minds. 

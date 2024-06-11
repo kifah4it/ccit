@@ -158,16 +158,16 @@ Home
 								<source src="./images/ccitvideo.mp4" type="video/mp4">
 									<span class="ion-ios-play"></span>
 									</video>-->
-									<video id="section2" width="540" height="340"controls id="video">
+									<video poster="./images/image_16.jpg" id="section2" width="540" height="340"controls id="video">
 										<source  src="./images/ccitvideo.mp4" type="video/mp4">
+										<span class="ion-ios-play"></span>
 									</video>
-
 							</div>
     				</div>
     			</div>
           <div class="col-md-6 heading-section heading-section-white ftco-animate pl-lg-5 pt-md-0 pt-5" >
-           <!-- <h2 class="mb-4">{{__('messages.ccit')}}</h2>-->
-            <p style="margin-top:80px; font-size:23px;">{{__('messages.ccit_para2')}}</p>
+           <h2 class="mb-4" style="margin-top:30px; font-size:29px;">{{__('messages.ccit')}}</h2>
+            <p style="font-size:20px;">{{__('messages.ccit_para2')}}</p>
           </div>
         </div>	
     		<div class="row d-md-flex align-items-center justify-content-center">
@@ -464,4 +464,5 @@ Home
 });
 		})
 </script>
+
 @endsection
