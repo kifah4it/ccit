@@ -28,10 +28,10 @@ if(isset($_POST['submit'])){
         <link rel="stylesheet" href="{{env('APP_URL')}}/css/icomoon.css">
         @if(Cookie::get('lang') == 'EN')
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/login.css?v={{env('version')}}">
     @else
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap-login.css">
+    <link rel="stylesheet" href="css/bootstrap/rtl/bootstrap-login.css?v={{env('version')}}">
     @endif
     
     </head>
@@ -309,7 +309,7 @@ if(isset($_POST['submit'])){
     </div>
     <a href="{{env('APP_URL')}}" class="logo-container"><img src="./images/login_logo2.png" alt="user" class="image-container"></a>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/login.js" ></script>
+    <script src="js/login.js?v={{env('version')}}" ></script>
 <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 <script>
     function totalcost(){
