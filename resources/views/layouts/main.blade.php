@@ -28,18 +28,18 @@
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/flaticon.css">
     <link rel="stylesheet" href="{{env('APP_URL')}}/css/icomoon.css">
     @if(Cookie::get('lang') === 'EN')
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css?v={{env('version')}}">
     @else
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css">
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css?v={{env('version')}}">
     <!-- <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css"> -->
     @endif
     @yield('head')
     @if(Cookie::get('lang') == 'EN') 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css"> 
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/style.css?v={{env('version')}}"> 
     @else 
     <link href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css"> 
+    <link rel="stylesheet" href="{{env('APP_URL')}}/css/bootstrap/rtl/bootstrap.css?v={{env('version')}}"> 
     @endif
 
 
@@ -262,9 +262,9 @@
   <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script> -->
   <script src="{{env('APP_URL')}}/js/google-map.js"></script>
   @if(Cookie::get('lang') === 'EN')
-  <script src="{{env('APP_URL')}}/js/main.js"></script>
+  <script src="{{env('APP_URL')}}/js/main.js?v={{env('version')}}"></script>
   @else
-  <script src="{{env('APP_URL')}}/js/main-rtl.js"></script>
+  <script src="{{env('APP_URL')}}/js/main-rtl.js?v={{env('version')}}"></script>
   @endif
   <script>
     $(function(){
