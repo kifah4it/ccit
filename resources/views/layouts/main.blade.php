@@ -136,7 +136,11 @@
                 session_start();
               ?>
               @if(!isset($_SESSION['mdl_sesskey']))
-                <a href="{{env('APP_URL')}}/login" class="btnnn" id="login">{{__('messages.login')}}</a>
+             
+                <a href="{{env('APP_URL')}}/login" class="btnnn" id="login">{{__('messages.login')}} 
+                <i class="icon-account_box" style="font-size:21px; "></i>
+                </a>
+                
               @else
                   <a href="{{env('LMS_URL')}}/login/logout.php?sesskey={{$_SESSION['mdl_sesskey']}}" class="btnnn" id="logout">{{__('messages.logout')}}</a>
               @endif

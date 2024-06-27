@@ -14440,10 +14440,11 @@ transition: all 0.2s linear;
   text-align: center;
   max-width: 100px;
   min-width: 60px;
-  font-size: 14px;
+  font-size: 16px;
   margin: 20px 0px 20px 0px;
   width: unset !important;
-  padding: 2px 8px 2px 8px;
+  padding: 2px 8px 10px 8px;
+
 
   -webkit-transition-duration: 3s;
   transition-duration: 0.3s;
@@ -14458,6 +14459,17 @@ transition: all 0.2s linear;
   background: transparent;
   color: #c76413
 }
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 48px;
+  cursor: pointer;
+}
+
 
 
 
@@ -14520,8 +14532,9 @@ transition: all 0.2s linear;
 
 .ftco-footer {
   padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top:20px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+  transform: translateY(120px);
 }
 
 .InterChange_image {
