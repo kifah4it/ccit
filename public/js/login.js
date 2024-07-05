@@ -130,8 +130,12 @@ jQuery('#frmCart').submit(function (e) {
         dataType: "text",
         success: function(resultData){
             res = JSON.parse(resultData);
+            
            if(res.status == 'success'){
             hideCart();
+                if(res.act_courses != null){
+                    window.location.href = res.act_courses[0][1];
+                }
            }
            else{
             hideenorlloader();
