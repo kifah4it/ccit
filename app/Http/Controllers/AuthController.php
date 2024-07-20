@@ -94,13 +94,14 @@ public function Logout(Request $req)
     //     }
     // }
     //     else{
-            if(isset($_SESSION['mdl_userinfo'])){
+            // if(isset($_SESSION['mdl_userinfo'])){
                 unset($_SESSION['mdl_userinfo']);
                 unset($_SESSION['mdl_sesskey']);
+                // return Redirect::to(env('APP_URL'));
+                // }
                 return Redirect::to(env('APP_URL'));
-                }
-                else{
-                    return 'error http';
-                }
+                // else{
+                //     return 'error http';
+                // }
         }
 }
