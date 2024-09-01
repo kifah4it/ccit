@@ -84,7 +84,7 @@ if(isset($_POST['submit'])){
     <div class="details">
     <p>&nbsp;&nbsp; {{$cr['fullname']}} </p>
     <p>&nbsp;&nbsp; {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</p>
-    <input type="hidden" name="courses[]" value="{{$cr['id']}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}"/>
+    <input type="hidden" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid']}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}"/>
     </div>
     </li>
     <p>ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ</p>
@@ -133,7 +133,7 @@ if(isset($_POST['submit'])){
        </div>
     </div>
     <div class="input-box animation" style="--i:20; --j:3;">
-        <input type="text" required name="arabicname" id="arabicname" style="direction:rtl;">
+        <input type="text" required name="englishname" id="englishname" style="direction:rtl;">
         <label id='full_name' for="arabicinput">{{__('messages.full_name')}}</label>
         <!--<i class='bx bxs-user'></i>-->
         

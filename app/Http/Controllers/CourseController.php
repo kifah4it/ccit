@@ -93,20 +93,60 @@ class CourseController extends Controller
                 session_start();
 
             $LMS_URL = env('LMS_URL');
-            $username = $_SESSION['mdl_userinfo']->username;
+            $userid = $_SESSION['mdl_userinfo']->id;
             $courses = '';
-            $coursesArr = [];
+            $messages = '';
+            $key = env('localops_API_key');
+            $url = $LMS_URL . '/webservice/rest/server.php?wstoken=' . $key . '&wsfunction=local_ops_assign_member_cohort_apply&moodlewsrestformat=json';
             if ($req->courses != null) {
                 foreach ($req->courses as $crs) {
-                    $courses .= "courses[]=" . $crs . "&";
+                    // $courses .= "courses[]=" . $crs . "&";
+                    $selected_course = explode(':', $crs);
+                    if(count($selected_course) > 1){
+                        $options = [
+                            'form_params' => [
+                                'members' => [
+                                    [
+                                        'cohortid' => $selected_course[1],
+                                        'userid' => $userid,
+                                        'courseid' => $selected_course[0]
+                                    ]
+                                ]
+                            ]
+                        ];
+                    }
+                    else if(count($selected_course) == 1){
+                        $options = [
+                            'form_params' => [
+                                'members' => [
+                                    [
+                                        'cohortid' => null,
+                                        'userid' => $userid,
+                                        'courseid' => $selected_course[1]
+                                    ]
+                                ]
+                            ]
+                        ];
+                    }
+                    else{
+                        $messages = [
+                            'status' => 'error',
+                            'warningcode' => null,
+                            'message' => 'neither cohort or course selected'
+                        ];
+                        return json_encode($messages);
+                    }
+                    
+                    $client = new \GuzzleHttp\Client(['verify' => false]);
+                    $r = $client->post($url, $options);
+                    $messages = $r->getBody();
                 }
             }
-            $key = env('localops_API_key');
-            $url = $LMS_URL . '/webservice/rest/server.php?wstoken=' . $key . '&wsfunction=local_ops_enroll_student&username=' . $username . '&' . $courses . 'moodlewsrestformat=json';
+            return $messages;
 
-            $client = new \GuzzleHttp\Client(['verify' => false]);
-            $r = $client->request('GET', $url);
-            return $r->getBody();
+
+
+            // return $r->getBody();
         } catch (Exception $ex) {
             Log::error(json_encode($ex, true));
         }

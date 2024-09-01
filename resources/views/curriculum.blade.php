@@ -321,6 +321,10 @@ Curriculum
 												<button id="pendingbtn" class="lp-button button button-enroll-course" disabled>
 												{{__('messages.pendingRegister')}}
 												</button>
+												@elseif($courseObj[0]['avail'][0]['status'] == 'requested')
+												<button id="pendingbtn" class="lp-button button button-enroll-course" disabled>
+													{{ __('messages.requestedRegister') }}
+												</button>
 												@else
 											<?php 
 											if(!isset($_SESSION))
@@ -333,25 +337,27 @@ Curriculum
 													@csrf
 													<div class="courses">
 													<p>{{__('messages.materials')}}</p>
-													<p style="display:none;"><input type="checkbox" name="courses[]" value="{{$courseObj[0]['id']}}" cost="0" checked></input></p>
+													<p style="display:none;"><input type="checkbox" name="courses[]" value="{{$courseObj[0]['id']}}:{{$courseObj[0]['cohortid'] ?? ''}}" cost="0" checked></input></p>
                                                 @foreach($courseObj[0]['courses'] as $cr)
-												<p><input type="checkbox" name="courses[]" value="{{$cr['id']}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p>
+												<p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p>
                                                 @endforeach
 												<div class="total">
 													<span>{{__('messages.cost')}}</span><span class="cost"></span><span>{{$_SESSION['currancy']}}</span>
 												</div>
 												</div>
+												@if(isset($courseObj[0]['start_date']) && $courseObj[0]['start_date'] != null)
 												<div class="course-start-date">
 													<div class="date">
 													<p>{{__('messages.starts_on')}}</p>
 													<p class="sprtr"></p>
 													<p><span class="icon-calendar"></span></p>
-													<p> {{date("Y-m-d", $courseObj[0]['startdate'])}}</p>
+													<p> {{date("Y-m-d", $courseObj[0]['start_date'])}}</p>
 													<p class="sprtr"></p>
 													<p><span class="icon-clock-o"></span></p>
-													<p> {{date("H:i", $courseObj[0]['startdate'])}} </p>
+													<p> {{date("H:i", $courseObj[0]['start_date'])}} </p>
 													</div>
 												</div>
+												@endif
 												<input type="submit" id="accptdbtn" class="lp-button button button-enroll-course" value="{{__('messages.enrol_now')}}">
 												</input>
 												</form>

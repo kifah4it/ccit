@@ -56,8 +56,10 @@ jQuery('#frmSignup').submit(function (e) {
                 // document.getElementById('Sin').style.display = 'none';
                 // document.getElementById('cart').style.display = 'block';
            }
-           else
-           console.log('internal erro');
+           else{
+           console.log('internal erro: ');
+           console.log(res);
+           }
 
            $('#submitBtn *').hide();
             $('#submitBtn > div').show();
@@ -108,12 +110,13 @@ jQuery('#frmLogin').submit(function (e) {
             window.location.href =res.loginurl;
            }
            else{
-            console.log(res.errMsg);
+            console.log(res);
             hideloader();
            }
         },
       error: function(errors){
           res = errors;
+          console.log(res);
           hideloader();
       }
   });

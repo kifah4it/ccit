@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Exception;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use stdClass;
@@ -15,12 +16,13 @@ class SignupController extends Controller
     }
     public function store(Request $request)
     {
+        try{
         if (!isset($_SESSION))
             session_start();
-
+            $lang = isset($_COOKIE['lang']) ? strtolower($_COOKIE['lang']) : 'ar';
         $data = "&username=" . $request->username . "&password=" . $request->Password . "&firstname=" . $request->first_name
-            . "&lastname=" . $request->last_name . "&email=" . $request->Email . "&arabfullname=" . $request->arabicname
-            . "&mobnum=" . $request->mob_num . "&birthdate=" . $request->month . '/' . $request->day . '/' . $request->year;
+            . "&lastname=" . $request->last_name . "&email=" . $request->Email . "&englishfullname=" . $request->englishname
+            . "&mobnum=" . $request->mob_num . "&birthdate=" . $request->month . '/' . $request->day . '/' . $request->year . "&lang=" . $lang;
         $LMS_URL = env('LMS_URL');
         $key = env('localops_API_key');
         $url = $LMS_URL . '/webservice/rest/server.php?wstoken=' . $key . '&wsfunction=local_ops_register_student' . $data . '&moodlewsrestformat=json';
@@ -67,6 +69,9 @@ class SignupController extends Controller
                 break;
         }
         return $res;
+    }catch(Exception $ex){
+        return json_encode($ex);
+    }
     }
     public function checkenrolmentavailability(Request $req)
     {
