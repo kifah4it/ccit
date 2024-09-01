@@ -141,7 +141,6 @@ class HomeController extends Controller
                     $c = array_merge((array)$c, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id ?? null, $c['id']), true));
                 // }
                 $cohort = json_decode(self::getcohorts($c['fullname']), true);
-                var_dump($cohort);
                 $c = array_merge($c,(array)$cohort);
                 return view('course')->with('courseObj', $c);
             }
