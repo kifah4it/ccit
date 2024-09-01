@@ -136,10 +136,10 @@ class HomeController extends Controller
             session_start();
         foreach ($courses as $c) {
             if ($c['fullname'] == $name) {
-                if (isset($_SESSION['mdl_userinfo'])) {
+                // if (isset($_SESSION['mdl_userinfo'])) {
                     //$avail = self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id,$c['id']);
-                    $c = array_merge((array)$c, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id, $c['id']), true));
-                }
+                    $c = array_merge((array)$c, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id ?? null, $c['id']), true));
+                // }
                 $cohort = json_decode(self::getcohorts($c['fullname']), true);
                 $c = array_merge($c,(array)$cohort);
                 return view('course')->with('courseObj', $c);
