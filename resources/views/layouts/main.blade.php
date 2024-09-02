@@ -49,9 +49,7 @@
         <link rel="stylesheet" href="{{ env('APP_URL') }}/css/bootstrap/rtl/bootstrap.css?v={{ env('version') }}">
     @endif
     <style>
-        #login,
-        #logout,
-        .lmsitem {
+.wait-load {
             display: none;
         }
     </style>
@@ -104,7 +102,7 @@
             }
             ?>
             {{-- @if (isset($_SESSION['mdl_sesskey'])) --}}
-            <div class="lmsitem mob hidden">
+            <div class="lmsitem mob wait-load">
                 <div class="nav-btn">
                     <a href="{{ env('LMS_URL') }}/my" class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
                 </div>
@@ -139,7 +137,7 @@
                         </ul>
                     <li class="nav-item">
 
-                        <div class="lmsitem desk hidden">
+                        <div class="lmsitem desk wait-load">
                             <div class="nav-btn">
                                 <a href="{{ env('LMS_URL') }}/my"
                                     class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
@@ -156,12 +154,12 @@
                 }
                 ?>
                 {{-- @if (!isset($_SESSION['mdl_sesskey'])) --}}
-                <a href="{{ env('APP_URL') }}/login" class="btnnn" id="login">{{ __('messages.login') }}
+                <a href="{{ env('APP_URL') }}/login" class="btnnn wait-load" id="login">{{ __('messages.login') }}
                     <i class="icon-account_box" style="font-size:21px; "></i>
                 </a>
                 {{-- @else --}}
                 <a href="{{ env('LMS_URL') }}/login/logout.php?sesskey={{ $_SESSION['mdl_sesskey'] ?? 0 }}"
-                    class="btnnn" id="logout">{{ __('messages.logout') }}</a>
+                    class="btnnn wait-load" id="logout">{{ __('messages.logout') }}</a>
                 {{-- @endif --}}
 
 
@@ -333,22 +331,19 @@
                 success: function(resultData) {
                     res = JSON.parse(resultData);
                     if (res != 0) {
-                        $('#login').hide();
-                        $('#logout').show();
-                        $('.lmsitem').show();
+                        $('#logout').removeClass('wait-load');
+                        $('.lmsitem').removeClass('wait-load');
                         console.log(res);
                     } else {
-                        $('#logout').hide();
-                        $('#login').show();
+                        $('#login').removeClass('wait-load');
                         $('.lmsitem').hide();
                         console.log(res);
                     }
                 },
                 error: function(errors) {
-                    $('#logout').hide();
-                    $('#login').show();
-                    $('.lmsitem').hide();
-                    console.log(res);
+                  $('#login').removeClass('wait-load');
+                        $('.lmsitem').hide();
+                        console.log(errors);
                 }
             });
         })
