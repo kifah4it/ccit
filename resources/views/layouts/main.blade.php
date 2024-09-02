@@ -336,7 +336,7 @@
                         console.log(res);
                     } else {
                         $('#login').removeClass('wait-load');
-                        $('.lmsitem').hide();
+                        // $('.lmsitem').hide();
                         console.log(res);
                     }
                 },
