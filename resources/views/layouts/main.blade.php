@@ -48,11 +48,13 @@
             rel="stylesheet">
         <link rel="stylesheet" href="{{ env('APP_URL') }}/css/bootstrap/rtl/bootstrap.css?v={{ env('version') }}">
     @endif
-<style>
-#login,#logout,.lmsitem{
-  display: none;
-}
-</style>
+    <style>
+        #login,
+        #logout,
+        .lmsitem {
+            display: none;
+        }
+    </style>
 
 </head>
 
@@ -102,13 +104,12 @@
             }
             ?>
             {{-- @if (isset($_SESSION['mdl_sesskey'])) --}}
-                <div class="lmsitem mob hidden">
-                    <div class="nav-btn">
-                        <a href="{{ env('LMS_URL') }}/my"
-                            class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
-                    </div>
-                    <span class="icon-graduation-cap LMSico"></span>
+            <div class="lmsitem mob hidden">
+                <div class="nav-btn">
+                    <a href="{{ env('LMS_URL') }}/my" class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
                 </div>
+                <span class="icon-graduation-cap LMSico"></span>
+            </div>
             {{-- @endif --}}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -137,15 +138,15 @@
                             <li></li>
                         </ul>
                     <li class="nav-item">
-                       
-                            <div class="lmsitem desk hidden">
-                                <div class="nav-btn">
-                                    <a href="{{ env('LMS_URL') }}/my"
-                                        class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
-                                </div>
-                                <span class="icon-graduation-cap LMSico"></span>
+
+                        <div class="lmsitem desk hidden">
+                            <div class="nav-btn">
+                                <a href="{{ env('LMS_URL') }}/my"
+                                    class="nav-link pl-0">{{ __('messages.LearningPlatform') }}</a>
                             </div>
-                        
+                            <span class="icon-graduation-cap LMSico"></span>
+                        </div>
+
                     </li>
                 </ul>
 
@@ -155,12 +156,12 @@
                 }
                 ?>
                 {{-- @if (!isset($_SESSION['mdl_sesskey'])) --}}
-                    <a href="{{ env('APP_URL') }}/login" class="btnnn" id="login">{{ __('messages.login') }}
-                        <i class="icon-account_box" style="font-size:21px; "></i>
-                    </a>
+                <a href="{{ env('APP_URL') }}/login" class="btnnn" id="login">{{ __('messages.login') }}
+                    <i class="icon-account_box" style="font-size:21px; "></i>
+                </a>
                 {{-- @else --}}
-                    <a href="{{ env('LMS_URL') }}/login/logout.php?sesskey={{ $_SESSION['mdl_sesskey'] ?? 0 }}"
-                        class="btnnn" id="logout">{{ __('messages.logout') }}</a>
+                <a href="{{ env('LMS_URL') }}/login/logout.php?sesskey={{ $_SESSION['mdl_sesskey'] ?? 0 }}"
+                    class="btnnn" id="logout">{{ __('messages.logout') }}</a>
                 {{-- @endif --}}
 
 
@@ -321,27 +322,33 @@
                 }, 700);
             }
         });
-        $(function() { 
+        $(function() {
             $.ajax({
                 type: "GET",
                 url: "{{ env('LMS_URL') }}/local/ops/pages/isloggedin.php",
                 dataType: "text",
+                xhrFields: {
+                    withCredentials: true
+                },
                 success: function(resultData) {
                     res = JSON.parse(resultData);
-                        if(res != 0){
-                          $('#login').hide();
-                          $('#logout').show();
-                          $('.lmsitem').show();
-                        }else{
-                          $('#logout').hide();
-                          $('#login').show();
-                          $('.lmsitem').hide();
-                        }
+                    if (res != 0) {
+                        $('#login').hide();
+                        $('#logout').show();
+                        $('.lmsitem').show();
+                        console.log(res);
+                    } else {
+                        $('#logout').hide();
+                        $('#login').show();
+                        $('.lmsitem').hide();
+                        console.log(res);
+                    }
                 },
                 error: function(errors) {
-                  $('#logout').hide();
-                  $('#login').show();
-                  $('.lmsitem').hide();
+                    $('#logout').hide();
+                    $('#login').show();
+                    $('.lmsitem').hide();
+                    console.log(res);
                 }
             });
         })
