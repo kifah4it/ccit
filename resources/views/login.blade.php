@@ -20,6 +20,11 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html dir="{{Cookie::get('lang') == 'EN' ? 'ltr' : 'rtl'}}">
     <head>
+        <style>
+            .total > p{
+                display: none;
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <title>Login</title>
         <link rel="icon" href="./images/login_logo2.png">
@@ -94,11 +99,11 @@ if(isset($_POST['submit'])){
 <div>
 <div class="total"><span>{{__('messages.cost')}} </span><span class="cost"></span><span class="curr">{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? '$' : ' ل.س' : ' ل.س'}}</span></div>
     <div class="payment">
-    <h4>{{__('messages.pay_methods')}}</h4>
+    {{-- <h4>{{__('messages.pay_methods')}}</h4>
     <input type="radio" value="option1" name="option" id="option1">
     <label for="option1">{{__('messages.requesto_to_pay')}}</label><br>
     <input type="radio" value="option2" name="option" id="option2">
-    <label for="option2">{{__('messages.online_pay')}}</label>
+    <label for="option2">{{__('messages.online_pay')}}</label> --}}
     <div style="text-align:center">
         <button type="submit"><span>{{__('messages.enroll')}}</span><img src="./images/login-loader.gif" height="31px" style="display:none"></button>
     </div>
@@ -315,7 +320,10 @@ if(isset($_POST['submit'])){
     function totalcost(){
 		var sum = 0;
 			$('#cart li input[type=hidden]').each(function(s,e){
-					sum += Number($(this).attr('cost'));
+                num = Number($(this).attr('cost'));
+                console.log(typeof(num));
+               sum+= isNaN(num) ? 0 : num;
+					
 			})
 			$('.total > .cost').text(sum);
 	}

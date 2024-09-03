@@ -136,11 +136,16 @@ jQuery('#frmCart').submit(function (e) {
             
            if(res.status == 'success'){
             hideCart();
-                if(res.act_courses != null){
-                    window.location.href = res.act_courses[0][1];
+                // if(res.act_courses != null){
+                //     window.location.href = res.act_courses[0][1];
+                // }
+                if($('.total > .cost').text() == '0'){
+                    window.location.href = 'https://lms.change-cit.com/my/courses.php';
+
                 }
            }
            else{
+            $('.total > p').show();
             hideenorlloader();
             console.log(res);
            }

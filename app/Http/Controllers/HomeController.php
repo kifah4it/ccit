@@ -126,7 +126,7 @@ class HomeController extends Controller
         $courses = json_decode($response, true);
         return $courses;
     }
-    
+
     public function course($name)
     {
         require_once('CacheManagement.php');
@@ -137,11 +137,11 @@ class HomeController extends Controller
         foreach ($courses as $c) {
             if ($c['fullname'] == $name) {
                 // if (isset($_SESSION['mdl_userinfo'])) {
-                    //$avail = self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id,$c['id']);
-                    $c = array_merge((array)$c, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id ?? null, $c['id']), true));
+                //$avail = self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id,$c['id']);
+                $c = array_merge((array)$c, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id ?? null, $c['id']), true));
                 // }
                 $cohort = json_decode(self::getcohorts($c['fullname']), true);
-                $c = array_merge($c,(array)$cohort);
+                $c = array_merge($c, (array)$cohort);
                 return view('course')->with('courseObj', $c);
             }
         }
@@ -199,8 +199,8 @@ class HomeController extends Controller
                         if (isset($_SESSION['mdl_userinfo']))
                             $cr = array_merge((array)$cr, array('avail' => self::checkcourseavailabilty($_SESSION['mdl_userinfo']->id, $cr['id']), true));
 
-                            $cohort = json_decode(self::getcohorts($cr['fullname']), true);
-                            $cr = array_merge($cr,(array)$cohort);
+                        $cohort = json_decode(self::getcohorts($cr['fullname']), true);
+                        $cr = array_merge($cr, (array)$cohort);
 
                         $crclm[0]['courses'][] = $cr;
                     }
@@ -212,7 +212,7 @@ class HomeController extends Controller
     }
     public function login()
     {
-                    
+
         if (isset($_GET['action']) && $_GET['action'] == 'logout') {
             unset($_SESSION['mdl_userinfo']);
             return view('home');
@@ -221,10 +221,9 @@ class HomeController extends Controller
             if (!isset($_SESSION))
                 session_start();
             $_SESSION['redirect'] = $_GET['redirect'];
-        }elseif(isset($_SESSION['mdl_userinfo'])){
+        } elseif (isset($_SESSION['mdl_userinfo'])) {
 
-            return redirect(env('LMS_URL').'/my');
-
+            return redirect(env('LMS_URL') . '/my');
         }
         return view('login');
     }
