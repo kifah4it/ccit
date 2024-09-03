@@ -221,9 +221,7 @@ class HomeController extends Controller
             if (!isset($_SESSION))
                 session_start();
             $_SESSION['redirect'] = $_GET['redirect'];
-        }
-        
-        if(isset($_SESSION['mdl_userinfo'])){
+        }elseif(isset($_SESSION['mdl_userinfo'])){
 
             return redirect(env('LMS_URL').'/my');
 
