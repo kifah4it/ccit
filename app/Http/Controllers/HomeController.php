@@ -212,6 +212,7 @@ class HomeController extends Controller
     }
     public function login()
     {
+                    
         if (isset($_GET['action']) && $_GET['action'] == 'logout') {
             unset($_SESSION['mdl_userinfo']);
             return view('home');
@@ -220,6 +221,12 @@ class HomeController extends Controller
             if (!isset($_SESSION))
                 session_start();
             $_SESSION['redirect'] = $_GET['redirect'];
+        }
+        
+        if(isset($_SESSION['mdl_userinfo'])){
+
+            return redirect(env('LMS_URL').'/my');
+
         }
         return view('login');
     }
