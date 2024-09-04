@@ -221,10 +221,11 @@ class HomeController extends Controller
             if (!isset($_SESSION))
                 session_start();
             $_SESSION['redirect'] = $_GET['redirect'];
-        } elseif (isset($_SESSION['mdl_userinfo'])) {
+        } 
+        // elseif (isset($_SESSION['mdl_userinfo'])) {
 
-            return redirect(env('LMS_URL') . '/my');
-        }
+        //     return redirect(env('LMS_URL') . '/my');
+        // }
         return view('login');
     }
 }
