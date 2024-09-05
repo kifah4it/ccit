@@ -377,8 +377,9 @@
                         if($('.form-box.register.enrol').length < 1){
                         $('.id-status').text('Redirecting to LMS ...');
                         window.location.href = 'https://lms.change-cit.com/my/';
+                        }else{
+                            $('.loader').fadeOut(500);
                         }
-
                     } else {
                         $('.loader').fadeOut(500);
                     }
