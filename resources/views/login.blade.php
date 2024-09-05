@@ -1,25 +1,11 @@
-<?php
-//
-if (isset($_POST['submit'])) {
-    $text = $_POST['text'];
-    $secretkey = '6LehFL4pAAAAAIKIm-CkbAgFJCt9YCaelGU0Gxi-';
-    $response = $_POST['g-recaptcha-response'];
-    $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretkey) . ($response = urlencode($response));
-    $response = file_get_contents($url);
-    $res - json_decode($response, true);
-    if ($res['success']) {
-        echo 'Successfully done.';
-    } else {
-        echo 'error';
-    }
-}
-
-?>
 
 <!DOCTYPE html>
+
 <html dir="{{ Cookie::get('lang') == 'EN' ? 'ltr' : 'rtl' }}">
 
 <head>
+    {{-- {!! NoCaptcha::renderJs() !!} --}}
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Le6ZTYqAAAAAAccdNRU7j020mi5HZcFYG-1Y5Vl"></script>
     <style>
         .total>p {
             display: none;
@@ -60,6 +46,14 @@ if (isset($_POST['submit'])) {
             <div class="loader-content">
                 <img src="./images/login-loader.gif" height="40px">
                 <p dir="ltr" class="id-status">Checking user identity ...</p>
+                
+                <form id="frm_recaptcha" action="{{ url('recaptcha') }}" method="post">
+                    
+                    {{-- {!! NoCaptcha::display() !!} --}}
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                    
+                </form>
+
             </div>
         </div>
         <span class="bg-animate"></span>
@@ -69,6 +63,7 @@ if (isset($_POST['submit'])) {
                 <h2 class="animation" style="--i:0; --j:21; ">{{ __('messages.login') }}</h2>
                 <form id="frmLogin" action="{{ url('Login') }}" method="post">
                     @csrf
+
                     <div class="input-box animation " style="--i:1; --j:22;">
                         <input type="text" required name="email">
                         <label>{{ __('messages.username') }}</label>
@@ -379,8 +374,11 @@ if (isset($_POST['submit'])) {
                 success: function(resultData) {
                     res = JSON.parse(resultData);
                     if (res != 0) {
+                        if($('.form-box.register.enrol').length < 1){
                         $('.id-status').text('Redirecting to LMS ...');
                         window.location.href = 'https://lms.change-cit.com/my/';
+                        }
+
                     } else {
                         $('.loader').fadeOut(500);
                     }
@@ -393,6 +391,21 @@ if (isset($_POST['submit'])) {
         
         })
     </script>
+                   
 </body>
-
+{{-- <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Le6ZTYqAAAAAAccdNRU7j020mi5HZcFYG-1Y5Vl', {action: 'auth'}).then(function(token) {
+           document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script> --}}
+<script>
+    $(function(){
+      grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute('6Le6ZTYqAAAAAAccdNRU7j020mi5HZcFYG-1Y5Vl', {action: 'LOGIN'});
+        console.log(token);
+      });
+})
+  </script>
 </html>
