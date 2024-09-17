@@ -164,7 +164,7 @@ Curriculum
 	}
 	.ftco-section .overview > h2 {
 	padding-bottom: 10px;
-	margin-bottom: 10px;	
+	margin-bottom: 10px;
 	}
 	.course-price .value{
 		text-align:center;
@@ -230,7 +230,7 @@ Curriculum
 		border-radius: 3%;
 		background: #03a5030d;
 	}
-	
+
 </style>
 @endsection
 @section('content')
@@ -326,24 +326,24 @@ Curriculum
 													{{ __('messages.requestedRegister') }}
 												</button>
 												@else
-											<?php 
+											<?php
 											if(!isset($_SESSION))
 											session_start();
 
 											$_SESSION['currancy'] = isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' ? '$' : ' ل.س ' : ' ل.س ';
 											?>
-											
+
 											<form id="frm_enroll" method="POST" action="{{url('Login')}}?action=enroll">
 													@csrf
 													<div class="courses">
 													<p>{{__('messages.materials')}}</p>
 													<p style="display:none;"><input type="checkbox" name="courses[]" value="{{$courseObj[0]['id']}}:{{$courseObj[0]['cohortid'] ?? ''}}" cost="0" checked></input></p>
                                                 @foreach($courseObj[0]['courses'] as $cr)
-												<p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p>
+												{{-- <p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p> --}}
                                                 @endforeach
-												<div class="total">
+												{{-- <div class="total">
 													<span>{{__('messages.cost')}}</span><span class="cost"></span><span>{{$_SESSION['currancy']}}</span>
-												</div>
+												</div> --}}
 												</div>
 												@if(isset($courseObj[0]['start_date']) && $courseObj[0]['start_date'] != null)
 												<div class="course-start-date">
@@ -361,15 +361,15 @@ Curriculum
 												<input type="submit" id="accptdbtn" class="lp-button button button-enroll-course" value="{{__('messages.enrol_now')}}">
 												</input>
 												</form>
-												
-												
+
+
 												@endif
 											@endif
 							</div>
 						</div>
 
-					
-						
+
+
 						<div class="thim-course-info">
 							<h3 class="title">{{__('messages.course_details')}}</h3>
 							<div class="content">
@@ -409,7 +409,7 @@ Curriculum
 
 		$url = $('#loginbtn').prop('href')+'?redirect='+window.location.href;
 		$('#loginbtn').prop('href',$url);
-		
+
 		$('#frm_enroll :checkbox').change(function(e){
 			totalcost();
 		})
@@ -441,7 +441,7 @@ Curriculum
 	// 				st = $w.scrollTop(),
 	// 				navbar = $('#sidebar'),
 	// 				sd = $('.js-scroll-wrap');
-	// 						console.log('st:'+ st + 'sidebar: ' + navbar.position().top)			
+	// 						console.log('st:'+ st + 'sidebar: ' + navbar.position().top)
 	// 				if(st >= navbar.position().top){
 	// 						navbar.addClass('stick');
 	// 				}
