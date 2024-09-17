@@ -339,7 +339,8 @@ Curriculum
 													<p>{{__('messages.materials')}}</p>
 													<p style="display:none;"><input type="checkbox" name="courses[]" value="{{$courseObj[0]['id']}}:{{$courseObj[0]['cohortid'] ?? ''}}" cost="0" checked></input></p>
                                                 @foreach($courseObj[0]['courses'] as $cr)
-												{{-- <p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p> --}}
+												 {{-- <p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}} - {{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س' : $cr['price'] . ' ل.س'}}</input></p> --}}
+												 <p><input type="checkbox" name="courses[]" value="{{$cr['id']}}:{{$cr['cohortid'] ?? ''}}" cost="{{isset($_SESSION['country']) ? $_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] : $cr['price'] : $cr['price']}}" checked>&nbsp;{{$cr['fullname']}}</input></p>
                                                 @endforeach
 												{{-- <div class="total">
 													<span>{{__('messages.cost')}}</span><span class="cost"></span><span>{{$_SESSION['currancy']}}</span>
