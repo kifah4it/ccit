@@ -194,3 +194,21 @@ function hideenorlloader(){
     $('#frmCart button[type="submit"] *').hide();
     $('#frmCart button[type="submit"] span').show();
 }
+
+jQuery('#frm_recaptcha').submit(function (e) {
+    e.preventDefault();
+    form = $(this);
+    var saveData = $.ajax({
+        type: "POST",
+        url: $(form).prop('action'),
+        data: form.serialize(),
+        dataType: "text",
+        success: function(res){
+           console.log(res);
+        },
+      error: function(errors){
+          res = errors;
+          console.log(res);
+      }
+  });
+})

@@ -107,7 +107,7 @@
                                     <div class="details">
                                         <p>&nbsp;&nbsp; {{ $cr['fullname'] }} </p>
                                         <p>&nbsp;&nbsp;
-                                            {{ isset($_SESSION['country']) ? ($_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س') : $cr['price'] . ' ل.س' }}
+                                            {{-- {{ isset($_SESSION['country']) ? ($_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? $cr['interprice'] . '$' : $cr['price'] . ' ل.س') : $cr['price'] . ' ل.س' }} --}}
                                         </p>
                                         <input type="hidden" name="courses[]"
                                             value="{{ $cr['id'] }}:{{ $cr['cohortid'] }}"
@@ -119,7 +119,7 @@
                         </ul>
 
                         <div>
-                            <div class="total"><span>{{ __('messages.cost') }} </span><span
+                            <div class="total" style="display:none"><span>{{ __('messages.cost') }} </span><span
                                     class="cost"></span><span
                                     class="curr">{{ isset($_SESSION['country']) ? ($_SESSION['country'] != 'SY' && $cr['interprice'] != '' ? '$' : ' ل.س') : ' ل.س' }}</span>
                             </div>
@@ -360,7 +360,7 @@
             $('.total > .cost').text(sum);
         }
         $(function() {
-            totalcost();
+          //  totalcost();
         });
 
         $(function(){
