@@ -230,7 +230,10 @@ Curriculum
 		border-radius: 3%;
 		background: #03a5030d;
 	}
-
+	.media-intro img{
+		max-width: 331px;
+		max-height: 202px;
+	}
 </style>
 @endsection
 @section('content')
@@ -285,7 +288,7 @@ Curriculum
 						<div>
 							<div class="course-thumbnail">
 								<div class="media-intro">
-									<image src="{{env('LMS_URL').'/'.$courseObj[0]['courseimage']}}" width="200px" height="250px" />
+									<image src="{{env('LMS_URL').'/'.$courseObj[0]['courseimage']}}" />
 								</div>
 							</div>
 						</div>
