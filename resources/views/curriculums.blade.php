@@ -56,7 +56,7 @@ Home
 	</div>
 
 	<div class="col-md-4">
-		<a href="{{env('APP_URL')}}/curriculum/منهاج البكالوريا الأدبي">
+		<a href="{{env('APP_URL')}}/curriculum/منهاج الثانوية العامة - الفرع العلمي">
 			<div class="City">
 
 				<img class="City_Im" src="{{env('APP_URL')}}/images/literary.png">
