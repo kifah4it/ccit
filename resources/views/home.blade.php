@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Home
+CCIT
 @endsection
 @section("content")
   <div class="slider-fixed-content-container">

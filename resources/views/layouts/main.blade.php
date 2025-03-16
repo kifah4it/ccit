@@ -49,7 +49,7 @@
         <link rel="stylesheet" href="{{ env('APP_URL') }}/css/bootstrap/rtl/bootstrap.css?v={{ env('version') }}">
     @endif
     <style>
-.wait-load {
+        .wait-load {
             display: none;
         }
     </style>
@@ -95,7 +95,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ftco-navbar-light fixed-trans-menu" id="ftco-navbar">
         <div class="container-fluid d-flex align-items-center px-4">
-            <img src="{{ env('APP_URL') }}/images/logofinal.png" class="logo" />
+            <img src="{{ env('APP_URL') }}/images/logo-org.png" class="logo" />
             <?php
             if (!isset($_SESSION)) {
                 session_start();
@@ -154,7 +154,8 @@
                 }
                 ?>
                 {{-- @if (!isset($_SESSION['mdl_sesskey'])) --}}
-                <a href="{{ env('APP_URL') }}/login" class="btnnn wait-load" id="login">{{ __('messages.login') }}
+                <a href="{{ env('APP_URL') }}/login" class="btnnn wait-load"
+                    id="login">{{ __('messages.login') }}
                     <i class="icon-account_box" style="font-size:21px; "></i>
                 </a>
                 {{-- @else --}}
@@ -335,18 +336,28 @@
                         $('.lmsitem').removeClass('wait-load');
                         console.log(res);
                     } else {
+                        clearCoockies();
                         $('#login').removeClass('wait-load');
                         // $('.lmsitem').hide();
                         console.log(res);
                     }
                 },
                 error: function(errors) {
-                  $('#login').removeClass('wait-load');
-                        $('.lmsitem').hide();
-                        console.log(errors);
+                    $('#login').removeClass('wait-load');
+                    $('.lmsitem').hide();
+                    console.log(errors);
                 }
             });
         })
+
+        function clearCoockies() {
+            var Cookies = document.cookie.split(';');
+            // set past expiry to all cookies
+            for (var i = 0; i < Cookies.length; i++) {
+                if(Cookies[i].includes('PHPSESSID'))
+                document.cookie = Cookies[i] + "=; expires=" + new Date(0).toUTCString();
+            }
+        }
     </script>
     @yield('scripts')
 </body>

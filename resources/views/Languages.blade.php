@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Home
+CCIT - Languages
 @endsection
 @section("content")
 <style>

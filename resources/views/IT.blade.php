@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-IT
+CCIT - IT
 @endsection
 @section("content")
 <style>

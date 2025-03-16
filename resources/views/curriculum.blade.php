@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Curriculum
+CCIT - Curriculum
 @endsection
 @section('head')
 <style type="text/css">

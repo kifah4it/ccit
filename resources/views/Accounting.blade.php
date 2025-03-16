@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('title')
-Accounting
+CCIT - Accounting
 @endsection
 @section("content")
 <style>
