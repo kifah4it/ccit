@@ -17,7 +17,7 @@
             href="https://fonts.googleapis.com/css?family=Noto+Kufi+Arabic:200,300,400,500,600,700,800,900&display=swap"
             rel="stylesheet">
     @endif
-
+    <link rel="icon" href="./images/login_logo2.png">
     <link rel="stylesheet" href="{{ env('APP_URL') }}/css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="{{ env('APP_URL') }}/css/animate.css">
 
